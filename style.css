@@ -1,41 +1,107 @@
 body {
     margin: 0;
     font-family: Georgia, serif;
-    background: #0b1d3a;
-    color: white;
+    background: white;
+    color: #222;
 }
+
+
+/* Header */
 
 header {
     text-align: center;
     padding: 50px;
-    background: #111;
+    background: white;
     border-bottom: 3px solid gold;
 }
+
 
 h1 {
     color: gold;
     font-size: 45px;
 }
 
+
+/* Navigation */
+
 nav {
-    background: #050505;
+    background: gold;
     padding: 15px;
     text-align: center;
 }
 
+
 nav a {
-    color: gold;
+    color: white;
     margin: 20px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
+
+
+nav a:hover {
+    color: #222;
+}
+
+
+
+/* Main sections */
 
 section {
     padding: 40px;
     text-align: center;
+    max-width: 1000px;
+    margin: auto;
 }
+
+
+h2 {
+    color: #b8860b;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+
+
+h3 {
+    color: #b8860b;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+li {
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+
+/* Links */
+
+a {
+    color: #b8860b;
+}
+
+
+/* Images */
+
+img {
+    border: 3px solid gold;
+    border-radius: 10px;
+}
+
+
+
+/* Footer */
 
 footer {
     text-align: center;
     padding: 20px;
-    background: black;
+    background: gold;
+    color: white;
 }
