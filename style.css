@@ -315,7 +315,7 @@ main {
 .history-section {
     margin-left: -30px;
     margin-right: -30px;
-    padding: 80px 30px;
+    padding: 90px 30px;
     background: #e8f1f8;
     overflow: hidden;
 }
@@ -326,42 +326,52 @@ main {
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
-    padding: 30px 0 40px;
+
+    padding: 30px 0 50px;
 }
 
 
-/* Timeline background line */
+/* ========================================
+   TIMELINE BACKGROUND
+   ======================================== */
 
 .history-timeline::before {
     content: "";
 
     position: absolute;
+
     left: 150px;
     top: 30px;
-    bottom: 40px;
+    bottom: 50px;
 
     width: 4px;
 
     background: #c9d5df;
+
     border-radius: 4px;
 }
 
 
-/* Moving progress line */
+/* ========================================
+   TIMELINE PROGRESS
+   ======================================== */
 
 .history-timeline::after {
     content: "";
 
     position: absolute;
+
     left: 150px;
     top: 30px;
 
     width: 4px;
+
     height: var(--timeline-progress);
 
-    max-height: calc(100% - 70px);
+    max-height: calc(100% - 80px);
 
     background: #005ea8;
+
     border-radius: 4px;
 
     z-index: 1;
@@ -374,18 +384,21 @@ main {
 
 .history-entry {
     display: grid;
+
     grid-template-columns: 150px 1fr;
+
     gap: 45px;
 
     position: relative;
 
-    min-height: 320px;
-    padding-bottom: 80px;
+    min-height: 430px;
+
+    padding-bottom: 110px;
 }
 
 
 /* ========================================
-   TIMELINE DOT
+   TIMELINE DOTS
    ======================================== */
 
 .timeline-dot {
@@ -394,10 +407,11 @@ main {
     left: 150px;
     top: 30px;
 
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 
     background: #ffffff;
+
     border: 4px solid #005ea8;
 
     border-radius: 50%;
@@ -414,10 +428,11 @@ main {
 }
 
 
-/* Active timeline dot */
+/* Active dot */
 
 .history-entry.active .timeline-dot {
     background: #c9a227;
+
     border-color: #c9a227;
 
     transform: translateX(-50%) scale(1.35);
@@ -428,11 +443,12 @@ main {
 
 
 /* ========================================
-   HISTORY YEAR
+   YEARS
    ======================================== */
 
 .history-year {
     font-size: 22px;
+
     font-weight: bold;
 
     color: #005ea8;
@@ -447,16 +463,15 @@ main {
 }
 
 
-/* Active year */
-
 .history-entry.active .history-year {
     color: #c9a227;
+
     transform: translateX(-5px);
 }
 
 
 /* ========================================
-   HISTORY CONTENT CARD
+   HISTORY CARDS
    ======================================== */
 
 .history-content {
@@ -464,7 +479,7 @@ main {
 
     border-left: 5px solid #005ea8;
 
-    padding: 30px 35px;
+    padding: 32px 36px;
 
     box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.08);
@@ -480,8 +495,6 @@ main {
         box-shadow 0.3s ease;
 }
 
-
-/* Active card */
 
 .history-entry.active .history-content {
     opacity: 1;
@@ -512,6 +525,7 @@ main {
 
     margin-bottom: 8px;
 }
+
 
 .history-entry.active .history-label {
     color: #c9a227;
@@ -629,6 +643,7 @@ main {
 
 footer {
     background: #0b1f33;
+
     color: white;
 
     padding: 45px 30px;
@@ -689,7 +704,7 @@ footer p {
 
 
     /* ====================================
-       NORMAL MOBILE HERO
+       NORMAL MOBILE
        ==================================== */
 
     .hero {
@@ -723,7 +738,7 @@ footer p {
 
 
     /* ====================================
-       MOBILE HISTORY
+       MOBILE HISTORY INTRO
        ==================================== */
 
     .history-intro {
@@ -738,11 +753,16 @@ footer p {
         font-size: 18px;
     }
 
+
+    /* ====================================
+       MOBILE TIMELINE
+       ==================================== */
+
     .history-section {
         margin-left: -20px;
         margin-right: -20px;
 
-        padding: 50px 20px;
+        padding: 60px 20px;
     }
 
     .history-timeline {
@@ -750,20 +770,26 @@ footer p {
     }
 
 
-    /* Mobile timeline */
-
     .history-timeline::before {
         left: 12px;
+
         top: 20px;
+        bottom: 30px;
     }
+
 
     .history-timeline::after {
         left: 12px;
+
         top: 20px;
+
+        max-height: calc(100% - 50px);
     }
 
 
-    /* Mobile entries */
+    /* ====================================
+       MOBILE ENTRIES
+       ==================================== */
 
     .history-entry {
         display: block;
@@ -772,26 +798,34 @@ footer p {
 
         padding-left: 40px;
 
-        padding-bottom: 55px;
+        padding-bottom: 75px;
     }
 
 
-    /* Mobile dots */
+    /* ====================================
+       MOBILE DOTS
+       ==================================== */
 
     .timeline-dot {
         left: 12px;
+
         top: 20px;
+
+        width: 18px;
+        height: 18px;
     }
 
 
-    /* Mobile years */
+    /* ====================================
+       MOBILE YEARS
+       ==================================== */
 
     .history-year {
         text-align: left;
 
         padding-top: 0;
 
-        margin-bottom: 12px;
+        margin-bottom: 15px;
 
         font-size: 20px;
     }
@@ -801,7 +835,9 @@ footer p {
     }
 
 
-    /* Mobile cards */
+    /* ====================================
+       MOBILE CARDS
+       ==================================== */
 
     .history-content {
         padding: 25px 22px;
@@ -816,7 +852,9 @@ footer p {
     }
 
 
-    /* Mobile extra sections */
+    /* ====================================
+       MOBILE EXTRA SECTIONS
+       ==================================== */
 
     .history-extra {
         padding: 45px 0;
