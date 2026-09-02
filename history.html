@@ -1,144 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>History - Principality of Vithuanum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>History | Principality of Vithuanum</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
 </head>
 
-
 <body>
 
-<header>
-    <h1>History of Vithuanum</h1>
-    <p>The Constitutional History of the Principality</p>
-</header>
+    <!-- ========================================
+         GOVERNMENT HEADER
+         ======================================== -->
+
+    <header class="government-header">
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <div class="government-brand">
+
+            <img
+                src="coat-of-arms.png"
+                alt="Coat of Arms of Vithuanum">
+
+            <div>
+                <strong>PRINCIPALITY OF VITHUANUM</strong>
+                <span>Official Government Website</span>
+            </div>
+
+        </div>
+
+    </header>
 
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="government.html">Government</a>
-    <a href="territory.html">Territory</a>
-    <a href="diplomacy.html">Diplomacy</a>
-    <a href="constitution.html">Constitution</a>
-    <a href="get-involved.html">Get Involved</a>
-    <a href="citizenship.html">Citizenship</a>
-    <a href="political-parties.html">Political Parties</a>
-</nav>
+    <!-- ========================================
+         SIDE MENU
+         ======================================== -->
+
+    <nav id="side-menu" class="side-menu">
+
+        <div class="menu-header">
+
+            <strong>VITHUANUM</strong>
+
+            <button
+                onclick="toggleMenu()"
+                aria-label="Close navigation menu">
+                ×
+            </button>
+
+        </div>
+
+        <a href="index.html">Home</a>
+        <a href="government.html">Government</a>
+        <a href="history.html">History</a>
+        <a href="territory.html">Territory</a>
+        <a href="citizenship.html">Citizenship</a>
+        <a href="diplomacy.html">Diplomacy</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="political-parties.html">Political Parties</a>
+        <a href="news.html">News</a>
+
+    </nav>
 
 
+    <!-- ========================================
+         MENU OVERLAY
+         ======================================== -->
 
-<section>
-
-
-<h2>📜 The Constitutional History of Vithuanum</h2>
-
-
-<h2>Cargo (2023)</h2>
-
-<p>
-The origins of the Principality of Vithuanum date back to <strong>2023</strong>, when the nation was first established under the name <strong>Cargo</strong>.
-</p>
-
-<p>
-Cargo was organised as a <strong>communist state</strong>, founded on principles of collective governance and equality. During this period, the first foundations of the micronation were laid, including the development of its identity and community.
-</p>
-
-<p>
-Although the government differed greatly from today, Cargo remains recognised as the beginning of the nation's history.
-</p>
+    <div
+        id="menu-overlay"
+        class="menu-overlay"
+        onclick="toggleMenu()">
+    </div>
 
 
+    <!-- ========================================
+         MAIN CONTENT
+         ======================================== -->
 
-<h2>The Kingdom of Rütsi</h2>
+    <main>
 
-<p>
-As the nation developed, a new direction was taken and the state was reorganised under the name <strong>Rütsi</strong>.
-</p>
+        <!-- PAGE INTRO -->
 
-<p>
-With this transformation came a constitutional change from a communist state to a <strong>monarchy</strong>. The Crown became the centre of government, and greater emphasis was placed on national traditions, symbolism, and state-building.
-</p>
+        <section class="history-intro">
 
-<p>
-This marked the nation's first experience under monarchical rule.
-</p>
+            <p class="eyebrow">
+                HISTORY OF VITHUANUM
+            </p>
 
+            <h1>
+                The History of Vithuanum
+            </h1>
 
+            <p class="intro">
+                Vithuanum has developed through several historical eras
+                since its foundation in 2023. Explore the major periods
+                that shaped the Principality.
+            </p>
 
-<h2>The Kingdom of Hackendurry</h2>
-
-<p>
-Following further reforms, the nation adopted the name <strong>Hackendurry</strong>.
-</p>
-
-<p>
-Hackendurry continued as a <strong>monarchy</strong>, building upon the institutions established during the Rütsi era. During this period, the nation's administration, identity, and long-term vision continued to develop.
-</p>
-
-<p>
-Many traditions that continue today have their roots in this era.
-</p>
+        </section>
 
 
+        <!-- ========================================
+             TIMELINE
+             ======================================== -->
 
-<h2>The Principality of Vithuanum</h2>
+        <section class="history-section">
 
-<p>
-After a period of reflection and national reform, the nation adopted its present name, the <strong>Principality of Vithuanum</strong>.
-</p>
+            <div class="history-timeline">
 
-<p>
-Vithuanum established itself as a <strong>centralist state</strong>, with authority centred in the national government while maintaining a constitutional framework and a Head of State.
-</p>
+                <!-- ==================================
+                     CARGO
+                     ================================== -->
 
+                <article class="history-entry">
 
-<h3>The Modern Era</h3>
+                    <div class="history-year">
+                        2023
+                    </div>
 
-<p>
-The modern era has focused on:
-</p>
+                    <div class="history-content">
 
-<ul>
-<li>Establishing a Constitution and legal code</li>
-<li>Creating the six counties of Vithuanum</li>
-<li>Appointing a Prime Minister</li>
-<li>Expanding diplomatic relations with other micronations</li>
-<li>Building a welcoming community for citizens</li>
-</ul>
+                        <span class="history-label">
+                            ERA I
+                        </span>
 
+                        <h2>
+                            Cargo
+                        </h2>
 
-<p>
-The Government continues to promote unity, creativity, diplomacy, and responsible governance while preserving the history of the earlier states that led to the creation of Vithuanum.
-</p>
+                        <p class="history-type">
+                            Founding State
+                        </p>
 
+                        <p>
+                            Cargo represents the earliest known period
+                            in the history of Vithuanum and the origins
+                            of the nation.
+                        </p>
 
+                        <p>
+                            During this period, Cargo was established
+                            as a communist state and served as the
+                            foundation for the later development of
+                            Vithuanum.
+                        </p>
 
+                    </div>
 
-<h2>Legacy</h2>
-
-<p>
-The Principality of Vithuanum recognises <strong>Cargo</strong>, <strong>Rütsi</strong>, and <strong>Hackendurry</strong> as predecessor states in its historical development.
-</p>
-
-<p>
-Each era contributed to the nation's evolution, shaping its institutions, traditions, and identity. Together, they form a continuous historical timeline beginning in <strong>2023</strong> and continuing into the present day.
-</p>
-
-
-<h2>🏰 AVE VITHUANUM</h2>
-
-
-</section>
-
+                </article>
 
 
-<footer>
-<p>© Principality of Vithuanum</p>
-</footer>
+                <!-- ==================================
+                     RÜTSI
+                     ================================== -->
 
+                <article class="history-entry">
+
+                    <div class="history-year">
+                        Era II
+                    </div>
+
+                    <div class="history-content">
+
+                        <span class="history-label">
+                            ERA II
+                        </span>
+
+                        <h2>
+                            The Kingdom of Rütsi
+                        </h2>
+
+                        <p class="history-type">
+                            Monarchy
+                        </p>
+
+                        <p>
+                            Following the Cargo period, the nation
+                            developed into the Kingdom of Rütsi.
+                        </p>
+
+                        <p>
+                            This era introduced a monarchical system
+                            and marked an important stage in the
+                            political development of the nation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==================================
+                     HACKENDURRY
+                     ================================== -->
+
+                <article class="history-entry">
+
+                    <div class="history-year">
+                        Era III
+                    </div>
+
+                    <div class="history-content">
+
+                        <span class="history-label">
+                            ERA III
+                        </span>
+
+                        <h2>
+                            The Kingdom of Hackendurry
+                        </h2>
+
+                        <p class="history-type">
+                            Monarchy
+                        </p>
+
+                        <p>
+                            The Kingdom of Hackendurry followed the
+                            Kingdom of Rütsi and continued the
+                            nation's development under a monarchy.
+                        </p>
+
+                        <p>
+                            This period helped establish the political
+                            foundations that would eventually lead
+                            to the creation of modern Vithuanum.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==================================
+                     MODERN VITHUANUM
+                     ================================== -->
+
+                <article class="history-entry current-era">
+
+                    <div class="history-year">
+                        Present
+                    </div>
+
+                    <div class="history-content">
+
+                        <span class="history-label">
+                            CURRENT ERA
+                        </span>
+
+                        <h2>
+                            The Principality of Vithuanum
+                        </h2>
+
+                        <p class="history-type">
+                            Centralist Constitutional Monarchy
+                        </p>
+
+                        <p>
+                            The modern Principality of Vithuanum
+                            represents the current era of the nation.
+                        </p>
+
+                        <p>
+                            Vithuanum is governed as a centralist
+                            constitutional monarchy, established under
+                            the Constitution and supported by a structured
+                            government and national institutions.
+                        </p>
+
+                        <p>
+                            The Principality is organised into six
+                            counties and maintains a growing national
+                            community alongside diplomatic relations
+                            with other micronations.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             MODERN ERA
+             ======================================== -->
+
+        <section class="content-section history-extra">
+
+            <h2>
+                The Modern Era
+            </h2>
+
+            <p>
+                Modern Vithuanum is built around constitutional
+                government, national identity, community and
+                continued development.
+            </p>
+
+            <ul>
+                <li>Centralist constitutional monarchy</li>
+                <li>Six recognised counties</li>
+                <li>Constitution and legal framework</li>
+                <li>Prime Minister and Government</li>
+                <li>National Assembly</li>
+                <li>Diplomatic relations</li>
+                <li>Growing national community</li>
+            </ul>
+
+        </section>
+
+
+        <!-- ========================================
+             LEGACY
+             ======================================== -->
+
+        <section class="content-section history-extra">
+
+            <h2>
+                Legacy
+            </h2>
+
+            <p>
+                Each historical period contributed to the development
+                of the modern Principality. The transition from Cargo,
+                through the Kingdoms of Rütsi and Hackendurry, ultimately
+                led to the establishment of the present Vithuanian state.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================
+             THE FUTURE
+             ======================================== -->
+
+        <section class="content-section history-extra">
+
+            <h2>
+                The Future
+            </h2>
+
+            <p>
+                Vithuanum continues to develop through national projects,
+                government institutions, diplomacy, community activities
+                and the participation of its citizens.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+
+    <footer>
+
+        <strong>
+            Principality of Vithuanum
+        </strong>
+
+        <p>
+            Official Government Website
+        </p>
+
+        <p>
+            © Principality of Vithuanum
+        </p>
+
+    </footer>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+         ======================================== -->
+
+    <script src="script.js"></script>
 
 </body>
 
