@@ -1,517 +1,615 @@
-/* ========================================
+/* ==========================================
    VITHUANUM GOVERNMENT WEBSITE
-   ======================================== */
+   MAIN STYLESHEET
+   ========================================== */
+
+
+/* ==========================================
+   RESET
+   ========================================== */
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
     color: #1d1d1d;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #005ea8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
-/* ========================================
+/* ==========================================
    HEADER
-   ======================================== */
+   ========================================== */
 
-.government-header {
-    height: 90px;
+header {
+    height: 76px;
     background: #0b1f33;
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
     padding: 0 30px;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
 .menu-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: transparent;
+    color: #ffffff;
+    font-size: 25px;
     cursor: pointer;
-    padding: 10px 15px;
-    margin-right: 20px;
+    margin-right: 18px;
 }
 
 .menu-button:hover {
-    background: #163b5c;
+    background: rgba(255,255,255,0.1);
 }
 
-.government-brand {
+.header-brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
 }
 
-.government-brand img {
-    width: 55px;
-    height: 55px;
+.header-brand img {
+    width: 42px;
+    height: 42px;
     object-fit: contain;
-    border: none;
-    border-radius: 0;
 }
 
-.government-brand strong {
-    display: block;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-}
-
-.government-brand span {
-    display: block;
-    font-size: 14px;
-    margin-top: 4px;
-    color: #d9e5ef;
+.header-brand span {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 
-/* ========================================
+/* ==========================================
    SIDE MENU
-   ======================================== */
+   ========================================== */
 
-.side-menu {
+#side-menu {
     position: fixed;
     top: 0;
-    left: -350px;
-    width: 350px;
+    left: -340px;
+    width: 340px;
     height: 100vh;
     background: #ffffff;
-    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 0 15px rgba(0,0,0,0.2);
     z-index: 2000;
     transition: left 0.3s ease;
     overflow-y: auto;
 }
 
-.side-menu.open {
+#side-menu.open {
     left: 0;
 }
 
-.menu-header {
-    height: 90px;
+.side-menu-header {
+    height: 76px;
     background: #0b1f33;
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 25px;
+    padding: 0 22px;
+}
+
+.side-menu-header h2 {
+    margin: 0;
     font-size: 20px;
 }
 
-.menu-header button {
-    background: none;
+.close-menu {
     border: none;
-    color: white;
-    font-size: 35px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 30px;
     cursor: pointer;
 }
 
-.menu-header button:hover {
-    color: #c9a227;
+#side-menu nav {
+    padding: 15px 0;
 }
 
-.side-menu a {
+#side-menu nav a {
     display: block;
-    padding: 18px 25px;
-    color: #005ea8;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    border-bottom: 1px solid #dddddd;
+    padding: 15px 25px;
+    color: #1d1d1d;
+    font-size: 16px;
+    border-bottom: 1px solid #eeeeee;
 }
 
-.side-menu a:hover {
+#side-menu nav a:hover {
     background: #e8f1f8;
-    color: #003f70;
+    text-decoration: none;
+    color: #005ea8;
 }
 
 
-/* ========================================
-   MENU OVERLAY
-   ======================================== */
+/* ==========================================
+   OVERLAY
+   ========================================== */
 
-.menu-overlay {
+#menu-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.55);
+    inset: 0;
+    background: rgba(0,0,0,0.45);
     z-index: 1500;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
 }
 
-.menu-overlay.open {
-    display: block;
+#menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
 }
 
 
-/* ========================================
-   MAIN CONTENT
-   ======================================== */
+/* ==========================================
+   MAIN
+   ========================================== */
 
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 30px;
+    min-height: 70vh;
 }
 
 
-/* ========================================
+/* ==========================================
    HERO
-   ======================================== */
+   ========================================== */
 
 .hero {
-    padding: 70px 0 60px;
-    border-bottom: 1px solid #dddddd;
+    background: #0b1f33;
+    color: #ffffff;
+    padding: 80px 30px;
 }
 
-.eyebrow {
-    color: #555555;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    color: #0b1f33;
+    margin: 0 0 15px;
     font-size: 48px;
-    margin: 0 0 20px;
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
-.intro {
-    max-width: 800px;
-    font-size: 21px;
-    line-height: 1.6;
-    color: #333333;
-}
-
-.national-flag {
-    display: block;
-    width: 300px;
-    height: auto;
-    margin-top: 35px;
-    border: 1px solid #cccccc;
-    border-radius: 0;
+.hero p {
+    max-width: 750px;
+    font-size: 20px;
+    margin: 0;
 }
 
 
-/* ========================================
-   CONTENT SECTIONS
-   ======================================== */
+/* ==========================================
+   GENERAL CONTENT
+   ========================================== */
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
 
 .content-section {
-    padding: 50px 0;
-    border-bottom: 1px solid #dddddd;
+    margin-bottom: 55px;
 }
 
 .content-section h2 {
+    font-size: 30px;
     color: #0b1f33;
-    font-size: 32px;
-    margin: 0 0 20px;
-    border: none;
-    padding: 0;
+    margin-bottom: 18px;
+}
+
+.content-section h3 {
+    font-size: 22px;
+    color: #0b1f33;
 }
 
 .content-section p {
     max-width: 850px;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #333333;
 }
 
 
-/* ========================================
-   LINK GRID
-   ======================================== */
+/* ==========================================
+   CARDS
+   ========================================== */
 
+.card {
+    background: #ffffff;
+    border: 1px solid #d8dfe5;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+
+/* ==========================================
+   GOVERNMENT GRID
+   ========================================== */
+
+.government-grid,
+.values-grid,
 .link-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    margin-top: 30px;
 }
 
-.link-grid a {
-    display: block;
-    padding: 25px;
-    border: 1px solid #cccccc;
-    border-left: 6px solid #005ea8;
-    text-decoration: none;
+.government-card {
     background: #ffffff;
+    border: 1px solid #d8dfe5;
+    border-top: 5px solid #005ea8;
+    padding: 25px;
 }
 
-.link-grid a:hover {
+.government-card h3 {
+    margin-top: 0;
+    color: #0b1f33;
+}
+
+.government-list {
+    padding-left: 20px;
+}
+
+
+/* ==========================================
+   VALUES
+   ========================================== */
+
+.values-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.values-grid div {
     background: #e8f1f8;
+    padding: 20px;
+    border-left: 4px solid #005ea8;
 }
 
-.link-grid strong {
+
+/* ==========================================
+   LINKS
+   ========================================== */
+
+.link-grid {
+    margin-top: 25px;
+}
+
+.link-card {
     display: block;
-    color: #005ea8;
-    font-size: 21px;
-    margin-bottom: 10px;
+    border: 1px solid #d8dfe5;
+    padding: 25px;
+    color: #1d1d1d;
+    transition: 0.2s ease;
 }
 
-.link-grid span {
-    color: #333333;
-    font-size: 16px;
+.link-card:hover {
+    border-color: #005ea8;
+    background: #e8f1f8;
+    text-decoration: none;
 }
-
-
-/* ========================================
-   MAIN LINKS
-   ======================================== */
 
 .main-link {
     display: inline-block;
-    margin-top: 15px;
-    color: #005ea8;
-    font-size: 18px;
+    background: #005ea8;
+    color: #ffffff;
+    padding: 13px 22px;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .main-link:hover {
-    color: #003f70;
+    background: #0b1f33;
+    text-decoration: none;
 }
 
 
-/* ========================================
+/* ==========================================
    HISTORY INTRO
-   ======================================== */
+   ========================================== */
 
 .history-intro {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 70px 0 50px;
-    border-bottom: 1px solid #dddddd;
+    max-width: 850px;
+    margin-bottom: 60px;
 }
 
 .history-intro h1 {
     color: #0b1f33;
-    font-size: 48px;
-    margin: 0 0 20px;
-    line-height: 1.15;
+    font-size: 42px;
+    margin-bottom: 15px;
 }
 
-.history-intro .intro {
-    max-width: 800px;
-    font-size: 21px;
-    line-height: 1.6;
-    color: #333333;
+.history-intro p {
+    font-size: 18px;
 }
 
 
-/* ========================================
-   HISTORY TIMELINE
-   ======================================== */
+/* ==========================================
+   HISTORY SECTION
+   ========================================== */
 
 .history-section {
-    margin-left: -30px;
-    margin-right: -30px;
-    padding: 100px 30px;
     background: #e8f1f8;
-    overflow: hidden;
+    padding: 80px 30px;
 }
+
+.history-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   TIMELINE
+   ========================================== */
 
 .history-timeline {
-    --timeline-progress: 0%;
-
-    max-width: 1000px;
-    margin: 0 auto;
-
     position: relative;
-
-    padding: 40px 0 80px;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 40px 0 100px;
 }
 
 
-/* ========================================
-   TIMELINE BACKGROUND LINE
-   ======================================== */
+/* ==========================================
+   MAIN GREY LINE
+   ========================================== */
 
 .history-timeline::before {
     content: "";
-
     position: absolute;
-
-    left: 150px;
-
     top: 40px;
+    bottom: 100px;
 
-    bottom: 80px;
+    /*
+       This is where the timeline lives.
+       It lines up with the centre of the
+       180px timeline column.
+    */
+    left: 180px;
 
-    width: 4px;
-
-    background: #c9d5df;
-
-    border-radius: 4px;
-}
-
-
-/* ========================================
-   BLUE PROGRESS LINE
-   ======================================== */
-
-.history-timeline::after {
-    content: "";
-
-    position: absolute;
-
-    left: 150px;
-
-    top: 40px;
-
-    width: 4px;
-
-    height: var(--timeline-progress);
-
-    max-height: calc(100% - 120px);
-
-    background: #005ea8;
-
-    border-radius: 4px;
-
+    width: 5px;
+    background: #c7d0d8;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
 
-/* ========================================
+/* ==========================================
+   BLUE PROGRESS LINE
+   ========================================== */
+
+.timeline-progress {
+    position: absolute;
+
+    left: 180px;
+
+    width: 5px;
+
+    background: #005ea8;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    border-radius: 5px;
+}
+
+
+/* ==========================================
    HISTORY ENTRIES
-   ======================================== */
+   ========================================== */
 
 .history-entry {
-    display: grid;
-
-    grid-template-columns: 150px 1fr;
-
-    gap: 45px;
-
     position: relative;
 
+    display: grid;
+
     /*
-       THIS IS THE IMPORTANT PART.
-       Each era gets a large amount of
-       vertical space so the dots are
-       clearly separated.
+       BIGGER FIRST COLUMN.
+       This physically pushes the text
+       away from the timeline.
     */
+    grid-template-columns: 180px minmax(0, 1fr);
 
-    height: 560px;
+    /*
+       THIS controls the horizontal gap.
+    */
+    column-gap: 120px;
 
-    padding-bottom: 100px;
+    align-items: start;
+
+    /*
+       THIS controls the vertical distance
+       between each era.
+    */
+    margin-bottom: 300px;
+
+    padding: 0;
+
+    min-height: 0;
+    height: auto;
 }
 
 
-/* Last entry doesn't need as much space */
+/* Last entry doesn't need extra space */
 
 .history-entry:last-child {
-    height: 500px;
+    margin-bottom: 0;
 }
 
 
-/* ========================================
-   TIMELINE DOT
-   ======================================== */
+/* ==========================================
+   YEAR
+   ========================================== */
+
+.history-year {
+    text-align: right;
+
+    padding-right: 35px;
+
+    padding-top: 5px;
+
+    font-size: 26px;
+    font-weight: bold;
+
+    color: #0b1f33;
+
+    position: relative;
+    z-index: 4;
+}
+
+
+/* ==========================================
+   TIMELINE CIRCLE
+   ========================================== */
 
 .timeline-dot {
     position: absolute;
 
-    left: 150px;
+    /*
+       EXACTLY THE SAME X POSITION
+       AS THE TIMELINE LINE.
+    */
+    left: 180px;
 
-    top: 40px;
+    top: 8px;
 
-    width: 22px;
-
-    height: 22px;
+    width: 26px;
+    height: 26px;
 
     background: #ffffff;
 
-    border: 4px solid #005ea8;
+    border: 5px solid #005ea8;
 
     border-radius: 50%;
 
     transform: translateX(-50%);
 
-    z-index: 3;
+    z-index: 5;
 
     transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
-/* Active dot */
+/* Current era circle */
 
 .history-entry.active .timeline-dot {
     background: #c9a227;
 
     border-color: #c9a227;
 
-    transform: translateX(-50%) scale(1.35);
+    transform:
+        translateX(-50%)
+        scale(1.3);
 
     box-shadow:
-        0 0 0 8px rgba(201, 162, 39, 0.18);
+        0 0 0 8px rgba(201,162,39,0.2);
 }
 
 
-/* ========================================
-   YEARS
-   ======================================== */
+/* Passed circles */
 
-.history-year {
-    font-size: 22px;
-
-    font-weight: bold;
-
-    color: #005ea8;
-
-    text-align: right;
-
-    padding-top: 30px;
-
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.history-entry.active .history-year {
-    color: #c9a227;
-
-    transform: translateX(-5px);
+.timeline-dot.passed {
+    background: #005ea8;
+    border-color: #005ea8;
 }
 
 
-/* ========================================
-   HISTORY CARD
-   ======================================== */
+/* Keep active circle gold */
+
+.history-entry.active .timeline-dot.passed {
+    background: #c9a227;
+    border-color: #c9a227;
+}
+
+
+/* ==========================================
+   MOVING GOLD DOT
+   ========================================== */
+
+.timeline-runner {
+    position: absolute;
+
+    left: 180px;
+
+    width: 22px;
+    height: 22px;
+
+    background: #c9a227;
+
+    border: 4px solid #ffffff;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 0 0 5px rgba(201,162,39,0.25);
+
+    transition: top 0.12s linear;
+}
+
+
+/* ==========================================
+   HISTORY CONTENT CARD
+   ========================================== */
 
 .history-content {
     background: #ffffff;
 
     border-left: 5px solid #005ea8;
 
-    padding: 32px 36px;
+    padding: 32px;
 
     box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+        0 2px 8px rgba(0,0,0,0.08);
 
-    opacity: 0.55;
+    opacity: 0.6;
 
-    transform: translateY(25px);
+    transform: translateY(20px);
 
     transition:
-        opacity 0.5s ease,
-        transform 0.5s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        border-color 0.4s ease;
 }
 
 
@@ -523,348 +621,208 @@ main {
     transform: translateY(0);
 
     border-left-color: #c9a227;
-
-    box-shadow:
-        0 5px 18px rgba(0, 0, 0, 0.12);
 }
 
 
-/* ========================================
-   ERA LABEL
-   ======================================== */
+.history-content h2 {
+    margin-top: 0;
+
+    color: #0b1f33;
+
+    font-size: 30px;
+}
+
+
+.history-content p {
+    margin-bottom: 15px;
+}
+
 
 .history-label {
-    display: block;
-
-    color: #005ea8;
+    display: inline-block;
 
     font-size: 13px;
 
     font-weight: bold;
 
-    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #005ea8;
 
     margin-bottom: 8px;
 }
 
-.history-entry.active .history-label {
-    color: #c9a227;
-}
-
-
-/* ========================================
-   HISTORY HEADINGS
-   ======================================== */
-
-.history-content h2 {
-    color: #0b1f33;
-
-    font-size: 32px;
-
-    margin: 0 0 8px;
-
-    line-height: 1.2;
-}
-
-
-/* ========================================
-   HISTORY TYPE
-   ======================================== */
 
 .history-type {
-    color: #555555 !important;
-
-    font-size: 15px !important;
-
     font-weight: bold;
 
-    margin: 0 0 20px;
+    color: #555555;
+
+    margin-bottom: 18px;
 }
 
 
-/* ========================================
-   HISTORY TEXT
-   ======================================== */
-
-.history-content p {
-    color: #333333;
-
-    font-size: 17px;
-
-    line-height: 1.65;
-
-    margin: 0 0 16px;
-}
-
-.history-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ========================================
+/* ==========================================
    CURRENT ERA
-   ======================================== */
+   ========================================== */
 
-.current-era .history-content {
-    border-left-color: #c9a227;
-}
-
-.current-era .history-year {
-    color: #c9a227;
+.current-era {
+    border-top: 5px solid #c9a227;
 }
 
 
-/* ========================================
-   EXTRA HISTORY SECTIONS
-   ======================================== */
-
-.history-extra {
-    padding: 55px 0;
-
-    border-bottom: 1px solid #dddddd;
-}
-
-.history-extra h2 {
-    color: #0b1f33;
-
-    font-size: 32px;
-
-    margin: 0 0 20px;
-}
-
-.history-extra p {
-    max-width: 850px;
-
-    color: #333333;
-
-    font-size: 18px;
-
-    line-height: 1.7;
-}
-
-.history-extra ul {
-    max-width: 850px;
-
-    padding-left: 25px;
-}
-
-.history-extra li {
-    color: #333333;
-
-    font-size: 17px;
-
-    margin: 12px 0;
-}
-
-
-/* ========================================
+/* ==========================================
    FOOTER
-   ======================================== */
+   ========================================== */
 
 footer {
     background: #0b1f33;
-
-    color: white;
-
-    padding: 45px 30px;
-
-    margin-top: 0;
+    color: #ffffff;
+    padding: 40px 30px;
 }
 
-footer strong {
-    font-size: 20px;
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 footer p {
-    color: #d9e5ef;
+    margin: 5px 0;
+}
 
-    font-size: 15px;
-
-    margin: 10px 0;
+footer a {
+    color: #ffffff;
 }
 
 
-/* ========================================
+/* ==========================================
    MOBILE
-   ======================================== */
+   ========================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
-    .government-header {
-        height: 75px;
-        padding: 0 15px;
+    header {
+        padding: 0 18px;
     }
 
-    .menu-button {
-        font-size: 26px;
-        margin-right: 10px;
+    .header-brand span {
+        font-size: 18px;
     }
-
-    .government-brand img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .government-brand strong {
-        font-size: 15px;
-    }
-
-    .government-brand span {
-        font-size: 11px;
-    }
-
-    .side-menu {
-        width: 85%;
-        left: -85%;
-    }
-
-    main {
-        padding: 0 20px;
-    }
-
-
-    /* ====================================
-       NORMAL MOBILE
-       ==================================== */
 
     .hero {
-        padding: 45px 0;
+        padding: 55px 20px;
     }
 
     .hero h1 {
         font-size: 36px;
     }
 
-    .intro {
-        font-size: 18px;
+    .content {
+        padding: 45px 20px;
     }
 
-    .national-flag {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .content-section {
-        padding: 40px 0;
-    }
-
-    .content-section h2 {
-        font-size: 27px;
-    }
-
+    .government-grid,
+    .values-grid,
     .link-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* ====================================
-       MOBILE HISTORY
-       ==================================== */
-
-    .history-intro {
-        padding: 45px 0;
-    }
-
-    .history-intro h1 {
-        font-size: 36px;
-    }
-
-    .history-intro .intro {
-        font-size: 18px;
-    }
+    /* ==============================
+       MOBILE TIMELINE
+       ============================== */
 
     .history-section {
-        margin-left: -20px;
-        margin-right: -20px;
-
-        padding: 60px 20px;
+        padding: 55px 20px;
     }
 
     .history-timeline {
-        padding-top: 20px;
-        padding-bottom: 40px;
+        padding-left: 0;
     }
 
-
-    /* Mobile timeline */
 
     .history-timeline::before {
-        left: 12px;
-        top: 20px;
-        bottom: 40px;
-    }
-
-    .history-timeline::after {
-        left: 12px;
-        top: 20px;
-        max-height: calc(100% - 60px);
+        left: 20px;
     }
 
 
-    /* Mobile entries */
+    .timeline-progress {
+        left: 20px;
+    }
+
+
+    .timeline-runner {
+        left: 20px;
+    }
+
 
     .history-entry {
         display: block;
 
-        height: 520px;
+        margin-bottom: 180px;
 
-        padding-left: 40px;
-
-        padding-bottom: 60px;
+        padding-left: 65px;
     }
 
-    .history-entry:last-child {
-        height: 500px;
-    }
-
-
-    /* Mobile dots */
 
     .timeline-dot {
-        left: 12px;
-        top: 20px;
-
-        width: 19px;
-        height: 19px;
+        left: 20px;
     }
 
-
-    /* Mobile years */
 
     .history-year {
         text-align: left;
 
-        padding-top: 0;
+        padding: 0;
 
         margin-bottom: 15px;
 
-        font-size: 20px;
+        font-size: 22px;
     }
 
-    .history-entry.active .history-year {
-        transform: none;
-    }
-
-
-    /* Mobile cards */
 
     .history-content {
-        padding: 25px 22px;
+        padding: 24px;
     }
+
 
     .history-content h2 {
-        font-size: 26px;
+        font-size: 25px;
     }
 
-    .history-content p {
-        font-size: 16px;
+}
+
+
+/* ==========================================
+   SMALL PHONES
+   ========================================== */
+
+@media (max-width: 500px) {
+
+    #side-menu {
+        width: 290px;
+        left: -290px;
     }
 
+    .hero h1 {
+        font-size: 30px;
+    }
 
-    /* Mobile extra sections */
+    .history-entry {
+        padding-left: 55px;
+        margin-bottom: 140px;
+    }
 
-    .history-extra {
-        padding: 45px 0;
+    .history-timeline::before,
+    .timeline-progress {
+        left: 16px;
+    }
+
+    .timeline-runner,
+    .timeline-dot {
+        left: 16px;
     }
 
 }
