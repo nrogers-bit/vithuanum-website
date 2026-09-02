@@ -1,14 +1,15 @@
-/* ========================================
+/* ==========================================
    VITHUANUM GOVERNMENT WEBSITE
-   MAIN SCRIPT
-   ======================================== */
+   MAIN JAVASCRIPT
+   ========================================== */
 
 
-/* ========================================
+/* ==========================================
    SIDE MENU
-   ======================================== */
+   ========================================== */
 
 function toggleMenu() {
+
     const menu = document.getElementById("side-menu");
     const overlay = document.getElementById("menu-overlay");
 
@@ -16,88 +17,203 @@ function toggleMenu() {
         return;
     }
 
-    menu.classList.toggle("open");
-    overlay.classList.toggle("open");
+    const isOpen = menu.classList.contains("open");
+
+    if (isOpen) {
+        menu.classList.remove("open");
+        overlay.classList.remove("open");
+        document.body.classList.remove("menu-open");
+    } else {
+        menu.classList.add("open");
+        overlay.classList.add("open");
+        document.body.classList.add("menu-open");
+    }
 }
 
 
-/* ========================================
-   CLOSE MENU WITH ESCAPE
-   ======================================== */
+/* ==========================================
+   CLOSE MENU
+   ========================================== */
+
+function closeMenu() {
+
+    const menu = document.getElementById("side-menu");
+    const overlay = document.getElementById("menu-overlay");
+
+    if (menu) {
+        menu.classList.remove("open");
+    }
+
+    if (overlay) {
+        overlay.classList.remove("open");
+    }
+
+    document.body.classList.remove("menu-open");
+}
+
+
+/* ==========================================
+   ESCAPE KEY
+   ========================================== */
 
 document.addEventListener("keydown", function(event) {
 
     if (event.key === "Escape") {
-
-        const menu = document.getElementById("side-menu");
-        const overlay = document.getElementById("menu-overlay");
-
-        if (menu) {
-            menu.classList.remove("open");
-        }
-
-        if (overlay) {
-            overlay.classList.remove("open");
-        }
+        closeMenu();
     }
 
 });
 
 
-/* ========================================
-   HISTORY TIMELINE
-   ======================================== */
+/* ==========================================
+   PAGE LOADED
+   ========================================== */
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const timeline = document.querySelector(".history-timeline");
 
-    /*
-       If this isn't the History page,
-       stop here.
-    */
+    /* ======================================
+       CLOSE MENU WHEN OVERLAY IS CLICKED
+       ====================================== */
+
+    const overlay = document.getElementById("menu-overlay");
+
+    if (overlay) {
+
+        overlay.addEventListener("click", function() {
+            closeMenu();
+        });
+
+    }
+
+
+    /* ======================================
+       CLOSE MENU AFTER CLICKING A LINK
+       ====================================== */
+
+    const menuLinks = document.querySelectorAll("#side-menu a");
+
+    menuLinks.forEach(function(link) {
+
+        link.addEventListener("click", function() {
+            closeMenu();
+        });
+
+    });
+
+
+    /* ======================================
+       HISTORY TIMELINE
+       ====================================== */
+
+    const timeline =
+        document.querySelector(".history-timeline");
 
     if (!timeline) {
         return;
     }
 
 
-    const entries = Array.from(
-        document.querySelectorAll(".history-entry")
-    );
+    /* ======================================
+       FIND HISTORY ENTRIES
+       ====================================== */
 
+    const entries =
+        Array.from(
+            timeline.querySelectorAll(".history-entry")
+        );
 
     if (entries.length === 0) {
         return;
     }
 
 
-    /* ====================================
-       CREATE TIMELINE DOTS
-       ==================================== */
+    /* ======================================
+       CREATE DOTS
+       ====================================== */
 
-    entries.forEach(function(entry) {
+    entries.forEach(function(entry, index) {
 
-        /*
-           Don't create a second dot if one
-           already exists in the HTML.
-        */
+        let dot =
+            entry.querySelector(".timeline-dot");
 
-        if (!entry.querySelector(".timeline-dot")) {
+        if (!dot) {
 
-            const dot = document.createElement("div");
+            dot =
+                document.createElement("div");
 
             dot.className = "timeline-dot";
 
             entry.appendChild(dot);
         }
 
+        dot.dataset.index = index;
+
     });
 
 
-    /* ====================================
+    /* ======================================
+       CREATE MOVING DOT
+       ====================================== */
+
+    let movingDot =
+        timeline.querySelector(".timeline-moving-dot");
+
+    if (!movingDot) {
+
+        movingDot =
+            document.createElement("div");
+
+        movingDot.className =
+            "timeline-moving-dot";
+
+        timeline.appendChild(movingDot);
+    }
+
+
+    /* ======================================
+       CREATE PROGRESS LINE
+       ====================================== */
+
+    let progressLine =
+        timeline.querySelector(".timeline-progress");
+
+    if (!progressLine) {
+
+        progressLine =
+            document.createElement("div");
+
+        progressLine.className =
+            "timeline-progress";
+
+        timeline.appendChild(progressLine);
+    }
+
+
+    /* ======================================
+       GET DOT POSITION
+       ====================================== */
+
+    function getDotPosition(dot) {
+
+        const timelineRect =
+            timeline.getBoundingClientRect();
+
+        const dotRect =
+            dot.getBoundingClientRect();
+
+        return (
+            dotRect.top -
+            timelineRect.top +
+            dotRect.height / 2
+        );
+
+    }
+
+
+    /* ======================================
        UPDATE TIMELINE
-       ==================================== */
+       ====================================== */
 
     function updateTimeline() {
 
@@ -107,147 +223,226 @@ document.addEventListener("DOMContentLoaded", function() {
         const viewportHeight =
             window.innerHeight;
 
-
         /*
-           The middle of the screen is our
-           activation point.
+           The moving dot follows the middle
+           of the screen while scrolling.
         */
 
-        const triggerPoint =
+        const screenPoint =
             viewportHeight * 0.5;
 
-
-        /*
-           Calculate how far the user has
-           travelled through the timeline.
-        */
-
-        let progress =
-            triggerPoint - timelineRect.top;
+        let position =
+            screenPoint -
+            timelineRect.top;
 
 
-        const timelineHeight =
-            timeline.offsetHeight;
+        /* ==================================
+           TIMELINE LIMITS
+           ================================== */
+
+        const firstDot =
+            entries[0].querySelector(".timeline-dot");
+
+        const lastDot =
+            entries[entries.length - 1]
+                .querySelector(".timeline-dot");
+
+        if (!firstDot || !lastDot) {
+            return;
+        }
 
 
-        progress = Math.max(
-            0,
-            Math.min(progress, timelineHeight)
-        );
+        const firstPosition =
+            getDotPosition(firstDot);
+
+        const lastPosition =
+            getDotPosition(lastDot);
 
 
-        const percentage =
-            (progress / timelineHeight) * 100;
+        /* ==================================
+           KEEP DOT INSIDE TIMELINE
+           ================================== */
+
+        position =
+            Math.max(
+                firstPosition,
+                Math.min(
+                    position,
+                    lastPosition
+                )
+            );
 
 
-        /*
-           Send the progress percentage
-           to the CSS.
-        */
+        /* ==================================
+           MOVE THE DOT
+           ================================== */
 
-        timeline.style.setProperty(
-            "--timeline-progress",
-            percentage + "%"
-        );
+        movingDot.style.top =
+            position + "px";
 
 
-        /* =================================
+        /* ==================================
+           GROW BLUE PROGRESS LINE
+           ================================== */
+
+        progressLine.style.top =
+            firstPosition + "px";
+
+        progressLine.style.height =
+            Math.max(
+                0,
+                position - firstPosition
+            ) + "px";
+
+
+        /* ==================================
            FIND CURRENT ERA
-           ================================= */
+           ================================== */
 
-        let activeEntry = entries[0];
+        let currentIndex = 0;
 
-        let closestDistance = Infinity;
+        let smallestDistance =
+            Infinity;
 
 
-        entries.forEach(function(entry) {
+        entries.forEach(function(entry, index) {
 
-            const rect =
-                entry.getBoundingClientRect();
+            const dot =
+                entry.querySelector(".timeline-dot");
 
-            const entryPoint =
-                rect.top + (rect.height / 2);
+            if (!dot) {
+                return;
+            }
 
+            const dotPosition =
+                getDotPosition(dot);
 
             const distance =
-                Math.abs(entryPoint - triggerPoint);
+                Math.abs(
+                    dotPosition - position
+                );
 
+            if (distance < smallestDistance) {
 
-            /*
-               Select the era closest to the
-               middle of the screen.
-            */
+                smallestDistance =
+                    distance;
 
-            if (distance < closestDistance) {
-
-                closestDistance = distance;
-
-                activeEntry = entry;
+                currentIndex =
+                    index;
             }
 
         });
 
 
-        /* =================================
+        /* ==================================
            UPDATE ACTIVE ERA
-           ================================= */
+           ================================== */
 
-        entries.forEach(function(entry) {
+        entries.forEach(function(entry, index) {
 
-            entry.classList.remove("active");
+            if (index === currentIndex) {
+
+                entry.classList.add("active");
+
+            } else {
+
+                entry.classList.remove("active");
+
+            }
 
         });
 
 
-        if (activeEntry) {
+        /* ==================================
+           HIGHLIGHT PASSED DOTS
+           ================================== */
 
-            activeEntry.classList.add("active");
+        entries.forEach(function(entry, index) {
 
-        }
+            const dot =
+                entry.querySelector(".timeline-dot");
+
+            if (!dot) {
+                return;
+            }
+
+            const dotPosition =
+                getDotPosition(dot);
+
+            if (dotPosition <= position) {
+
+                dot.classList.add("passed");
+
+            } else {
+
+                dot.classList.remove("passed");
+
+            }
+
+        });
 
     }
 
 
-    /* ====================================
-       SCROLL EVENT
-       ==================================== */
+    /* ======================================
+       SMOOTH SCROLL UPDATE
+       ====================================== */
 
-    let ticking = false;
+    let animationFrame = null;
 
+    function requestUpdate() {
 
-    window.addEventListener("scroll", function() {
+        if (animationFrame !== null) {
+            return;
+        }
 
-        if (!ticking) {
-
+        animationFrame =
             window.requestAnimationFrame(function() {
 
                 updateTimeline();
 
-                ticking = false;
+                animationFrame = null;
 
             });
 
-            ticking = true;
-        }
-
-    });
+    }
 
 
-    /* ====================================
-       RESIZE EVENT
-       ==================================== */
+    /* ======================================
+       SCROLL
+       ====================================== */
 
-    window.addEventListener("resize", function() {
+    window.addEventListener(
+        "scroll",
+        requestUpdate,
+        { passive: true }
+    );
 
-        updateTimeline();
 
-    });
+    /* ======================================
+       RESIZE
+       ====================================== */
+
+    window.addEventListener(
+        "resize",
+        requestUpdate
+    );
 
 
-    /* ====================================
-       INITIAL UPDATE
-       ==================================== */
+    /* ======================================
+       INITIAL POSITION
+       ====================================== */
 
     updateTimeline();
+
+
+    /* ======================================
+       HANDLE PAGE LOAD IMAGES
+       ====================================== */
+
+    window.addEventListener(
+        "load",
+        updateTimeline
+    );
 
 });
