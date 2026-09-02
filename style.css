@@ -19,10 +19,18 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     font-family: Arial, Helvetica, sans-serif;
+
     color: #1d1d1d;
     background: #ffffff;
+
     line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -46,6 +54,7 @@ button {
 .government-header {
     width: 100%;
     height: 76px;
+
     background: #0b1f33;
     color: #ffffff;
 
@@ -56,11 +65,14 @@ button {
 
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
 
 
-/* MENU BUTTON */
+/* ==========================================
+   MENU BUTTON
+   ========================================== */
 
 .menu-button {
     width: 44px;
@@ -69,6 +81,7 @@ button {
     margin-right: 18px;
 
     background: transparent;
+
     border: 1px solid rgba(255, 255, 255, 0.6);
 
     color: #ffffff;
@@ -83,11 +96,14 @@ button {
 }
 
 
-/* GOVERNMENT BRAND */
+/* ==========================================
+   GOVERNMENT BRAND
+   ========================================== */
 
 .government-brand {
     display: flex;
     align-items: center;
+
     gap: 14px;
 }
 
@@ -239,432 +255,73 @@ main {
 
 
 /* ==========================================
-   HISTORY INTRO
+   HOMEPAGE HERO
    ========================================== */
 
-.history-intro {
-    max-width: 1100px;
+.hero {
+    background: #0b1f33;
 
-    margin: 0 auto;
+    color: #ffffff;
 
-    padding: 70px 30px 60px;
+    padding: 70px 30px 80px;
+
+    text-align: left;
 }
 
-.history-intro .eyebrow {
-    margin: 0 0 10px;
+.hero .eyebrow {
+    max-width: 1100px;
 
-    color: #005ea8;
+    margin: 0 auto 8px;
+
+    color: #ffffff;
 
     font-size: 14px;
+
     font-weight: bold;
 
     letter-spacing: 1.5px;
 }
 
-.history-intro h1 {
-    margin: 0 0 20px;
-
-    color: #0b1f33;
-
-    font-size: 46px;
-    line-height: 1.15;
-}
-
-.history-intro .intro {
-    max-width: 800px;
-
-    margin: 0;
-
-    font-size: 19px;
-
-    color: #444444;
-}
-
-
-/* ==========================================
-   HISTORY SECTION
-   ========================================== */
-
-.history-section {
-    width: 100%;
-
-    background: #e8f1f8;
-
-    padding: 80px 30px;
-}
-
-
-/* ==========================================
-   TIMELINE
-   ========================================== */
-
-.history-timeline {
-    position: relative;
-
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 60px 0 120px;
-}
-
-
-/* ==========================================
-   GREY TIMELINE
-   ========================================== */
-
-.history-timeline::before {
-    content: "";
-
-    position: absolute;
-
-    /*
-       THE TIMELINE IS AT 250PX.
-    */
-
-    left: 250px;
-
-    top: 60px;
-    bottom: 120px;
-
-    width: 5px;
-
-    background: #c5cdd4;
-
-    transform: translateX(-50%);
-
-    z-index: 1;
-}
-
-
-/* ==========================================
-   BLUE PROGRESS LINE
-   ========================================== */
-
-.timeline-progress {
-    position: absolute;
-
-    left: 250px;
-
-    width: 5px;
-
-    background: #005ea8;
-
-    transform: translateX(-50%);
-
-    z-index: 2;
-
-    border-radius: 5px;
-
-    pointer-events: none;
-}
-
-
-/* ==========================================
-   HISTORY ENTRY
-   ========================================== */
-
-.history-entry {
-    position: relative;
-
-    /*
-       THREE SEPARATE COLUMNS:
-
-       1. YEAR
-       2. TIMELINE
-       3. CONTENT
-    */
-
-    display: grid;
-
-    grid-template-columns: 150px 100px minmax(0, 1fr);
-
-    column-gap: 0;
-
-    align-items: start;
-
-    width: 100%;
-
-    min-height: 0;
-    height: auto;
-
-    margin: 0 0 300px 0;
-
-    padding: 0;
-}
-
-.history-entry:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ==========================================
-   YEAR
-   ========================================== */
-
-.history-year {
-    grid-column: 1;
-
-    padding-top: 2px;
-    padding-right: 30px;
-
-    text-align: right;
-
-    color: #0b1f33;
-
-    font-size: 25px;
-
-    font-weight: bold;
-
-    line-height: 1.3;
-}
-
-
-/* ==========================================
-   CONTENT
-   ========================================== */
-
-.history-content {
-    grid-column: 3;
-
-    width: 100%;
-
-    background: #ffffff;
-
-    border-left: 5px solid #005ea8;
-
-    padding: 32px;
-
-    box-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.08);
-
-    opacity: 0.55;
-
-    transform: translateY(20px);
-
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease,
-        border-color 0.4s ease;
-}
-
-
-/* ACTIVE CONTENT */
-
-.history-entry.active .history-content {
-    opacity: 1;
-
-    transform: translateY(0);
-
-    border-left-color: #c9a227;
-}
-
-
-/* ==========================================
-   TIMELINE CIRCLES
-   ========================================== */
-
-.timeline-dot {
-    position: absolute;
-
-    /*
-       150PX YEAR
-       + 100PX TIMELINE COLUMN
-       = 250PX
-    */
-
-    left: 250px;
-
-    top: 3px;
-
-    width: 30px;
-    height: 30px;
-
-    background: #ffffff;
-
-    border: 5px solid #005ea8;
-
-    border-radius: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 5;
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-/* ACTIVE CIRCLE */
-
-.history-entry.active .timeline-dot {
-    background: #c9a227;
-
-    border-color: #c9a227;
-
-    transform:
-        translateX(-50%)
-        scale(1.3);
-
-    box-shadow:
-        0 0 0 8px rgba(201, 162, 39, 0.2);
-}
-
-
-/* PASSED CIRCLE */
-
-.timeline-dot.passed {
-    background: #005ea8;
-
-    border-color: #005ea8;
-}
-
-
-/* ACTIVE OVERRIDES PASSED */
-
-.history-entry.active .timeline-dot.passed {
-    background: #c9a227;
-
-    border-color: #c9a227;
-}
-
-
-/* ==========================================
-   MOVING GOLD CIRCLE
-   ========================================== */
-
-.timeline-runner {
-    position: absolute;
-
-    left: 250px;
-
-    width: 24px;
-    height: 24px;
-
-    background: #c9a227;
-
-    border: 4px solid #ffffff;
-
-    border-radius: 50%;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 10;
-
-    pointer-events: none;
-
-    box-shadow:
-        0 0 0 5px rgba(201, 162, 39, 0.22);
-
-    transition: top 0.12s linear;
-}
-
-
-/* ==========================================
-   HISTORY LABEL
-   ========================================== */
-
-.history-label {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    color: #005ea8;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 1.2px;
-
-    text-transform: uppercase;
-}
-
-
-/* ==========================================
-   HISTORY TITLE
-   ========================================== */
-
-.history-content h2 {
-    margin: 0 0 10px;
-
-    color: #0b1f33;
-
-    font-size: 30px;
-
-    line-height: 1.2;
-}
-
-
-/* ==========================================
-   HISTORY TYPE
-   ========================================== */
-
-.history-type {
-    margin: 0 0 20px;
-
-    color: #555555;
-
-    font-weight: bold;
-}
-
-
-/* ==========================================
-   HISTORY PARAGRAPHS
-   ========================================== */
-
-.history-content p {
-    margin-top: 0;
-
-    margin-bottom: 16px;
-}
-
-.history-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ==========================================
-   CURRENT ERA
-   ========================================== */
-
-.current-era .history-content {
-    border-top: 5px solid #c9a227;
-}
-
-
-/* ==========================================
-   EXTRA HISTORY SECTIONS
-   ========================================== */
-
-.history-extra {
+.hero h1 {
     max-width: 1100px;
 
-    margin: 0 auto;
+    margin: 0 auto 18px;
 
-    padding: 60px 30px;
+    color: #ffffff;
+
+    font-size: 52px;
+
+    line-height: 1.1;
 }
 
-.history-extra h2 {
-    color: #0b1f33;
+.hero .intro {
+    max-width: 700px;
 
-    font-size: 30px;
+    margin: 0 auto 35px;
 
-    margin-top: 0;
+    color: #ffffff;
+
+    font-size: 19px;
 }
 
-.history-extra p {
-    max-width: 850px;
-}
 
-.history-extra ul {
-    max-width: 850px;
+/* ==========================================
+   HOMEPAGE FLAG
+   ========================================== */
 
-    padding-left: 25px;
+.national-flag {
+    display: block;
+
+    width: min(850px, 100%);
+
+    max-height: 420px;
+
+    margin: 35px auto 0;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -681,9 +338,95 @@ main {
 }
 
 .content-section h2 {
+    margin-top: 0;
+
     color: #0b1f33;
 
     font-size: 30px;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   LINK GRID
+   ========================================== */
+
+.link-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.link-grid a {
+    display: block;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8dfe5;
+
+    color: #1d1d1d;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.link-grid a:hover {
+    background: #e8f1f8;
+
+    border-color: #005ea8;
+
+    text-decoration: none;
+}
+
+.link-grid strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #005ea8;
+
+    font-size: 16px;
+}
+
+.link-grid span {
+    display: block;
+
+    color: #444444;
+}
+
+
+/* ==========================================
+   MAIN BUTTON
+   ========================================== */
+
+.main-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 22px;
+
+    background: #005ea8;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+.main-link:hover {
+    background: #0b1f33;
+
+    color: #ffffff;
+
+    text-decoration: none;
 }
 
 
@@ -692,8 +435,7 @@ main {
    ========================================== */
 
 .government-grid,
-.values-grid,
-.link-grid {
+.values-grid {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
@@ -750,58 +492,379 @@ main {
 
 
 /* ==========================================
-   LINK GRID
+   HISTORY INTRO
    ========================================== */
 
-.link-card {
-    display: block;
+.history-intro {
+    max-width: 1100px;
 
-    padding: 25px;
+    margin: 0 auto;
 
-    color: #1d1d1d;
-
-    background: #ffffff;
-
-    border: 1px solid #d8dfe5;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+    padding: 70px 30px 60px;
 }
 
-.link-card:hover {
-    background: #e8f1f8;
+.history-intro .eyebrow {
+    margin: 0 0 10px;
 
-    border-color: #005ea8;
+    color: #005ea8;
 
-    text-decoration: none;
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.history-intro h1 {
+    margin: 0 0 20px;
+
+    color: #0b1f33;
+
+    font-size: 46px;
+
+    line-height: 1.15;
+}
+
+.history-intro .intro {
+    max-width: 800px;
+
+    margin: 0;
+
+    font-size: 19px;
+
+    color: #444444;
 }
 
 
 /* ==========================================
-   MAIN BUTTON
+   HISTORY SECTION
    ========================================== */
 
-.main-link {
-    display: inline-block;
+.history-section {
+    width: 100%;
 
-    margin-top: 15px;
+    background: #e8f1f8;
 
-    padding: 13px 22px;
+    padding: 80px 30px;
+}
+
+
+/* ==========================================
+   HISTORY TIMELINE
+   ========================================== */
+
+.history-timeline {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 60px 0 120px;
+}
+
+
+/* GREY LINE */
+
+.history-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 330px;
+
+    top: 60px;
+    bottom: 120px;
+
+    width: 5px;
+
+    background: #c5cdd4;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+
+
+/* BLUE PROGRESS */
+
+.timeline-progress {
+    position: absolute;
+
+    left: 330px;
+
+    width: 5px;
 
     background: #005ea8;
 
-    color: #ffffff;
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    border-radius: 5px;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   HISTORY ENTRY
+   ========================================== */
+
+.history-entry {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 220px 220px minmax(0, 1fr);
+
+    align-items: start;
+
+    width: 100%;
+
+    margin: 0 0 300px;
+
+    padding: 0;
+}
+
+.history-entry:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   HISTORY YEAR
+   ========================================== */
+
+.history-year {
+    grid-column: 1;
+
+    padding-top: 2px;
+    padding-right: 35px;
+
+    text-align: right;
+
+    color: #0b1f33;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    line-height: 1.3;
+}
+
+
+/* ==========================================
+   HISTORY CONTENT
+   ========================================== */
+
+.history-content {
+    grid-column: 3;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-left: 5px solid #005ea8;
+
+    padding: 32px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08);
+
+    opacity: 0.55;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.history-entry.active .history-content {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    border-left-color: #c9a227;
+}
+
+
+/* ==========================================
+   HISTORY DOTS
+   ========================================== */
+
+.timeline-dot {
+    position: absolute;
+
+    left: 330px;
+
+    top: 3px;
+
+    width: 30px;
+    height: 30px;
+
+    background: #ffffff;
+
+    border: 5px solid #005ea8;
+
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.history-entry.active .timeline-dot {
+    background: #c9a227;
+
+    border-color: #c9a227;
+
+    transform:
+        translateX(-50%)
+        scale(1.3);
+
+    box-shadow:
+        0 0 0 8px rgba(201, 162, 39, 0.2);
+}
+
+.timeline-dot.passed {
+    background: #005ea8;
+
+    border-color: #005ea8;
+}
+
+.history-entry.active .timeline-dot.passed {
+    background: #c9a227;
+
+    border-color: #c9a227;
+}
+
+
+/* ==========================================
+   MOVING GOLD DOT
+   ========================================== */
+
+.timeline-runner {
+    position: absolute;
+
+    left: 330px;
+
+    width: 24px;
+    height: 24px;
+
+    background: #c9a227;
+
+    border: 4px solid #ffffff;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 0 0 5px rgba(201, 162, 39, 0.22);
+
+    transition: top 0.12s linear;
+}
+
+
+/* ==========================================
+   HISTORY TEXT
+   ========================================== */
+
+.history-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #005ea8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+.history-content h2 {
+    margin: 0 0 10px;
+
+    color: #0b1f33;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+.history-type {
+    margin: 0 0 20px;
+
+    color: #555555;
 
     font-weight: bold;
 }
 
-.main-link:hover {
-    background: #0b1f33;
+.history-content p {
+    margin-top: 0;
 
-    color: #ffffff;
+    margin-bottom: 16px;
+}
 
-    text-decoration: none;
+.history-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* CURRENT ERA */
+
+.current-era .history-content {
+    border-top: 5px solid #c9a227;
+}
+
+
+/* ==========================================
+   EXTRA HISTORY SECTIONS
+   ========================================== */
+
+.history-extra {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 30px;
+}
+
+.history-extra h2 {
+    margin-top: 0;
+
+    color: #0b1f33;
+
+    font-size: 30px;
+}
+
+.history-extra p {
+    max-width: 850px;
+}
+
+.history-extra ul {
+    max-width: 850px;
+
+    padding-left: 25px;
 }
 
 
@@ -836,19 +899,23 @@ footer a {
 
 @media (max-width: 900px) {
 
-    .history-timeline {
-        max-width: 850px;
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .national-flag {
+        max-height: 350px;
     }
 
     .history-entry {
-        grid-template-columns: 120px 80px minmax(0, 1fr);
+        grid-template-columns: 150px 150px minmax(0, 1fr);
     }
 
     .history-timeline::before,
     .timeline-progress,
     .timeline-runner,
     .timeline-dot {
-        left: 200px;
+        left: 225px;
     }
 
     .history-content {
@@ -881,6 +948,48 @@ footer a {
         height: 38px;
     }
 
+
+    /* HOMEPAGE */
+
+    .hero {
+        padding: 55px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero .intro {
+        font-size: 17px;
+    }
+
+    .national-flag {
+        width: 100%;
+
+        max-height: 250px;
+
+        margin-top: 25px;
+    }
+
+
+    /* GENERAL */
+
+    .content-section {
+        padding: 45px 20px;
+    }
+
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .government-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HISTORY */
+
     .history-intro {
         padding: 50px 20px 40px;
     }
@@ -892,11 +1001,6 @@ footer a {
     .history-section {
         padding: 50px 20px;
     }
-
-
-    /* ======================================
-       MOBILE TIMELINE
-       ====================================== */
 
     .history-timeline {
         padding: 40px 0 80px;
@@ -917,7 +1021,6 @@ footer a {
         left: 20px;
     }
 
-
     .history-entry {
         display: block;
 
@@ -925,12 +1028,6 @@ footer a {
 
         padding-left: 60px;
     }
-
-
-    .history-entry:last-child {
-        margin-bottom: 0;
-    }
-
 
     .history-year {
         display: block;
@@ -944,13 +1041,11 @@ footer a {
         font-size: 22px;
     }
 
-
     .timeline-dot {
         left: 20px;
 
         top: 3px;
     }
-
 
     .history-content {
         padding: 24px;
@@ -960,14 +1055,6 @@ footer a {
         font-size: 25px;
     }
 
-
-    .government-grid,
-    .values-grid,
-    .link-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .content-section,
     .history-extra {
         padding: 45px 20px;
     }
@@ -989,6 +1076,14 @@ footer a {
 
     .government-brand span {
         display: none;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .national-flag {
+        max-height: 200px;
     }
 
     .history-intro h1 {
