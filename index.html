@@ -1,126 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Principality of Vithuanum</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
 </head>
 
-
 <body>
 
+    <!-- Government Header -->
+    <header class="government-header">
 
-<header>
-    <h1>Principality of Vithuanum</h1>
-    <p>AVE VITHUANUM</p>
-</header>
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
+            ☰
+        </button>
 
+        <div class="government-brand">
+            <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
+            <div>
+                <strong>PRINCIPALITY OF VITHUANUM</strong>
+                <span>Official Government Website</span>
+            </div>
+        </div>
 
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="government.html">Government</a>
-    <a href="territory.html">Territory</a>
-    <a href="diplomacy.html">Diplomacy</a>
-    <a href="constitution.html">Constitution</a>
-    <a href="get-involved.html">Get Involved</a>
-    <a href="citizenship.html">Citizenship</a>
-    <a href="political-parties.html">Political Parties</a>
-</nav>
+    </header>
 
 
-<section>
+    <!-- Side Navigation -->
+    <nav id="side-menu" class="side-menu">
 
-    <h2>Welcome to Vithuanum</h2>
+        <div class="menu-header">
+            <strong>VITHUANUM</strong>
 
-    <p>
-        Welcome to the official website of the Principality of Vithuanum.
-    </p>
+            <button onclick="toggleMenu()" aria-label="Close navigation menu">
+                ×
+            </button>
+        </div>
 
-    <p>
-        Vithuanum is a peaceful, creative, and united micronation dedicated to
-        community, diplomacy, culture, and national development.
-    </p>
+        <a href="index.html">Home</a>
+        <a href="government.html">Government</a>
+        <a href="history.html">History</a>
+        <a href="territory.html">Territory</a>
+        <a href="citizenship.html">Citizenship</a>
+        <a href="diplomacy.html">Diplomacy</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="political-parties.html">Political Parties</a>
+        <a href="news.html">News</a>
 
-
-    <img
-        src="flag.png"
-        alt="Flag of Vithuanum"
-        width="300"
-    >
-
-
-    <h2>🏰 The Principality of Vithuanum</h2>
-
-    <p>
-        Founded in 2023, Vithuanum has developed through several historical
-        eras, eventually becoming a centralist constitutional monarchy.
-    </p>
-
-    <p>
-        Explore our website to discover the history, government, territory,
-        Constitution, diplomacy, and opportunities to become involved in
-        the Principality.
-    </p>
+    </nav>
 
 
-    <h2>📜 Our Constitution</h2>
-
-    <p>
-        The Constitution of Vithuanum establishes the principles,
-        rights, responsibilities, and structure of the Principality.
-    </p>
-
-    <p>
-        <a href="constitution.html">
-            <strong>Read the Constitution →</strong>
-        </a>
-    </p>
+    <!-- Dark Overlay -->
+    <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
 
-    <h2>🏛️ Our Government</h2>
+    <!-- Main Content -->
+    <main>
 
-    <p>
-        Vithuanum operates as a centralist constitutional monarchy under
-        the authority of the Sovereign and the Government.
-    </p>
+        <section class="hero">
 
-    <p>
-        <a href="government.html">
-            <strong>Explore the Government →</strong>
-        </a>
-    </p>
+            <p class="eyebrow">PRINCIPALITY OF VITHUANUM</p>
 
+            <h1>Welcome to Vithuanum</h1>
 
-    <h2>🤝 Get Involved</h2>
+            <p class="intro">
+                The official website of the Principality of Vithuanum,
+                providing information about our government, history,
+                territory, Constitution and national community.
+            </p>
 
-    <p>
-        There are many ways to participate in Vithuanum, from creating
-        artwork and designing flags to taking part in political debates,
-        conferences, competitions, and national projects.
-    </p>
+            <img
+                src="flag.png"
+                alt="Flag of Vithuanum"
+                class="national-flag"
+            >
 
-    <p>
-        <a href="get-involved.html">
-            <strong>Get Involved in Vithuanum →</strong>
-        </a>
-    </p>
+        </section>
 
 
-    <h2>🏰 AVE VITHUANUM</h2>
+        <section class="content-section">
 
-</section>
+            <h2>The Principality of Vithuanum</h2>
+
+            <p>
+                Founded in 2023, Vithuanum has developed through several
+                historical eras, eventually becoming a centralist
+                constitutional monarchy.
+            </p>
+
+            <p>
+                Vithuanum is dedicated to community, diplomacy, culture,
+                creativity and national development.
+            </p>
+
+        </section>
 
 
+        <section class="content-section">
 
-<footer>
-    <p>© Principality of Vithuanum</p>
-</footer>
+            <h2>Government and Constitution</h2>
 
+            <p>
+                The Constitution establishes the principles, rights,
+                responsibilities and structure of the Principality.
+            </p>
+
+            <div class="link-grid">
+
+                <a href="government.html">
+                    <strong>Government</strong>
+                    <span>Learn about the Government of Vithuanum</span>
+                </a>
+
+                <a href="constitution.html">
+                    <strong>Constitution</strong>
+                    <span>Read the Constitution of Vithuanum</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="content-section">
+
+            <h2>Get Involved</h2>
+
+            <p>
+                Citizens and visitors can participate in national projects,
+                political debates, competitions, conferences, creative
+                activities and other community events.
+            </p>
+
+            <a class="main-link" href="get-involved.html">
+                Find out how to get involved →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <strong>Principality of Vithuanum</strong>
+
+        <p>
+            Official Government Website
+        </p>
+
+        <p>
+            © Principality of Vithuanum
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
