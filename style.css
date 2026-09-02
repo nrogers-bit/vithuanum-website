@@ -199,14 +199,19 @@ a:hover {
     line-height: 1.6;
 }
 
+
+/* ==========================================
+   NATIONAL FLAG
+   ========================================== */
+
 .national-flag {
     display: block;
-    width: 500px;
-    max-width: 80%;
-    max-height: 250px;
-    margin: 30px auto 0;
+    width: 300px;
+    max-width: 70%;
+    max-height: 160px;
+    margin: 25px auto 0;
     object-fit: contain;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -284,7 +289,7 @@ main {
 
 
 /* ==========================================
-   MAIN LINKS / BUTTONS
+   LINKS / BUTTONS
    ========================================== */
 
 .main-link {
@@ -292,11 +297,6 @@ main {
     margin-top: 15px;
     font-weight: bold;
     font-size: 17px;
-}
-
-button,
-.main-button {
-    cursor: pointer;
 }
 
 .button {
@@ -393,7 +393,7 @@ button,
 
 .history-timeline {
     position: relative;
-    padding: 20px 0 20px;
+    padding: 20px 0;
     margin-left: 0;
 }
 
@@ -551,7 +551,6 @@ footer p {
     .timeline-progress {
         left: 272px;
     }
-
 }
 
 
@@ -602,9 +601,9 @@ footer p {
     }
 
     .national-flag {
-        width: 380px;
-        max-width: 100%;
-        max-height: 200px;
+        width: 260px;
+        max-width: 85%;
+        max-height: 140px;
     }
 
     .content-section {
@@ -669,5 +668,4 @@ footer p {
     .timeline-progress {
         left: 16px;
     }
-
 }
