@@ -1,252 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Government - Principality of Vithuanum</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
 </head>
 
-
 <body>
 
-<header>
-    <h1>Government of Vithuanum</h1>
-    <p>The administration of the Principality</p>
-</header>
+    <!-- Government Header -->
+    <header class="government-header">
 
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
+            ☰
+        </button>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="government.html">Government</a>
-    <a href="territory.html">Territory</a>
-    <a href="diplomacy.html">Diplomacy</a>
-    <a href="constitution.html">Constitution</a>
-    <a href="get-involved.html">Get Involved</a>
-    <a href="citizenship.html">Citizenship</a>
-    <a href="political-parties.html">Political Parties</a>
-</nav>
+        <div class="government-brand">
+            <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
 
+            <div>
+                <strong>PRINCIPALITY OF VITHUANUM</strong>
+                <span>Official Government Website</span>
+            </div>
+        </div>
 
-<section>
+    </header>
 
 
-<h2>👑 The Sovereign</h2>
+    <!-- Side Navigation -->
+    <nav id="side-menu" class="side-menu">
 
-<h3>Sovereign of the Principality of Vithuanum</h3>
+        <div class="menu-header">
+            <strong>VITHUANUM</strong>
 
-<p>
-<strong>Noah Rogers</strong>
-</p>
+            <button onclick="toggleMenu()" aria-label="Close navigation menu">
+                ×
+            </button>
+        </div>
 
-<p>
-The Sovereign is the Head of State and highest authority of the Principality of Vithuanum.
-</p>
+        <a href="index.html">Home</a>
+        <a href="government.html">Government</a>
+        <a href="history.html">History</a>
+        <a href="territory.html">Territory</a>
+        <a href="citizenship.html">Citizenship</a>
+        <a href="diplomacy.html">Diplomacy</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="political-parties.html">Political Parties</a>
+        <a href="news.html">News</a>
 
+    </nav>
 
-<p>
-The responsibilities of the Sovereign include:
-</p>
 
-<ul>
-<li>Protecting the Constitution of Vithuanum</li>
-<li>Representing the nation domestically and internationally</li>
-<li>Appointing government officials</li>
-<li>Approving national decisions</li>
-<li>Protecting the rights of citizens</li>
-<li>Guiding the future development of Vithuanum</li>
-</ul>
+    <!-- Dark Overlay -->
+    <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
 
-<p>
-The Sovereign serves as a symbol of unity, stability, and national identity.
-</p>
+    <!-- Main Content -->
+    <main>
 
+        <section class="hero">
 
+            <p class="eyebrow">GOVERNMENT OF VITHUANUM</p>
 
+            <h1>Government</h1>
 
-<h2>🏛️ Government Structure</h2>
+            <p class="intro">
+                Information about the constitutional structure, institutions
+                and administration of the Principality of Vithuanum.
+            </p>
 
-<p>
-The Principality of Vithuanum is a <strong>centralist constitutional monarchy</strong>.
-</p>
+        </section>
 
-<p>
-Authority is centred in the national government while operating under the Constitution and laws of Vithuanum.
-</p>
 
-<p>
-The Government assists the Sovereign in managing national affairs, developing policies, and supporting citizens.
-</p>
+        <section class="content-section">
 
+            <h2>Constitutional Monarchy</h2>
 
+            <p>
+                The Principality of Vithuanum is a centralist constitutional
+                monarchy. The Constitution establishes the structure of the
+                Principality and defines the responsibilities and authority
+                of its institutions.
+            </p>
 
+            <p>
+                The Sovereign serves as the Head of State, while the
+                Government is responsible for the administration and
+                development of the Principality.
+            </p>
 
-<h2>👔 Government Offices</h2>
+        </section>
 
 
-<h3>Prime Minister</h3>
+        <section class="content-section">
 
-<p>
-<strong>Current Prime Minister:</strong> Allu
-</p>
+            <h2>The Sovereign</h2>
 
-<p>
-The Prime Minister assists the Sovereign in the administration of Vithuanum and helps coordinate government activities.
-</p>
+            <p>
+                The Sovereign is the Head of State of the Principality of
+                Vithuanum and serves as the highest constitutional authority
+                within the Principality.
+            </p>
 
-<p>Responsibilities include:</p>
+            <div class="government-card">
 
-<ul>
-<li>Supporting the Sovereign</li>
-<li>Managing government operations</li>
-<li>Representing the interests of citizens</li>
-<li>Helping develop national projects</li>
-</ul>
+                <h3>Noah Rogers</h3>
 
+                <p>
+                    <strong>Sovereign of Vithuanum</strong>
+                </p>
 
+                <p>
+                    The Sovereign represents the unity and continuity of
+                    Vithuanum and exercises the powers assigned by the
+                    Constitution and laws of the Principality.
+                </p>
 
+            </div>
 
-<h3>Minister of Foreign Affairs</h3>
+        </section>
 
-<p>
-<strong>Current Holder:</strong> Not currently appointed
-</p>
 
-<p>Responsibilities:</p>
+        <section class="content-section">
 
-<ul>
-<li>Managing diplomatic relations</li>
-<li>Establishing friendships and alliances with other micronations</li>
-<li>Representing Vithuanum internationally</li>
-</ul>
+            <h2>The Prime Minister</h2>
 
+            <p>
+                The Prime Minister is the Head of Government and is
+                responsible for overseeing the Government and coordinating
+                national administration.
+            </p>
 
+            <div class="government-card">
 
+                <h3>Allu</h3>
 
-<h3>Minister of Culture</h3>
+                <p>
+                    <strong>Prime Minister of Vithuanum</strong>
+                </p>
 
-<p>
-<strong>Current Holder:</strong> Not currently appointed
-</p>
+                <p>
+                    The Prime Minister works with the Sovereign and Government
+                    to manage national affairs, develop policy and support
+                    the administration of the Principality.
+                </p>
 
-<p>Responsibilities:</p>
+            </div>
 
-<ul>
-<li>Promoting Vithuanum's culture</li>
-<li>Preserving traditions and history</li>
-<li>Supporting creative projects</li>
-</ul>
+        </section>
 
 
+        <section class="content-section">
 
+            <h2>The National Assembly</h2>
 
-<h3>Minister of Finance</h3>
+            <p>
+                The National Assembly of Vithuanum is the legislative
+                institution of the Principality.
+            </p>
 
-<p>
-<strong>Current Holder:</strong> Not currently appointed
-</p>
+            <p>
+                Members of the National Assembly participate in debates,
+                consider legislation and represent the interests of citizens
+                within the political system of Vithuanum.
+            </p>
 
-<p>Responsibilities:</p>
+            <p>
+                The powers, responsibilities and procedures of the National
+                Assembly are established by the Constitution and laws of the
+                Principality.
+            </p>
 
-<ul>
-<li>Managing national financial matters</li>
-<li>Supporting economic projects</li>
-<li>Overseeing the national currency system</li>
-</ul>
+        </section>
 
 
+        <section class="content-section">
 
+            <h2>The Government</h2>
 
-<h3>Minister of Infrastructure</h3>
+            <p>
+                The Government consists of the Prime Minister and Ministers
+                responsible for different areas of national administration.
+            </p>
 
-<p>
-<strong>Current Holder:</strong> Not currently appointed
-</p>
+            <div class="government-grid">
 
-<p>Responsibilities:</p>
+                <div class="government-card">
+                    <h3>Prime Minister</h3>
+                    <p>
+                        Leads the Government and coordinates national
+                        administration.
+                    </p>
+                </div>
 
-<ul>
-<li>Developing national systems</li>
-<li>Supporting digital infrastructure</li>
-<li>Helping expand the nation</li>
-</ul>
+                <div class="government-card">
+                    <h3>Minister of Foreign Affairs</h3>
+                    <p>
+                        Responsible for diplomacy, international relations
+                        and relations with other nations and micronations.
+                    </p>
+                    <strong>Position currently open</strong>
+                </div>
 
+                <div class="government-card">
+                    <h3>Minister of Culture</h3>
+                    <p>
+                        Responsible for national culture, heritage,
+                        traditions and cultural projects.
+                    </p>
+                    <strong>Position currently open</strong>
+                </div>
 
+                <div class="government-card">
+                    <h3>Minister of Finance</h3>
+                    <p>
+                        Responsible for financial administration and
+                        economic matters within the Principality.
+                    </p>
+                    <strong>Position currently open</strong>
+                </div>
 
+                <div class="government-card">
+                    <h3>Minister of Infrastructure</h3>
+                    <p>
+                        Responsible for national infrastructure,
+                        development and major construction projects.
+                    </p>
+                    <strong>Position currently open</strong>
+                </div>
 
+            </div>
 
-<h2>🗺️ Local Administration</h2>
+        </section>
 
-<p>
-The territory of Vithuanum is divided into counties and regions.
-</p>
 
-<p>
-The six recognised counties are:
-</p>
+        <section class="content-section">
 
-<ul>
-<li>Eagleshampton</li>
-<li>Ciocanshire</li>
-<li>Hurent</li>
-<li>South Coleena</li>
-<li>North Coleena</li>
-<li>Kuross</li>
-</ul>
+            <h2>Government Responsibilities</h2>
 
-<p>
-Each county contributes to the culture and identity of Vithuanum while remaining united under the Principality.
-</p>
+            <p>
+                The Government works to maintain the administration,
+                development and organisation of the Principality.
+            </p>
 
+            <ul class="government-list">
+                <li>National administration</li>
+                <li>Implementation of government policy</li>
+                <li>International diplomacy</li>
+                <li>Protection of national interests</li>
+                <li>Development of Vithuanum's counties and territories</li>
+                <li>Promotion of national culture and identity</li>
+                <li>Support for citizens and community projects</li>
+                <li>Development of national institutions</li>
+            </ul>
 
+        </section>
 
 
-<h2>📜 Future Institutions</h2>
+        <section class="content-section">
 
-<p>
-As Vithuanum continues to grow, future institutions may be established, including:
-</p>
+            <h2>Government Values</h2>
 
-<ul>
-<li>A Parliament</li>
-<li>Courts</li>
-<li>Local governments</li>
-<li>Additional ministries and government bodies</li>
-</ul>
+            <p>
+                The Government of Vithuanum is guided by the following
+                national values:
+            </p>
 
-<p>
-The creation of new institutions will follow the Constitution of Vithuanum.
-</p>
+            <div class="values-grid">
 
+                <div>Tradition</div>
+                <div>Peace</div>
+                <div>Unity</div>
+                <div>Justice</div>
+                <div>Creativity</div>
+                <div>Diplomacy</div>
+                <div>Honour</div>
 
+            </div>
 
+        </section>
 
-<h2>🏰 Government Values</h2>
 
-<ul>
-<li>Tradition</li>
-<li>Peace</li>
-<li>Unity</li>
-<li>Justice</li>
-<li>Creativity</li>
-<li>Diplomacy</li>
-<li>Honour</li>
-</ul>
+        <section class="content-section">
 
+            <h2>Further Information</h2>
 
-<h2>AVE VITHUANUM</h2>
+            <p>
+                Information about the constitutional system of Vithuanum
+                can be found in the Constitution of the Principality.
+            </p>
 
+            <a class="main-link" href="constitution.html">
+                Read the Constitution →
+            </a>
 
-</section>
+        </section>
 
+    </main>
 
 
-<footer>
-<p>© Principality of Vithuanum</p>
-</footer>
+    <!-- Footer -->
+    <footer>
 
+        <strong>Principality of Vithuanum</strong>
+
+        <p>
+            Official Government Website
+        </p>
+
+        <p>
+            © Principality of Vithuanum
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
