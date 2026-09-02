@@ -1,6 +1,5 @@
 /* ==========================================
    VITHUANUM GOVERNMENT WEBSITE
-   MAIN JAVASCRIPT
    ========================================== */
 
 
@@ -13,48 +12,22 @@ function toggleMenu() {
     const menu = document.getElementById("side-menu");
     const overlay = document.getElementById("menu-overlay");
 
-    if (!menu || !overlay) {
-        return;
-    }
+    if (!menu || !overlay) return;
 
-    const isOpen = menu.classList.contains("open");
-
-    if (isOpen) {
-        menu.classList.remove("open");
-        overlay.classList.remove("open");
-        document.body.classList.remove("menu-open");
-    } else {
-        menu.classList.add("open");
-        overlay.classList.add("open");
-        document.body.classList.add("menu-open");
-    }
+    menu.classList.toggle("open");
+    overlay.classList.toggle("open");
 }
 
-
-/* ==========================================
-   CLOSE MENU
-   ========================================== */
 
 function closeMenu() {
 
     const menu = document.getElementById("side-menu");
     const overlay = document.getElementById("menu-overlay");
 
-    if (menu) {
-        menu.classList.remove("open");
-    }
-
-    if (overlay) {
-        overlay.classList.remove("open");
-    }
-
-    document.body.classList.remove("menu-open");
+    if (menu) menu.classList.remove("open");
+    if (overlay) overlay.classList.remove("open");
 }
 
-
-/* ==========================================
-   ESCAPE KEY
-   ========================================== */
 
 document.addEventListener("keydown", function(event) {
 
@@ -66,73 +39,48 @@ document.addEventListener("keydown", function(event) {
 
 
 /* ==========================================
-   PAGE LOADED
+   HISTORY TIMELINE
    ========================================== */
 
 document.addEventListener("DOMContentLoaded", function() {
 
-
-    /* ======================================
-       CLOSE MENU WHEN OVERLAY IS CLICKED
-       ====================================== */
-
-    const overlay = document.getElementById("menu-overlay");
-
-    if (overlay) {
-
-        overlay.addEventListener("click", function() {
-            closeMenu();
-        });
-
-    }
-
-
-    /* ======================================
-       CLOSE MENU AFTER CLICKING A LINK
-       ====================================== */
-
-    const menuLinks = document.querySelectorAll("#side-menu a");
-
-    menuLinks.forEach(function(link) {
-
-        link.addEventListener("click", function() {
-            closeMenu();
-        });
-
-    });
-
-
-    /* ======================================
-       HISTORY TIMELINE
-       ====================================== */
-
     const timeline =
         document.querySelector(".history-timeline");
 
-    if (!timeline) {
-        return;
-    }
+    if (!timeline) return;
 
-
-    /* ======================================
-       FIND HISTORY ENTRIES
-       ====================================== */
 
     const entries =
         Array.from(
             timeline.querySelectorAll(".history-entry")
         );
 
-    if (entries.length === 0) {
-        return;
-    }
+    if (entries.length === 0) return;
 
 
-    /* ======================================
-       CREATE DOTS
-       ====================================== */
+    /* ----------------------------------------
+       FORCE LARGE SPACE BETWEEN ERAS
+       ---------------------------------------- */
 
     entries.forEach(function(entry, index) {
+
+        entry.style.height = "auto";
+        entry.style.minHeight = "0";
+        entry.style.marginBottom = "350px";
+        entry.style.paddingBottom = "0";
+
+        if (index === entries.length - 1) {
+            entry.style.marginBottom = "0";
+        }
+
+    });
+
+
+    /* ----------------------------------------
+       CREATE DOTS
+       ---------------------------------------- */
+
+    entries.forEach(function(entry) {
 
         let dot =
             entry.querySelector(".timeline-dot");
@@ -147,298 +95,235 @@ document.addEventListener("DOMContentLoaded", function() {
             entry.appendChild(dot);
         }
 
-        dot.dataset.index = index;
-
     });
 
 
-    /* ======================================
-       CREATE MOVING DOT
-       ====================================== */
+    /* ----------------------------------------
+       MOVING GOLD DOT
+       ---------------------------------------- */
 
-    let movingDot =
-        timeline.querySelector(".timeline-moving-dot");
+    let runner =
+        timeline.querySelector(".timeline-runner");
 
-    if (!movingDot) {
+    if (!runner) {
 
-        movingDot =
+        runner =
             document.createElement("div");
 
-        movingDot.className =
-            "timeline-moving-dot";
+        runner.className =
+            "timeline-runner";
 
-        timeline.appendChild(movingDot);
+        timeline.appendChild(runner);
     }
 
 
-    /* ======================================
-       CREATE PROGRESS LINE
-       ====================================== */
+    /* ----------------------------------------
+       BLUE PROGRESS LINE
+       ---------------------------------------- */
 
-    let progressLine =
+    let progress =
         timeline.querySelector(".timeline-progress");
 
-    if (!progressLine) {
+    if (!progress) {
 
-        progressLine =
+        progress =
             document.createElement("div");
 
-        progressLine.className =
+        progress.className =
             "timeline-progress";
 
-        timeline.appendChild(progressLine);
+        timeline.appendChild(progress);
     }
 
 
-    /* ======================================
-       GET DOT POSITION
-       ====================================== */
+    /* ----------------------------------------
+       GET DOT POSITIONS
+       ---------------------------------------- */
 
-    function getDotPosition(dot) {
+    function getPositions() {
 
-        const timelineRect =
+        const timelineBox =
             timeline.getBoundingClientRect();
 
-        const dotRect =
-            dot.getBoundingClientRect();
-
-        return (
-            dotRect.top -
-            timelineRect.top +
-            dotRect.height / 2
-        );
-
-    }
-
-
-    /* ======================================
-       UPDATE TIMELINE
-       ====================================== */
-
-    function updateTimeline() {
-
-        const timelineRect =
-            timeline.getBoundingClientRect();
-
-        const viewportHeight =
-            window.innerHeight;
-
-        /*
-           The moving dot follows the middle
-           of the screen while scrolling.
-        */
-
-        const screenPoint =
-            viewportHeight * 0.5;
-
-        let position =
-            screenPoint -
-            timelineRect.top;
-
-
-        /* ==================================
-           TIMELINE LIMITS
-           ================================== */
-
-        const firstDot =
-            entries[0].querySelector(".timeline-dot");
-
-        const lastDot =
-            entries[entries.length - 1]
-                .querySelector(".timeline-dot");
-
-        if (!firstDot || !lastDot) {
-            return;
-        }
-
-
-        const firstPosition =
-            getDotPosition(firstDot);
-
-        const lastPosition =
-            getDotPosition(lastDot);
-
-
-        /* ==================================
-           KEEP DOT INSIDE TIMELINE
-           ================================== */
-
-        position =
-            Math.max(
-                firstPosition,
-                Math.min(
-                    position,
-                    lastPosition
-                )
-            );
-
-
-        /* ==================================
-           MOVE THE DOT
-           ================================== */
-
-        movingDot.style.top =
-            position + "px";
-
-
-        /* ==================================
-           GROW BLUE PROGRESS LINE
-           ================================== */
-
-        progressLine.style.top =
-            firstPosition + "px";
-
-        progressLine.style.height =
-            Math.max(
-                0,
-                position - firstPosition
-            ) + "px";
-
-
-        /* ==================================
-           FIND CURRENT ERA
-           ================================== */
-
-        let currentIndex = 0;
-
-        let smallestDistance =
-            Infinity;
-
-
-        entries.forEach(function(entry, index) {
+        return entries.map(function(entry) {
 
             const dot =
                 entry.querySelector(".timeline-dot");
 
-            if (!dot) {
-                return;
-            }
+            const box =
+                dot.getBoundingClientRect();
 
-            const dotPosition =
-                getDotPosition(dot);
+            return (
+                box.top -
+                timelineBox.top +
+                box.height / 2
+            );
+
+        });
+
+    }
+
+
+    /* ----------------------------------------
+       UPDATE
+       ---------------------------------------- */
+
+    function updateTimeline() {
+
+        const timelineBox =
+            timeline.getBoundingClientRect();
+
+        const positions =
+            getPositions();
+
+        if (!positions.length) return;
+
+
+        const screenMiddle =
+            window.innerHeight / 2;
+
+
+        let position =
+            screenMiddle -
+            timelineBox.top;
+
+
+        const first =
+            positions[0];
+
+        const last =
+            positions[positions.length - 1];
+
+
+        position =
+            Math.max(
+                first,
+                Math.min(position, last)
+            );
+
+
+        /* GOLD DOT */
+
+        runner.style.top =
+            position + "px";
+
+
+        /* BLUE LINE */
+
+        progress.style.top =
+            first + "px";
+
+        progress.style.height =
+            Math.max(
+                0,
+                position - first
+            ) + "px";
+
+
+        /* ------------------------------------
+           FIND CURRENT ERA
+           ------------------------------------ */
+
+        let closest = 0;
+        let smallest = Infinity;
+
+
+        positions.forEach(function(dotPosition, index) {
 
             const distance =
                 Math.abs(
                     dotPosition - position
                 );
 
-            if (distance < smallestDistance) {
+            if (distance < smallest) {
 
-                smallestDistance =
-                    distance;
+                smallest = distance;
+                closest = index;
 
-                currentIndex =
-                    index;
             }
 
         });
 
 
-        /* ==================================
-           UPDATE ACTIVE ERA
-           ================================== */
+        /* ------------------------------------
+           ACTIVE ERA
+           ------------------------------------ */
 
         entries.forEach(function(entry, index) {
 
-            if (index === currentIndex) {
-
-                entry.classList.add("active");
-
-            } else {
-
-                entry.classList.remove("active");
-
-            }
+            entry.classList.toggle(
+                "active",
+                index === closest
+            );
 
         });
 
 
-        /* ==================================
-           HIGHLIGHT PASSED DOTS
-           ================================== */
+        /* ------------------------------------
+           PASSED DOTS
+           ------------------------------------ */
 
         entries.forEach(function(entry, index) {
 
             const dot =
                 entry.querySelector(".timeline-dot");
 
-            if (!dot) {
-                return;
-            }
+            if (!dot) return;
 
-            const dotPosition =
-                getDotPosition(dot);
-
-            if (dotPosition <= position) {
-
-                dot.classList.add("passed");
-
-            } else {
-
-                dot.classList.remove("passed");
-
-            }
+            dot.classList.toggle(
+                "passed",
+                positions[index] <= position
+            );
 
         });
 
     }
 
 
-    /* ======================================
-       SMOOTH SCROLL UPDATE
-       ====================================== */
-
-    let animationFrame = null;
-
-    function requestUpdate() {
-
-        if (animationFrame !== null) {
-            return;
-        }
-
-        animationFrame =
-            window.requestAnimationFrame(function() {
-
-                updateTimeline();
-
-                animationFrame = null;
-
-            });
-
-    }
-
-
-    /* ======================================
+    /* ----------------------------------------
        SCROLL
-       ====================================== */
+       ---------------------------------------- */
+
+    let ticking = false;
+
 
     window.addEventListener(
         "scroll",
-        requestUpdate,
+        function() {
+
+            if (ticking) return;
+
+            ticking = true;
+
+            requestAnimationFrame(function() {
+
+                updateTimeline();
+
+                ticking = false;
+
+            });
+
+        },
         { passive: true }
     );
 
 
-    /* ======================================
+    /* ----------------------------------------
        RESIZE
-       ====================================== */
+       ---------------------------------------- */
 
     window.addEventListener(
         "resize",
-        requestUpdate
+        updateTimeline
     );
 
 
-    /* ======================================
-       INITIAL POSITION
-       ====================================== */
+    /* ----------------------------------------
+       INITIAL
+       ---------------------------------------- */
 
     updateTimeline();
 
-
-    /* ======================================
-       HANDLE PAGE LOAD IMAGES
-       ====================================== */
 
     window.addEventListener(
         "load",
