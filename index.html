@@ -1,1109 +1,212 @@
-/* ==========================================
-   VITHUANUM GOVERNMENT WEBSITE
-   STYLE.CSS
-   ========================================== */
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ==========================================
-   RESET
-   ========================================== */
+    <title>Principality of Vithuanum</title>
 
-* {
-    box-sizing: border-box;
-}
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+</head>
 
-html {
-    scroll-behavior: smooth;
-}
+<body>
 
-body {
-    margin: 0;
-    padding: 0;
+    <header class="government-header">
 
-    font-family: Arial, Helvetica, sans-serif;
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
+            ☰
+        </button>
 
-    color: #1d1d1d;
-    background: #ffffff;
+        <div class="government-brand">
 
-    line-height: 1.6;
-}
+            <img
+                src="coat-of-arms.png"
+                alt="Coat of Arms of Vithuanum">
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+            <div>
+                <strong>PRINCIPALITY OF VITHUANUM</strong>
+                <span>Official Government Website</span>
+            </div>
 
-a {
-    color: #005ea8;
-    text-decoration: none;
-}
+        </div>
 
-a:hover {
-    text-decoration: underline;
-}
+    </header>
 
-button {
-    font-family: inherit;
-}
 
+    <nav id="side-menu" class="side-menu">
 
-/* ==========================================
-   GOVERNMENT HEADER
-   ========================================== */
+        <div class="menu-header">
 
-.government-header {
-    width: 100%;
-    height: 76px;
+            <strong>VITHUANUM</strong>
 
-    background: #0b1f33;
-    color: #ffffff;
+            <button
+                onclick="toggleMenu()"
+                aria-label="Close navigation menu">
+                ×
+            </button>
 
-    display: flex;
-    align-items: center;
+        </div>
 
-    padding: 0 30px;
+        <a href="index.html">Home</a>
+        <a href="government.html">Government</a>
+        <a href="history.html">History</a>
+        <a href="territory.html">Territory</a>
+        <a href="citizenship.html">Citizenship</a>
+        <a href="diplomacy.html">Diplomacy</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="political-parties.html">Political Parties</a>
+        <a href="news.html">News</a>
 
-    position: sticky;
-    top: 0;
+    </nav>
 
-    z-index: 1000;
-}
 
+    <div
+        id="menu-overlay"
+        class="menu-overlay"
+        onclick="toggleMenu()">
+    </div>
 
-/* ==========================================
-   MENU BUTTON
-   ========================================== */
 
-.menu-button {
-    width: 44px;
-    height: 44px;
+    <main>
 
-    margin-right: 18px;
+        <section class="hero">
 
-    background: transparent;
+            <div class="hero-inner">
 
-    border: 1px solid rgba(255, 255, 255, 0.6);
+                <p class="eyebrow">
+                    PRINCIPALITY OF VITHUANUM
+                </p>
 
-    color: #ffffff;
+                <h1>
+                    Welcome to Vithuanum
+                </h1>
 
-    font-size: 25px;
+                <p class="intro">
+                    The official website of the Principality of Vithuanum,
+                    providing information about our government, history,
+                    territory, Constitution and national community.
+                </p>
 
-    cursor: pointer;
-}
+                <img
+                    src="flag.png"
+                    alt="Flag of Vithuanum"
+                    class="national-flag">
 
-.menu-button:hover {
-    background: rgba(255, 255, 255, 0.12);
-}
+            </div>
 
+        </section>
 
-/* ==========================================
-   GOVERNMENT BRAND
-   ========================================== */
 
-.government-brand {
-    display: flex;
-    align-items: center;
+        <section class="content-section">
 
-    gap: 14px;
-}
+            <h2>
+                The Principality of Vithuanum
+            </h2>
 
-.government-brand img {
-    width: 44px;
-    height: 44px;
+            <p>
+                Founded in 2023, Vithuanum has developed through several
+                historical eras, eventually becoming a centralist
+                constitutional monarchy.
+            </p>
 
-    object-fit: contain;
-}
+            <p>
+                Vithuanum is dedicated to community, diplomacy, culture,
+                creativity and national development.
+            </p>
 
-.government-brand strong {
-    display: block;
+        </section>
 
-    font-size: 20px;
-    line-height: 1.2;
-}
 
-.government-brand span {
-    display: block;
+        <section class="content-section">
 
-    margin-top: 3px;
+            <h2>
+                Government and Constitution
+            </h2>
 
-    font-size: 13px;
+            <p>
+                The Constitution establishes the principles, rights,
+                responsibilities and structure of the Principality.
+            </p>
 
-    color: #dce6ef;
-}
+            <div class="link-grid">
 
+                <a href="government.html">
 
-/* ==========================================
-   SIDE MENU
-   ========================================== */
+                    <strong>
+                        Government
+                    </strong>
 
-.side-menu {
-    position: fixed;
+                    <span>
+                        Learn about the Government of Vithuanum
+                    </span>
 
-    top: 0;
-    left: -340px;
+                </a>
 
-    width: 340px;
-    height: 100vh;
+                <a href="constitution.html">
 
-    background: #ffffff;
+                    <strong>
+                        Constitution
+                    </strong>
 
-    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.2);
+                    <span>
+                        Read the Constitution of Vithuanum
+                    </span>
 
-    z-index: 2000;
+                </a>
 
-    transition: left 0.3s ease;
+            </div>
 
-    overflow-y: auto;
-}
+        </section>
 
-.side-menu.open {
-    left: 0;
-}
 
+        <section class="content-section">
 
-/* MENU HEADER */
+            <h2>
+                Get Involved
+            </h2>
 
-.menu-header {
-    height: 76px;
+            <p>
+                Citizens and visitors can participate in national projects,
+                political debates, competitions, conferences, creative
+                activities and other community events.
+            </p>
 
-    padding: 0 22px;
+            <a
+                class="main-link"
+                href="get-involved.html">
+                Find out how to get involved →
+            </a>
 
-    background: #0b1f33;
-    color: #ffffff;
+        </section>
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    </main>
 
-.menu-header strong {
-    font-size: 20px;
-}
 
-.menu-header button {
-    border: none;
+    <footer>
 
-    background: transparent;
+        <strong>
+            Principality of Vithuanum
+        </strong>
 
-    color: #ffffff;
+        <p>
+            Official Government Website
+        </p>
 
-    font-size: 32px;
+        <p>
+            © Principality of Vithuanum
+        </p>
 
-    cursor: pointer;
+    </footer>
 
-    line-height: 1;
-}
 
+    <script src="script.js"></script>
 
-/* MENU LINKS */
+</body>
 
-.side-menu > a {
-    display: block;
-
-    padding: 16px 25px;
-
-    border-bottom: 1px solid #e3e7ea;
-
-    color: #1d1d1d;
-
-    font-size: 16px;
-}
-
-.side-menu > a:hover {
-    background: #e8f1f8;
-
-    color: #005ea8;
-
-    text-decoration: none;
-}
-
-
-/* ==========================================
-   MENU OVERLAY
-   ========================================== */
-
-.menu-overlay {
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.45);
-
-    z-index: 1500;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
-}
-
-.menu-overlay.open {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-/* ==========================================
-   MAIN
-   ========================================== */
-
-main {
-    min-height: 70vh;
-}
-
-
-/* ==========================================
-   HOMEPAGE HERO
-   ========================================== */
-
-.hero {
-    background: #0b1f33;
-
-    color: #ffffff;
-
-    padding: 70px 30px 80px;
-
-    text-align: left;
-}
-
-.hero .eyebrow {
-    max-width: 1100px;
-
-    margin: 0 auto 8px;
-
-    color: #ffffff;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 1.5px;
-}
-
-.hero h1 {
-    max-width: 1100px;
-
-    margin: 0 auto 18px;
-
-    color: #ffffff;
-
-    font-size: 52px;
-
-    line-height: 1.1;
-}
-
-.hero .intro {
-    max-width: 700px;
-
-    margin: 0 auto 35px;
-
-    color: #ffffff;
-
-    font-size: 19px;
-}
-
-
-/* ==========================================
-   HOMEPAGE FLAG
-   ========================================== */
-
-.national-flag {
-    display: block;
-
-    width: min(850px, 100%);
-
-    max-height: 420px;
-
-    margin: 35px auto 0;
-
-    object-fit: contain;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-
-/* ==========================================
-   GENERAL CONTENT
-   ========================================== */
-
-.content-section {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 60px 30px;
-}
-
-.content-section h2 {
-    margin-top: 0;
-
-    color: #0b1f33;
-
-    font-size: 30px;
-
-    line-height: 1.2;
-}
-
-
-/* ==========================================
-   LINK GRID
-   ========================================== */
-
-.link-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-
-    margin-top: 30px;
-}
-
-.link-grid a {
-    display: block;
-
-    padding: 25px;
-
-    background: #ffffff;
-
-    border: 1px solid #d8dfe5;
-
-    color: #1d1d1d;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.link-grid a:hover {
-    background: #e8f1f8;
-
-    border-color: #005ea8;
-
-    text-decoration: none;
-}
-
-.link-grid strong {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #005ea8;
-
-    font-size: 16px;
-}
-
-.link-grid span {
-    display: block;
-
-    color: #444444;
-}
-
-
-/* ==========================================
-   MAIN BUTTON
-   ========================================== */
-
-.main-link {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 13px 22px;
-
-    background: #005ea8;
-
-    color: #ffffff;
-
-    font-weight: bold;
-}
-
-.main-link:hover {
-    background: #0b1f33;
-
-    color: #ffffff;
-
-    text-decoration: none;
-}
-
-
-/* ==========================================
-   GOVERNMENT
-   ========================================== */
-
-.government-grid,
-.values-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-}
-
-.government-card {
-    padding: 25px;
-
-    background: #ffffff;
-
-    border: 1px solid #d8dfe5;
-
-    border-top: 5px solid #005ea8;
-}
-
-.government-card h3 {
-    margin-top: 0;
-
-    color: #0b1f33;
-}
-
-.government-list {
-    padding-left: 20px;
-}
-
-.values-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.values-grid div {
-    padding: 20px;
-
-    background: #e8f1f8;
-
-    border-left: 4px solid #005ea8;
-}
-
-
-/* ==========================================
-   CARDS
-   ========================================== */
-
-.card {
-    padding: 28px;
-
-    margin-bottom: 20px;
-
-    background: #ffffff;
-
-    border: 1px solid #d8dfe5;
-}
-
-
-/* ==========================================
-   HISTORY INTRO
-   ========================================== */
-
-.history-intro {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 70px 30px 60px;
-}
-
-.history-intro .eyebrow {
-    margin: 0 0 10px;
-
-    color: #005ea8;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 1.5px;
-}
-
-.history-intro h1 {
-    margin: 0 0 20px;
-
-    color: #0b1f33;
-
-    font-size: 46px;
-
-    line-height: 1.15;
-}
-
-.history-intro .intro {
-    max-width: 800px;
-
-    margin: 0;
-
-    font-size: 19px;
-
-    color: #444444;
-}
-
-
-/* ==========================================
-   HISTORY SECTION
-   ========================================== */
-
-.history-section {
-    width: 100%;
-
-    background: #e8f1f8;
-
-    padding: 80px 30px;
-}
-
-
-/* ==========================================
-   HISTORY TIMELINE
-   ========================================== */
-
-.history-timeline {
-    position: relative;
-
-    width: 100%;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 60px 0 120px;
-}
-
-
-/* GREY LINE */
-
-.history-timeline::before {
-    content: "";
-
-    position: absolute;
-
-    left: 330px;
-
-    top: 60px;
-    bottom: 120px;
-
-    width: 5px;
-
-    background: #c5cdd4;
-
-    transform: translateX(-50%);
-
-    z-index: 1;
-}
-
-
-/* BLUE PROGRESS */
-
-.timeline-progress {
-    position: absolute;
-
-    left: 330px;
-
-    width: 5px;
-
-    background: #005ea8;
-
-    transform: translateX(-50%);
-
-    z-index: 2;
-
-    border-radius: 5px;
-
-    pointer-events: none;
-}
-
-
-/* ==========================================
-   HISTORY ENTRY
-   ========================================== */
-
-.history-entry {
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns: 220px 220px minmax(0, 1fr);
-
-    align-items: start;
-
-    width: 100%;
-
-    margin: 0 0 300px;
-
-    padding: 0;
-}
-
-.history-entry:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ==========================================
-   HISTORY YEAR
-   ========================================== */
-
-.history-year {
-    grid-column: 1;
-
-    padding-top: 2px;
-    padding-right: 35px;
-
-    text-align: right;
-
-    color: #0b1f33;
-
-    font-size: 25px;
-
-    font-weight: bold;
-
-    line-height: 1.3;
-}
-
-
-/* ==========================================
-   HISTORY CONTENT
-   ========================================== */
-
-.history-content {
-    grid-column: 3;
-
-    width: 100%;
-
-    background: #ffffff;
-
-    border-left: 5px solid #005ea8;
-
-    padding: 32px;
-
-    box-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.08);
-
-    opacity: 0.55;
-
-    transform: translateY(20px);
-
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease,
-        border-color 0.4s ease;
-}
-
-.history-entry.active .history-content {
-    opacity: 1;
-
-    transform: translateY(0);
-
-    border-left-color: #c9a227;
-}
-
-
-/* ==========================================
-   HISTORY DOTS
-   ========================================== */
-
-.timeline-dot {
-    position: absolute;
-
-    left: 330px;
-
-    top: 3px;
-
-    width: 30px;
-    height: 30px;
-
-    background: #ffffff;
-
-    border: 5px solid #005ea8;
-
-    border-radius: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 5;
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.history-entry.active .timeline-dot {
-    background: #c9a227;
-
-    border-color: #c9a227;
-
-    transform:
-        translateX(-50%)
-        scale(1.3);
-
-    box-shadow:
-        0 0 0 8px rgba(201, 162, 39, 0.2);
-}
-
-.timeline-dot.passed {
-    background: #005ea8;
-
-    border-color: #005ea8;
-}
-
-.history-entry.active .timeline-dot.passed {
-    background: #c9a227;
-
-    border-color: #c9a227;
-}
-
-
-/* ==========================================
-   MOVING GOLD DOT
-   ========================================== */
-
-.timeline-runner {
-    position: absolute;
-
-    left: 330px;
-
-    width: 24px;
-    height: 24px;
-
-    background: #c9a227;
-
-    border: 4px solid #ffffff;
-
-    border-radius: 50%;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 10;
-
-    pointer-events: none;
-
-    box-shadow:
-        0 0 0 5px rgba(201, 162, 39, 0.22);
-
-    transition: top 0.12s linear;
-}
-
-
-/* ==========================================
-   HISTORY TEXT
-   ========================================== */
-
-.history-label {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    color: #005ea8;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 1.2px;
-
-    text-transform: uppercase;
-}
-
-.history-content h2 {
-    margin: 0 0 10px;
-
-    color: #0b1f33;
-
-    font-size: 30px;
-
-    line-height: 1.2;
-}
-
-.history-type {
-    margin: 0 0 20px;
-
-    color: #555555;
-
-    font-weight: bold;
-}
-
-.history-content p {
-    margin-top: 0;
-
-    margin-bottom: 16px;
-}
-
-.history-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* CURRENT ERA */
-
-.current-era .history-content {
-    border-top: 5px solid #c9a227;
-}
-
-
-/* ==========================================
-   EXTRA HISTORY SECTIONS
-   ========================================== */
-
-.history-extra {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 60px 30px;
-}
-
-.history-extra h2 {
-    margin-top: 0;
-
-    color: #0b1f33;
-
-    font-size: 30px;
-}
-
-.history-extra p {
-    max-width: 850px;
-}
-
-.history-extra ul {
-    max-width: 850px;
-
-    padding-left: 25px;
-}
-
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-
-footer {
-    background: #0b1f33;
-
-    color: #ffffff;
-
-    padding: 40px 30px;
-}
-
-footer strong {
-    font-size: 18px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #ffffff;
-}
-
-
-/* ==========================================
-   TABLET
-   ========================================== */
-
-@media (max-width: 900px) {
-
-    .hero h1 {
-        font-size: 44px;
-    }
-
-    .national-flag {
-        max-height: 350px;
-    }
-
-    .history-entry {
-        grid-template-columns: 150px 150px minmax(0, 1fr);
-    }
-
-    .history-timeline::before,
-    .timeline-progress,
-    .timeline-runner,
-    .timeline-dot {
-        left: 225px;
-    }
-
-    .history-content {
-        padding: 26px;
-    }
-
-}
-
-
-/* ==========================================
-   MOBILE
-   ========================================== */
-
-@media (max-width: 700px) {
-
-    .government-header {
-        padding: 0 18px;
-    }
-
-    .government-brand strong {
-        font-size: 16px;
-    }
-
-    .government-brand span {
-        font-size: 11px;
-    }
-
-    .government-brand img {
-        width: 38px;
-        height: 38px;
-    }
-
-
-    /* HOMEPAGE */
-
-    .hero {
-        padding: 55px 20px 60px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero .intro {
-        font-size: 17px;
-    }
-
-    .national-flag {
-        width: 100%;
-
-        max-height: 250px;
-
-        margin-top: 25px;
-    }
-
-
-    /* GENERAL */
-
-    .content-section {
-        padding: 45px 20px;
-    }
-
-    .link-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .government-grid,
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* HISTORY */
-
-    .history-intro {
-        padding: 50px 20px 40px;
-    }
-
-    .history-intro h1 {
-        font-size: 36px;
-    }
-
-    .history-section {
-        padding: 50px 20px;
-    }
-
-    .history-timeline {
-        padding: 40px 0 80px;
-    }
-
-    .history-timeline::before {
-        left: 20px;
-
-        top: 40px;
-        bottom: 80px;
-    }
-
-    .timeline-progress {
-        left: 20px;
-    }
-
-    .timeline-runner {
-        left: 20px;
-    }
-
-    .history-entry {
-        display: block;
-
-        margin-bottom: 170px;
-
-        padding-left: 60px;
-    }
-
-    .history-year {
-        display: block;
-
-        padding: 0;
-
-        margin-bottom: 15px;
-
-        text-align: left;
-
-        font-size: 22px;
-    }
-
-    .timeline-dot {
-        left: 20px;
-
-        top: 3px;
-    }
-
-    .history-content {
-        padding: 24px;
-    }
-
-    .history-content h2 {
-        font-size: 25px;
-    }
-
-    .history-extra {
-        padding: 45px 20px;
-    }
-
-}
-
-
-/* ==========================================
-   SMALL PHONES
-   ========================================== */
-
-@media (max-width: 450px) {
-
-    .side-menu {
-        width: 290px;
-
-        left: -290px;
-    }
-
-    .government-brand span {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .national-flag {
-        max-height: 200px;
-    }
-
-    .history-intro h1 {
-        font-size: 30px;
-    }
-
-    .history-entry {
-        padding-left: 52px;
-
-        margin-bottom: 140px;
-    }
-
-    .history-timeline::before,
-    .timeline-progress {
-        left: 16px;
-    }
-
-    .timeline-runner,
-    .timeline-dot {
-        left: 16px;
-    }
-
-}
+</html>
