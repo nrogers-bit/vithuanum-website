@@ -13,15 +13,25 @@
 
 <body>
 
+
+<!-- Government Header -->
+
 <header class="government-header">
 
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+    >
         ☰
     </button>
 
     <div class="government-brand">
 
-        <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum"
+        >
 
         <div>
             <strong>PRINCIPALITY OF VITHUANUM</strong>
@@ -33,13 +43,18 @@
 </header>
 
 
+<!-- Side Navigation -->
+
 <nav id="side-menu" class="side-menu">
 
     <div class="menu-header">
 
         <strong>VITHUANUM</strong>
 
-        <button onclick="toggleMenu()" aria-label="Close navigation menu">
+        <button
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu"
+        >
             ×
         </button>
 
@@ -59,358 +74,421 @@
 </nav>
 
 
-<div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+<!-- Menu Overlay -->
+
+<div
+    id="menu-overlay"
+    class="menu-overlay"
+    onclick="toggleMenu()"
+></div>
 
 
 <main>
 
-    <!-- Introduction -->
 
-    <section class="content-section">
+<!-- Introduction -->
 
-        <h1>Territory of Vithuanum</h1>
+<section class="content-section">
 
-        <p>
-            The Principality of Vithuanum consists of six
-            counties united under the sovereignty of the
-            Principality and its Constitution.
-        </p>
+    <h1>Territory of Vithuanum</h1>
 
-    </section>
+    <p>
+        The Principality of Vithuanum consists of six
+        counties united under the sovereignty of the
+        Principality and its Constitution.
+    </p>
 
-
-    <!-- Territory Map -->
-
-    <section class="content-section">
-
-        <h2>Territory</h2>
-
-        <p>
-            The territory of Vithuanum is represented below.
-            The highlighted area represents the territory
-            claimed by the Principality.
-        </p>
+</section>
 
 
-        <div class="territory-map">
+<!-- Territory -->
 
-            <svg
-                class="territory-svg"
-                viewBox="0 0 1163 481"
+<section class="content-section">
+
+    <h2>Territory</h2>
+
+    <p>
+        The territory of Vithuanum is represented below.
+        The highlighted area represents the territory
+        claimed by the Principality.
+    </p>
+
+
+    <div class="territory-map">
+
+        <svg
+            class="territory-svg"
+            viewBox="0 0 1080 655"
+            preserveAspectRatio="none"
+            aria-label="Map of the territory of Vithuanum"
+        >
+
+
+            <!-- Map Background -->
+
+            <image
+                href="map.png"
+                x="0"
+                y="0"
+                width="1080"
+                height="655"
                 preserveAspectRatio="none"
-                aria-label="Map of the territory of Vithuanum"
-            >
-
-                <!-- Clean Map Background -->
-
-                <image
-                    href="map.png"
-                    x="0"
-                    y="0"
-                    width="1163"
-                    height="481"
-                />
+            />
 
 
-                <defs>
-
-                    <!-- Wiggly Vithuanum Territory -->
-
-                    <clipPath id="vithuanum-territory">
-
-                        <polygon points="
-                            176,60
-                            212,42
-                            268,30
-                            340,28
-                            430,36
-                            515,45
-                            600,55
-                            662,62
-                            720,74
-                            780,90
-                            835,104
-                            880,120
-                            920,142
-                            955,166
-                            985,194
-                            1008,222
-                            1025,248
-                            1040,278
-                            1052,308
-                            1063,334
-                            1078,358
-                            1095,378
-                            1110,394
-                            1122,408
-                            1128,420
-                            1122,432
-                            1108,444
-                            1088,456
-                            1060,466
-                            1030,474
-                            995,478
-                            955,479
-                            915,478
-                            875,476
-                            830,474
-                            780,472
-                            735,470
-                            690,468
-                            645,467
-                            595,465
-                            545,463
-                            498,460
-                            458,456
-                            425,450
-                            398,436
-                            372,420
-                            348,402
-                            325,388
-                            298,382
-                            268,380
-                            238,379
-                            205,378
-                            175,376
-                            145,368
-                            124,352
-                            108,330
-                            96,306
-                            86,280
-                            76,252
-                            66,222
-                            58,194
-                            50,164
-                            44,134
-                            40,108
-                            45,92
-                            60,82
-                            78,72
-                            98,64
-                            120,58
-                            146,56
-                            176,60
-                        "/>
-
-                    </clipPath>
-
-                </defs>
+            <defs>
 
 
-                <!-- Vithuanum Flag -->
+                <!-- Vithuanum Territory -->
 
-                <image
-                    href="flag.png"
-                    x="0"
-                    y="0"
-                    width="1163"
-                    height="481"
-                    preserveAspectRatio="xMidYMid slice"
-                    clip-path="url(#vithuanum-territory)"
-                    opacity="0.5"
-                />
+                <clipPath id="vithuanum-territory">
 
+                    <polygon points="
+                        175,60
+                        205,48
+                        235,38
+                        270,34
+                        310,36
+                        350,42
+                        395,47
+                        440,52
+                        485,57
+                        530,63
+                        570,70
+                        610,77
+                        650,87
+                        685,99
+                        720,113
+                        752,128
+                        780,146
+                        808,166
+                        833,188
+                        855,212
+                        875,240
+                        892,270
+                        905,300
+                        917,330
+                        928,360
+                        940,390
+                        953,420
+                        967,450
+                        978,478
+                        984,505
+                        988,530
+                        982,550
+                        970,568
+                        952,584
+                        930,596
+                        900,604
+                        865,606
+                        825,603
+                        785,600
+                        745,597
+                        705,594
+                        665,591
+                        625,589
+                        585,587
+                        545,584
+                        505,580
+                        470,576
+                        440,570
+                        415,560
+                        397,546
+                        382,530
+                        365,513
+                        348,497
+                        330,485
+                        310,477
+                        288,475
+                        265,474
+                        242,472
+                        220,468
+                        198,462
+                        180,450
+                        166,435
+                        155,417
+                        147,396
+                        140,374
+                        133,350
+                        127,326
+                        121,302
+                        116,278
+                        110,254
+                        105,230
+                        100,207
+                        96,185
+                        94,164
+                        96,145
+                        101,128
+                        109,112
+                        121,98
+                        137,86
+                        154,73
+                        175,60
+                    "/>
 
-                <!-- Wiggly Vithuanum Border -->
+                </clipPath>
 
-                <polygon
-                    points="
-                        176,60
-                        212,42
-                        268,30
-                        340,28
-                        430,36
-                        515,45
-                        600,55
-                        662,62
-                        720,74
-                        780,90
-                        835,104
-                        880,120
-                        920,142
-                        955,166
-                        985,194
-                        1008,222
-                        1025,248
-                        1040,278
-                        1052,308
-                        1063,334
-                        1078,358
-                        1095,378
-                        1110,394
-                        1122,408
-                        1128,420
-                        1122,432
-                        1108,444
-                        1088,456
-                        1060,466
-                        1030,474
-                        995,478
-                        955,479
-                        915,478
-                        875,476
-                        830,474
-                        780,472
-                        735,470
-                        690,468
-                        645,467
-                        595,465
-                        545,463
-                        498,460
-                        458,456
-                        425,450
-                        398,436
-                        372,420
-                        348,402
-                        325,388
-                        298,382
-                        268,380
-                        238,379
-                        205,378
-                        175,376
-                        145,368
-                        124,352
-                        108,330
-                        96,306
-                        86,280
-                        76,252
-                        66,222
-                        58,194
-                        50,164
-                        44,134
-                        40,108
-                        45,92
-                        60,82
-                        78,72
-                        98,64
-                        120,58
-                        146,56
-                        176,60
-                    "
-                    fill="none"
-                    stroke="#ffffff"
-                    stroke-width="5"
-                    stroke-linejoin="round"
-                />
-
-            </svg>
-
-        </div>
-
-    </section>
+            </defs>
 
 
-    <!-- Counties -->
+            <!-- Vithuanum Flag -->
 
-    <section class="content-section">
+            <image
+                href="flag.png"
+                x="0"
+                y="0"
+                width="1080"
+                height="655"
+                preserveAspectRatio="xMidYMid slice"
+                clip-path="url(#vithuanum-territory)"
+                opacity="0.5"
+            />
 
-        <h2>Our Counties</h2>
 
-        <p>
-            Vithuanum is divided into six counties, each
-            forming an important part of the Principality.
-        </p>
+            <!-- Vithuanum Border -->
+
+            <polygon
+                points="
+                    175,60
+                    205,48
+                    235,38
+                    270,34
+                    310,36
+                    350,42
+                    395,47
+                    440,52
+                    485,57
+                    530,63
+                    570,70
+                    610,77
+                    650,87
+                    685,99
+                    720,113
+                    752,128
+                    780,146
+                    808,166
+                    833,188
+                    855,212
+                    875,240
+                    892,270
+                    905,300
+                    917,330
+                    928,360
+                    940,390
+                    953,420
+                    967,450
+                    978,478
+                    984,505
+                    988,530
+                    982,550
+                    970,568
+                    952,584
+                    930,596
+                    900,604
+                    865,606
+                    825,603
+                    785,600
+                    745,597
+                    705,594
+                    665,591
+                    625,589
+                    585,587
+                    545,584
+                    505,580
+                    470,576
+                    440,570
+                    415,560
+                    397,546
+                    382,530
+                    365,513
+                    348,497
+                    330,485
+                    310,477
+                    288,475
+                    265,474
+                    242,472
+                    220,468
+                    198,462
+                    180,450
+                    166,435
+                    155,417
+                    147,396
+                    140,374
+                    133,350
+                    127,326
+                    121,302
+                    116,278
+                    110,254
+                    105,230
+                    100,207
+                    96,185
+                    94,164
+                    96,145
+                    101,128
+                    109,112
+                    121,98
+                    137,86
+                    154,73
+                    175,60
+                "
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="5"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+            />
+
+        </svg>
+
+    </div>
+
+</section>
 
 
-        <div class="card-grid">
+<!-- Counties -->
 
-            <div class="card">
-                <h3>Eagleshampton</h3>
-                <p>
-                    Eagleshampton is a recognised county
-                    of the Principality of Vithuanum.
-                </p>
-            </div>
+<section class="content-section">
 
-            <div class="card">
-                <h3>Ciocanshire</h3>
-                <p>
-                    Ciocanshire is a recognised county
-                    of the Principality of Vithuanum.
-                </p>
-            </div>
+    <h2>Our Counties</h2>
 
-            <div class="card">
-                <h3>Hurent</h3>
-                <p>
-                    Hurent is a recognised county
-                    of the Principality of Vithuanum.
-                </p>
-            </div>
+    <p>
+        Vithuanum is divided into six counties, each
+        forming an important part of the Principality.
+    </p>
 
-            <div class="card">
-                <h3>South Coleena</h3>
-                <p>
-                    South Coleena is a recognised county
-                    of the Principality of Vithuanum.
-                </p>
-            </div>
 
-            <div class="card">
-                <h3>North Coleena</h3>
-                <p>
-                    North Coleena is a recognised county
-                    of the Principality of Vithuanum.
-                </p>
-            </div>
+    <div class="card-grid">
 
-            <div class="card">
-                <h3>Kuross</h3>
-                <p>
-                    Kuross is a recognised county
-                    of the Principality of Vithuanum.
-                </p>
-            </div>
+
+        <div class="card">
+
+            <h3>Eagleshampton</h3>
+
+            <p>
+                Eagleshampton is a recognised county
+                of the Principality of Vithuanum.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="card">
+
+            <h3>Ciocanshire</h3>
+
+            <p>
+                Ciocanshire is a recognised county
+                of the Principality of Vithuanum.
+            </p>
+
+        </div>
 
 
-    <!-- County Administration -->
+        <div class="card">
 
-    <section class="content-section">
+            <h3>Hurent</h3>
 
-        <h2>County Administration</h2>
+            <p>
+                Hurent is a recognised county
+                of the Principality of Vithuanum.
+            </p>
 
-        <p>
-            Counties may have their own flags, symbols,
-            histories and cultural identities.
-        </p>
-
-        <p>
-            While counties may develop their own traditions
-            and identities, they remain an important part
-            of the united Principality of Vithuanum.
-        </p>
-
-    </section>
+        </div>
 
 
-    <!-- Future Expansion -->
+        <div class="card">
 
-    <section class="content-section">
+            <h3>South Coleena</h3>
 
-        <h2>Future Expansion</h2>
+            <p>
+                South Coleena is a recognised county
+                of the Principality of Vithuanum.
+            </p>
 
-        <p>
-            As Vithuanum continues to develop, additional
-            counties and regions may be established according
-            to the Constitution and laws of the Principality.
-        </p>
+        </div>
 
-    </section>
+
+        <div class="card">
+
+            <h3>North Coleena</h3>
+
+            <p>
+                North Coleena is a recognised county
+                of the Principality of Vithuanum.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Kuross</h3>
+
+            <p>
+                Kuross is a recognised county
+                of the Principality of Vithuanum.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- County Administration -->
+
+<section class="content-section">
+
+    <h2>County Administration</h2>
+
+    <p>
+        Counties may have their own flags, symbols,
+        histories and cultural identities.
+    </p>
+
+    <p>
+        While counties may develop their own traditions
+        and identities, they remain an important part
+        of the united Principality of Vithuanum.
+    </p>
+
+</section>
+
+
+<!-- Future Expansion -->
+
+<section class="content-section">
+
+    <h2>Future Expansion</h2>
+
+    <p>
+        As Vithuanum continues to develop, additional
+        counties and regions may be established according
+        to the Constitution and laws of the Principality.
+    </p>
+
+</section>
+
 
 </main>
 
+
+<!-- Footer -->
 
 <footer>
 
     <strong>Principality of Vithuanum</strong>
 
-    <p>Official Government Website</p>
+    <p>
+        Official Government Website
+    </p>
 
-    <p>© Principality of Vithuanum</p>
+    <p>
+        © Principality of Vithuanum
+    </p>
 
 </footer>
 
