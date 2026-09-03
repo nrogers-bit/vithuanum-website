@@ -2,236 +2,320 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Government | Principality of Vithuanum</title>
 
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- Government Header -->
-    <header class="government-header">
 
-        <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
-            ☰
-        </button>
+<!-- ==========================================
+     HEADER
+     ========================================== -->
 
-        <div class="government-brand">
-            <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
+<header class="government-header">
 
-            <div>
-                <strong>PRINCIPALITY OF VITHUANUM</strong>
-                <span>Official Government Website</span>
+    <button class="menu-button" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <div class="government-brand">
+
+        <div class="government-brand-small">
+            PRINCIPALITY OF
+        </div>
+
+        <div class="government-brand-large">
+            VITHUANUM
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     SIDE MENU
+     ========================================== -->
+
+<div id="menu-overlay" class="menu-overlay" onclick="closeMenu()"></div>
+
+
+<nav id="side-menu" class="side-menu">
+
+    <div class="side-menu-title">
+        PRINCIPALITY OF VITHUANUM
+    </div>
+
+
+    <a href="index.html">Home</a>
+
+    <a href="government.html">Government</a>
+
+    <a href="history.html">History</a>
+
+    <a href="territory.html">Territory</a>
+
+    <a href="citizenship.html">Citizenship</a>
+
+    <a href="constitution.html">Constitution</a>
+
+    <a href="national-symbols.html">National Symbols</a>
+
+    <a href="news.html">News</a>
+
+</nav>
+
+
+
+<!-- ==========================================
+     MAIN
+     ========================================== -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+        <div class="page-hero-inner">
+
+            <div class="hero-eyebrow">
+                GOVERNMENT
             </div>
-        </div>
 
-    </header>
-
-
-    <!-- Side Navigation -->
-    <nav id="side-menu" class="side-menu">
-
-        <div class="menu-header">
-            <strong>VITHUANUM</strong>
-
-            <button onclick="toggleMenu()" aria-label="Close navigation menu">
-                ×
-            </button>
-        </div>
-
-        <a href="index.html">Home</a>
-        <a href="government.html">Government</a>
-        <a href="history.html">History</a>
-        <a href="territory.html">Territory</a>
-        <a href="citizenship.html">Citizenship</a>
-        <a href="constitution.html">Constitution</a>
-        <a href="news.html">News</a>
-        <a href="national-symbols.html">National Symbols</a>
-
-    </nav>
-
-
-    <!-- Dark Overlay -->
-    <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
-
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Page Introduction -->
-        <section class="content-section">
-
-            <h1>Government of Vithuanum</h1>
+            <h1>
+                Government of Vithuanum
+            </h1>
 
             <p>
-                The Government of the Principality of Vithuanum
-                is responsible for the administration, development
-                and national affairs of the Principality.
+                The government of the Principality of Vithuanum
+                is responsible for managing national affairs and
+                supporting the development of the nation.
             </p>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- Head of State -->
-        <section class="content-section">
 
-            <h2>Head of State</h2>
+    <!-- GOVERNMENT LEADERSHIP -->
 
-            <div class="government-card">
+    <section class="content-section">
 
-                <h3>Sovereign</h3>
+        <div class="content-container">
 
-                <p>
-                    <strong>Noah Rogers</strong>
-                </p>
+            <h2>
+                National Leadership
+            </h2>
 
-                <p>
-                    The Sovereign is the Head of State and represents
-                    the Principality of Vithuanum.
-                </p>
+
+            <div class="government-grid">
+
+
+                <!-- SOVEREIGN -->
+
+                <div class="government-card">
+
+                    <div class="government-card-label">
+                        HEAD OF STATE
+                    </div>
+
+                    <h3>
+                        Noah Rogers
+                    </h3>
+
+                    <p>
+                        Sovereign of Vithuanum
+                    </p>
+
+                    <p>
+                        The Sovereign is the Head of State
+                        and the highest constitutional authority
+                        of the Principality of Vithuanum.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PRIME MINISTER -->
+
+                <div class="government-card">
+
+                    <div class="government-card-label">
+                        HEAD OF GOVERNMENT
+                    </div>
+
+                    <h3>
+                        Allu
+                    </h3>
+
+                    <p>
+                        Prime Minister
+                    </p>
+
+                    <p>
+                        The Prime Minister assists the Sovereign
+                        in managing the affairs of the Principality
+                        and coordinating the Government.
+                    </p>
+
+                </div>
+
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- Head of Government -->
-        <section class="content-section">
 
-            <h2>Head of Government</h2>
+    <!-- MINISTRIES -->
 
-            <div class="government-card">
+    <section class="content-section light-section">
 
-                <h3>Prime Minister</h3>
+        <div class="content-container">
 
-                <p>
-                    <strong>Allu</strong>
-                </p>
-
-                <p>
-                    The Prime Minister is the Head of Government
-                    and oversees the administration of the Principality.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Council of Ministers -->
-        <section class="content-section">
-
-            <h2>Ministries</h2>
+            <h2>
+                Government Ministries
+            </h2>
 
             <p>
-                Ministers are responsible for specific areas of
-                government and assist in the administration of
-                the Principality.
+                Government ministries are responsible for
+                specific areas of national administration.
+                Positions are appointed by the Sovereign
+                and may be opened as Vithuanum develops.
             </p>
 
 
             <div class="government-grid">
 
 
-                <!-- Foreign Affairs -->
+                <!-- FOREIGN AFFAIRS -->
+
                 <div class="government-card">
 
-                    <h3>Minister of Foreign Affairs</h3>
+                    <div class="government-card-label">
+                        MINISTRY
+                    </div>
+
+                    <h3>
+                        Foreign Affairs
+                    </h3>
 
                     <p>
-                        Responsible for international relations,
-                        diplomacy, partnerships and relations
-                        with other nations.
-                    </p>
-
-                    <p>
-                        <strong>Position: Open</strong>
+                        Responsible for Vithuanum's
+                        international relations, diplomatic
+                        communication and relationships
+                        with other micronations.
                     </p>
 
                     <a
+                        href="mailto:principalityofvithuanum@gmail.com"
                         class="button"
-                        href="mailto:principalityofvithuanum@gmail.com?subject=Application%20for%20Minister%20of%20Foreign%20Affairs&body=Name%3A%0A%0ADiscord%20username%3A%0A%0AWhy%20I%20want%20this%20position%3A%0A%0ARelevant%20experience%3A"
                     >
-                        Apply
+                        Apply for this position →
                     </a>
 
                 </div>
 
 
-                <!-- Culture -->
+
+                <!-- CULTURE -->
+
                 <div class="government-card">
 
-                    <h3>Minister of Culture</h3>
+                    <div class="government-card-label">
+                        MINISTRY
+                    </div>
+
+                    <h3>
+                        Culture
+                    </h3>
 
                     <p>
-                        Responsible for national culture,
-                        arts, traditions, heritage and
-                        cultural projects.
-                    </p>
-
-                    <p>
-                        <strong>Position: Open</strong>
+                        Responsible for supporting national
+                        culture, history, traditions, arts
+                        and creative projects.
                     </p>
 
                     <a
+                        href="mailto:principalityofvithuanum@gmail.com"
                         class="button"
-                        href="mailto:principalityofvithuanum@gmail.com?subject=Application%20for%20Minister%20of%20Culture&body=Name%3A%0A%0ADiscord%20username%3A%0A%0AWhy%20I%20want%20this%20position%3A%0A%0ARelevant%20experience%3A"
                     >
-                        Apply
+                        Apply for this position →
                     </a>
 
                 </div>
 
 
-                <!-- Finance -->
+
+                <!-- FINANCE -->
+
                 <div class="government-card">
 
-                    <h3>Minister of Finance</h3>
+                    <div class="government-card-label">
+                        MINISTRY
+                    </div>
+
+                    <h3>
+                        Finance
+                    </h3>
 
                     <p>
                         Responsible for national finances,
-                        economic administration and financial
-                        planning.
-                    </p>
-
-                    <p>
-                        <strong>Position: Open</strong>
+                        currency and economic administration.
                     </p>
 
                     <a
+                        href="mailto:principalityofvithuanum@gmail.com"
                         class="button"
-                        href="mailto:principalityofvithuanum@gmail.com?subject=Application%20for%20Minister%20of%20Finance&body=Name%3A%0A%0ADiscord%20username%3A%0A%0AWhy%20I%20want%20this%20position%3A%0A%0ARelevant%20experience%3A"
                     >
-                        Apply
+                        Apply for this position →
                     </a>
 
                 </div>
 
 
-                <!-- Infrastructure -->
+
+                <!-- INFRASTRUCTURE -->
+
                 <div class="government-card">
 
-                    <h3>Minister of Infrastructure</h3>
+                    <div class="government-card-label">
+                        MINISTRY
+                    </div>
+
+                    <h3>
+                        Infrastructure
+                    </h3>
 
                     <p>
-                        Responsible for infrastructure,
-                        national development, construction
-                        and public projects.
-                    </p>
-
-                    <p>
-                        <strong>Position: Open</strong>
+                        Responsible for national infrastructure,
+                        development and future projects.
                     </p>
 
                     <a
+                        href="mailto:principalityofvithuanum@gmail.com"
                         class="button"
-                        href="mailto:principalityofvithuanum@gmail.com?subject=Application%20for%20Minister%20of%20Infrastructure&body=Name%3A%0A%0ADiscord%20username%3A%0A%0AWhy%20I%20want%20this%20position%3A%0A%0ARelevant%20experience%3A"
                     >
-                        Apply
+                        Apply for this position →
                     </a>
 
                 </div>
@@ -239,68 +323,98 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- Government Structure -->
-        <section class="content-section">
 
-            <h2>Government Structure</h2>
+    <!-- GOVERNMENT STRUCTURE -->
+
+    <section class="content-section">
+
+        <div class="content-container">
+
+            <h2>
+                Government Structure
+            </h2>
 
             <p>
-                The Government operates under the Constitution
-                of the Principality of Vithuanum.
+                Vithuanum operates as a centralist constitutional
+                monarchy. The Sovereign serves as Head of State,
+                while the Government assists in the administration
+                of the Principality.
             </p>
 
-            <div class="link-grid">
 
-                <a href="constitution.html">
+            <div class="info-grid">
 
-                    <strong>Constitution</strong>
+
+                <a href="constitution.html" class="info-card">
+
+                    <h3>
+                        Constitution
+                    </h3>
+
+                    <p>
+                        Read the Constitution of the
+                        Principality of Vithuanum.
+                    </p>
 
                     <span>
-                        Read the Constitution and learn about
-                        the principles of government.
+                        Read the Constitution →
                     </span>
 
                 </a>
 
-
-                <a href="political-parties.html">
-
-                    <strong>Political Parties</strong>
-
-                    <span>
-                        Learn about the political parties
-                        operating within Vithuanum.
-                    </span>
-
-                </a>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <strong>Principality of Vithuanum</strong>
-
-        <p>
-            Official Government Website
-        </p>
-
-        <p>
-            © Principality of Vithuanum
-        </p>
-
-    </footer>
+    </section>
 
 
-    <script src="script.js"></script>
+</main>
+
+
+
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <strong>
+                Principality of Vithuanum
+            </strong>
+
+            <p>
+                Official Government Website
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                AVE VITHUANUM
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
 
