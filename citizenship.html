@@ -1,72 +1,370 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Citizenship - Principality of Vithuanum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citizenship | Principality of Vithuanum</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
 </head>
 
-
 <body>
 
+<header class="government-header">
 
-<header>
-    <h1>Citizenship of Vithuanum</h1>
-    <p>Become Part of the Principality</p>
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <div class="government-brand">
+
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum">
+
+        <div>
+            <strong>PRINCIPALITY OF VITHUANUM</strong>
+            <span>Official Government Website</span>
+        </div>
+
+    </div>
+
 </header>
 
 
-<nav>
+<nav id="side-menu" class="side-menu">
+
+    <div class="menu-header">
+
+        <strong>VITHUANUM</strong>
+
+        <button
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+            ×
+        </button>
+
+    </div>
+
     <a href="index.html">Home</a>
-    <a href="history.html">History</a>
     <a href="government.html">Government</a>
+    <a href="history.html">History</a>
     <a href="territory.html">Territory</a>
+    <a href="citizenship.html">Citizenship</a>
     <a href="diplomacy.html">Diplomacy</a>
     <a href="constitution.html">Constitution</a>
+    <a href="national-symbols.html">National Symbols</a>
     <a href="get-involved.html">Get Involved</a>
-    <a href="citizenship.html">Citizenship</a>
     <a href="political-parties.html">Political Parties</a>
+    <a href="news.html">News</a>
+
 </nav>
 
 
-<section>
+<div
+    id="menu-overlay"
+    class="menu-overlay"
+    onclick="toggleMenu()">
+</div>
 
 
-<h2>👤 Become a Citizen</h2>
+<main>
 
-<p>
-Visitors can apply to become citizens of Vithuanum. Citizenship allows you to become an official member of the Principality and participate in national activities.
-</p>
+    <!-- PAGE HEADER -->
 
-<ul>
-<li>Complete the citizenship application</li>
-<li>Agree to respect the Constitution and laws</li>
-<li>Take the Oath of Citizenship</li>
-<li>Become an active member of the community</li>
-</ul>
+    <section class="hero">
 
-<p>
-<strong>Ready to become a citizen?</strong>
-</p>
+        <div class="hero-inner">
 
-<p>
-<a href="https://np0bpx5a967.typeform.com/to/M8uCIXAE" target="_blank">
-<strong>🏰 Apply for Vithuanum Citizenship</strong>
-</a>
-</p>
+            <p class="eyebrow">
+                JOIN VITHUANUM
+            </p>
+
+            <h1>
+                Citizenship
+            </h1>
+
+            <p class="intro">
+                Become a citizen of the Principality of
+                Vithuanum and take part in our national
+                community.
+            </p>
+
+        </div>
+
+    </section>
 
 
-</section>
+    <!-- INTRODUCTION -->
+
+    <section class="content-section">
+
+        <h2>Become a Citizen</h2>
+
+        <p>
+            Citizenship connects you to the community of
+            Vithuanum and allows you to participate in the
+            nation's activities, projects and institutions.
+        </p>
+
+        <p>
+            Individuals who wish to become citizens must
+            complete the official citizenship application
+            and agree to respect the Constitution and laws
+            of Vithuanum.
+        </p>
+
+        <a
+            class="main-link"
+            href="https://np0bpx5a967.typeform.com/to/M8uCIXAE"
+            target="_blank"
+            rel="noopener noreferrer">
+            Apply for Citizenship →
+        </a>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="content-section">
+
+        <h2>How Citizenship Works</h2>
+
+        <h3>1. Join the Community</h3>
+
+        <p>
+            Individuals joining the official community of
+            Vithuanum are initially recognised as Visitors.
+        </p>
+
+
+        <h3>2. Complete the Application</h3>
+
+        <p>
+            Visitors are expected to complete the citizenship
+            application process within three (3) days of
+            joining the server.
+        </p>
+
+
+        <h3>3. Application Review</h3>
+
+        <p>
+            Applications are reviewed according to the
+            requirements of the Principality of Vithuanum.
+        </p>
+
+
+        <h3>4. Citizenship</h3>
+
+        <p>
+            Successful applicants may be granted citizenship
+            and become recognised members of the Vithuanian
+            community.
+        </p>
+
+    </section>
+
+
+    <!-- VISITORS -->
+
+    <section class="content-section">
+
+        <h2>Visitor Status</h2>
+
+        <p>
+            New members of the official Vithuanum community
+            are initially recognised as Visitors.
+        </p>
+
+        <p>
+            Visitors are expected to complete their
+            citizenship application within three (3) days
+            of joining.
+        </p>
+
+        <p>
+            Visitors who do not obtain citizenship within
+            this period may be removed from the official
+            Discord server at the discretion of the
+            Government or authorised moderators.
+        </p>
+
+        <p>
+            Individuals removed under this process may
+            rejoin the server and submit a new citizenship
+            application at a later date.
+        </p>
+
+    </section>
+
+
+    <!-- EXTENSIONS -->
+
+    <section class="content-section">
+
+        <h2>Extensions and Exemptions</h2>
+
+        <p>
+            The Government may grant extensions or exemptions
+            in exceptional circumstances where a Visitor has
+            demonstrated a genuine intention to become a
+            citizen.
+        </p>
+
+    </section>
+
+
+    <!-- CITIZEN RESPONSIBILITIES -->
+
+    <section class="content-section">
+
+        <h2>Responsibilities of Citizens</h2>
+
+        <p>
+            Citizens of Vithuanum are expected to:
+        </p>
+
+        <ul>
+            <li>Respect other members.</li>
+            <li>Follow national laws and server rules.</li>
+            <li>Support the peaceful development of Vithuanum.</li>
+            <li>Represent the nation positively.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- CITIZEN RIGHTS -->
+
+    <section class="content-section">
+
+        <h2>Rights of Citizens</h2>
+
+        <p>
+            Citizens of Vithuanum have the right to:
+        </p>
+
+        <ul>
+            <li>Express opinions respectfully.</li>
+            <li>Participate in national activities.</li>
+            <li>Share ideas for improving the nation.</li>
+            <li>Access national information.</li>
+            <li>Be treated fairly and with respect.</li>
+            <li>Participate in cultural and creative projects.</li>
+            <li>
+                Participate in parliamentary elections,
+                subject to electoral laws and requirements.
+            </li>
+            <li>
+                Stand for election to the National Assembly,
+                subject to electoral laws and requirements.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- CITIZENSHIP REMOVAL -->
+
+    <section class="content-section">
+
+        <h2>Removal of Citizenship</h2>
+
+        <p>
+            Citizenship may be removed due to serious
+            violations of national laws or harmful actions
+            against the community.
+        </p>
+
+    </section>
+
+
+    <!-- OATH -->
+
+    <section class="content-section">
+
+        <h2>Oath of Citizenship</h2>
+
+        <p>
+            Citizens may affirm their commitment to
+            Vithuanum through the national Oath of Citizenship:
+        </p>
+
+        <blockquote>
+            “I pledge to respect the Principality of Vithuanum,
+            uphold its Constitution, support its citizens, and
+            contribute positively to the future of our nation.”
+        </blockquote>
+
+    </section>
+
+
+    <!-- CONSTITUTION -->
+
+    <section class="content-section">
+
+        <h2>Constitutional Basis</h2>
+
+        <p>
+            Citizenship and Visitor status are established
+            under Articles V, VI and XIII of the Constitution
+            of the Principality of Vithuanum.
+        </p>
+
+        <a
+            class="main-link"
+            href="constitution.html">
+            Read the Constitution →
+        </a>
+
+    </section>
+
+
+    <!-- FINAL APPLICATION -->
+
+    <section class="content-section">
+
+        <h2>Ready to Apply?</h2>
+
+        <p>
+            Complete the official citizenship application
+            to begin the process of becoming a citizen of
+            Vithuanum.
+        </p>
+
+        <a
+            class="main-link"
+            href="https://np0bpx5a967.typeform.com/to/M8uCIXAE"
+            target="_blank"
+            rel="noopener noreferrer">
+            Start Citizenship Application →
+        </a>
+
+    </section>
+
+</main>
 
 
 <footer>
+
+    <strong>Principality of Vithuanum</strong>
+
+    <p>Official Government Website</p>
+
     <p>© Principality of Vithuanum</p>
+
 </footer>
 
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
