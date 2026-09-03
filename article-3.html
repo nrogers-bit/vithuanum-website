@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New updates published on the Government website</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+    <style>
+
+        .article-page {
+            background: #ffffff;
+            padding: 70px 6% 100px;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .article-label {
+            display: inline-block;
+            background: #005ea8;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 9px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .article-container h1 {
+            font-size: 46px;
+            line-height: 1.15;
+            color: #0b1f33;
+            margin: 0 0 15px;
+        }
+
+        .article-date {
+            color: #555;
+            font-size: 14px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .article-content {
+            font-size: 18px;
+            line-height: 1.75;
+            color: #222;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 35px;
+            color: #005ea8;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="government-header">
+
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <div class="government-brand">
+
+        <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
+
+        <div>
+            <strong>PRINCIPALITY OF VITHUANUM</strong>
+            <span>Official Government Website</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav id="side-menu" class="side-menu">
+
+    <div class="menu-header">
+        <strong>VITHUANUM</strong>
+        <button onclick="toggleMenu()" aria-label="Close navigation menu">×</button>
+    </div>
+
+    <a href="index.html">Home</a>
+    <a href="government.html">Government</a>
+    <a href="history.html">History</a>
+    <a href="territory.html">Territory</a>
+    <a href="citizenship.html">Citizenship</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="national-symbols.html">National Symbols</a>
+    <a href="news.html">News</a>
+
+</nav>
+
+
+<div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
+
+<main>
+
+<section class="article-page">
+
+<div class="article-container">
+
+    <span class="article-label">Announcement</span>
+
+    <h1>
+        New updates published on the Government website
+    </h1>
+
+    <div class="article-date">
+        28 August 2026
+    </div>
+
+    <div class="article-content">
+
+        <p>
+            New information and updates have been published across
+            the official Government website of Vithuanum.
+        </p>
+
+        <p>
+            Citizens and visitors can use the website to access
+            information about the Principality and its institutions.
+        </p>
+
+    </div>
+
+    <a href="news.html" class="back-link">
+        ← Back to News
+    </a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <strong>Principality of Vithuanum</strong>
+    <p>Official Government Website</p>
+    <p>© Principality of Vithuanum</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
