@@ -8,32 +8,43 @@
 
     <title>Government | Principality of Vithuanum</title>
 
-    <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
 
 </head>
 
 <body>
 
 
-<!-- HEADER -->
+<!-- ========================================
+     GOVERNMENT HEADER
+     ======================================== -->
 
 <header class="government-header">
 
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        ☰
     </button>
 
     <div class="government-brand">
 
-        <div class="government-brand-small">
-            PRINCIPALITY OF
-        </div>
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum">
 
-        <div class="government-brand-large">
-            VITHUANUM
+        <div>
+
+            <strong>
+                PRINCIPALITY OF VITHUANUM
+            </strong>
+
+            <span>
+                Official Government Website
+            </span>
+
         </div>
 
     </div>
@@ -42,14 +53,24 @@
 
 
 
-<!-- SIDE MENU -->
-
-<div id="menu-overlay" class="menu-overlay" onclick="closeMenu()"></div>
+<!-- ========================================
+     SIDE MENU
+     ======================================== -->
 
 <nav id="side-menu" class="side-menu">
 
-    <div class="side-menu-title">
-        PRINCIPALITY OF VITHUANUM
+    <div class="menu-header">
+
+        <strong>
+            VITHUANUM
+        </strong>
+
+        <button
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+            ×
+        </button>
+
     </div>
 
     <a href="index.html">Home</a>
@@ -65,40 +86,54 @@
 
 
 
+<!-- ========================================
+     MENU OVERLAY
+     ======================================== -->
+
+<div
+    id="menu-overlay"
+    class="menu-overlay"
+    onclick="toggleMenu()">
+</div>
+
+
+
+<!-- ========================================
+     MAIN CONTENT
+     ======================================== -->
+
 <main>
 
 
-<!-- GOVERNMENT BANNER -->
+    <!-- ========================================
+         PAGE INTRO
+         ======================================== -->
 
-<section class="page-hero">
+    <section class="history-intro">
 
-    <div class="page-hero-inner">
-
-        <div class="hero-eyebrow">
+        <p class="eyebrow">
             GOVERNMENT
-        </div>
+        </p>
 
         <h1>
             Government of Vithuanum
         </h1>
 
-        <p>
+        <p class="intro">
             The government of the Principality of Vithuanum
             is responsible for managing national affairs and
             supporting the development of the nation.
         </p>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- NATIONAL LEADERSHIP -->
+    <!-- ========================================
+         NATIONAL LEADERSHIP
+         ======================================== -->
 
-<section class="content-section">
-
-    <div class="content-container">
+    <section class="content-section">
 
         <h2>
             National Leadership
@@ -125,8 +160,8 @@
 
                 <p>
                     The Sovereign is the Head of State
-                    and the highest constitutional authority
-                    of the Principality of Vithuanum.
+                    and the highest authority of the
+                    Principality of Vithuanum.
                 </p>
 
             </div>
@@ -151,8 +186,8 @@
 
                 <p>
                     The Prime Minister assists the Sovereign
-                    in managing the affairs of the Principality
-                    and coordinating the Government.
+                    in managing the affairs of Vithuanum and
+                    coordinating the Government.
                 </p>
 
             </div>
@@ -160,17 +195,15 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- GOVERNMENT MINISTRIES -->
+    <!-- ========================================
+         GOVERNMENT MINISTRIES
+         ======================================== -->
 
-<section class="content-section light-section">
-
-    <div class="content-container">
+    <section class="content-section">
 
         <h2>
             Government Ministries
@@ -208,8 +241,7 @@
 
                 <a
                     href="mailto:principalityofvithuanum@gmail.com"
-                    class="button"
-                >
+                    class="main-link">
                     Apply for this position →
                 </a>
 
@@ -237,8 +269,7 @@
 
                 <a
                     href="mailto:principalityofvithuanum@gmail.com"
-                    class="button"
-                >
+                    class="main-link">
                     Apply for this position →
                 </a>
 
@@ -265,8 +296,7 @@
 
                 <a
                     href="mailto:principalityofvithuanum@gmail.com"
-                    class="button"
-                >
+                    class="main-link">
                     Apply for this position →
                 </a>
 
@@ -293,8 +323,7 @@
 
                 <a
                     href="mailto:principalityofvithuanum@gmail.com"
-                    class="button"
-                >
+                    class="main-link">
                     Apply for this position →
                 </a>
 
@@ -303,17 +332,15 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- GOVERNMENT STRUCTURE -->
+    <!-- ========================================
+         GOVERNMENT STRUCTURE
+         ======================================== -->
 
-<section class="content-section">
-
-    <div class="content-container">
+    <section class="content-section">
 
         <h2>
             Government Structure
@@ -327,12 +354,14 @@
         </p>
 
 
-        <div class="info-grid">
+        <div class="link-grid">
 
 
             <!-- CONSTITUTION -->
 
-            <a href="constitution.html" class="info-card">
+            <a
+                href="constitution.html"
+                class="link-card">
 
                 <h3>
                     Constitution
@@ -343,9 +372,9 @@
                     Principality of Vithuanum.
                 </p>
 
-                <span>
+                <strong>
                     Read the Constitution →
-                </span>
+                </strong>
 
             </a>
 
@@ -353,7 +382,9 @@
 
             <!-- POLITICAL PARTIES -->
 
-            <a href="political-parties.html" class="info-card">
+            <a
+                href="political-parties.html"
+                class="link-card">
 
                 <h3>
                     Political Parties
@@ -364,52 +395,39 @@
                     of the Principality of Vithuanum.
                 </p>
 
-                <span>
+                <strong>
                     Look at Political Parties →
-                </span>
+                </strong>
 
             </a>
 
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 </main>
 
 
 
-<!-- FOOTER -->
+<!-- ========================================
+     FOOTER
+     ======================================== -->
 
-<footer class="site-footer">
+<footer>
 
-    <div class="footer-container">
+    <strong>
+        Principality of Vithuanum
+    </strong>
 
-        <div>
+    <p>
+        Official Government Website
+    </p>
 
-            <strong>
-                Principality of Vithuanum
-            </strong>
-
-            <p>
-                Official Government Website
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <p>
-                AVE VITHUANUM
-            </p>
-
-        </div>
-
-    </div>
+    <p>
+        © Principality of Vithuanum
+    </p>
 
 </footer>
 
