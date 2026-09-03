@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>News | Principality of Vithuanum</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+    <style>
+
+        .news-page {
+            background: #f5f5f5;
+            padding: 70px 6% 100px;
+            min-height: 70vh;
+        }
+
+        .news-header {
+            max-width: 1100px;
+            margin: 0 auto 45px;
+        }
+
+        .news-header .eyebrow {
+            color: #005ea8;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .news-header h1 {
+            font-size: 48px;
+            margin: 0 0 15px;
+            color: #0b1f33;
+        }
+
+        .news-header p {
+            font-size: 18px;
+            max-width: 700px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .news-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            align-items: start;
+        }
+
+        .news-card {
+            background: #ffffff;
+            padding: 25px 25px 30px;
+            min-height: 270px;
+            border: 1px solid #e2e2e2;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .news-card h2 {
+            font-size: 19px;
+            line-height: 1.25;
+            margin: 0 0 8px;
+        }
+
+        .news-card h2 a {
+            color: #111;
+            text-decoration: underline;
+        }
+
+        .news-card h2 a:hover {
+            color: #005ea8;
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .news-card p {
+            font-size: 14px;
+            line-height: 1.55;
+            color: #333;
+            margin: 0;
+        }
+
+        .news-label {
+            display: inline-block;
+            background: #005ea8;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 7px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 1000px) {
+
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .news-page {
+                padding: 45px 20px 70px;
+            }
+
+            .news-header h1 {
+                font-size: 36px;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<header class="government-header">
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <div class="government-brand">
+
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum">
+
+        <div>
+            <strong>PRINCIPALITY OF VITHUANUM</strong>
+            <span>Official Government Website</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav id="side-menu" class="side-menu">
+
+    <div class="menu-header">
+
+        <strong>VITHUANUM</strong>
+
+        <button
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+            ×
+        </button>
+
+    </div>
+
+    <a href="index.html">Home</a>
+    <a href="government.html">Government</a>
+    <a href="history.html">History</a>
+    <a href="territory.html">Territory</a>
+    <a href="citizenship.html">Citizenship</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="national-symbols.html">National Symbols</a>
+    <a href="news.html">News</a>
+
+</nav>
+
+
+<div
+    id="menu-overlay"
+    class="menu-overlay"
+    onclick="toggleMenu()">
+</div>
+
+
+<main>
+
+    <section class="news-page">
+
+        <div class="news-header">
+
+            <p class="eyebrow">
+                PRINCIPALITY OF VITHUANUM
+            </p>
+
+            <h1>
+                News
+            </h1>
+
+            <p>
+                Official news, announcements and updates from the
+                Government of Vithuanum.
+            </p>
+
+        </div>
+
+
+        <div class="news-grid">
+
+
+            <!-- ARTICLE 1 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    Government
+                </span>
+
+                <h2>
+                    <a href="#">
+                        Government of Vithuanum announces new national programme
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    3 September 2026
+                </div>
+
+                <p>
+                    The Government has announced a new national programme
+                    supporting the continued development of Vithuanum and
+                    its national institutions.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 2 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    National
+                </span>
+
+                <h2>
+                    <a href="#">
+                        Vithuanum celebrates continued national development
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    1 September 2026
+                </div>
+
+                <p>
+                    Vithuanum continues to develop its national institutions,
+                    community and government structures.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 3 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    Announcement
+                </span>
+
+                <h2>
+                    <a href="#">
+                        New updates published on the Government website
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    28 August 2026
+                </div>
+
+                <p>
+                    New information and updates have been published across
+                    the official Government website of Vithuanum.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 4 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    Citizenship
+                </span>
+
+                <h2>
+                    <a href="#">
+                        Citizenship applications remain open
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    25 August 2026
+                </div>
+
+                <p>
+                    Applications for citizenship in the Principality of
+                    Vithuanum remain available to eligible visitors.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 5 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    Government
+                </span>
+
+                <h2>
+                    <a href="#">
+                        Government institutions continue to expand
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    20 August 2026
+                </div>
+
+                <p>
+                    Further work is underway to develop the institutions
+                    and administrative structure of Vithuanum.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 6 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    National
+                </span>
+
+                <h2>
+                    <a href="#">
+                        Vithuanum publishes national update
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    15 August 2026
+                </div>
+
+                <p>
+                    The Principality has published an update concerning
+                    recent national developments and future plans.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 7 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    Announcement
+                </span>
+
+                <h2>
+                    <a href="#">
+                        Official Government announcements
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    10 August 2026
+                </div>
+
+                <p>
+                    Read the latest official announcements from the
+                    Government of the Principality of Vithuanum.
+                </p>
+
+            </article>
+
+
+            <!-- ARTICLE 8 -->
+
+            <article class="news-card">
+
+                <span class="news-label">
+                    Vithuanum
+                </span>
+
+                <h2>
+                    <a href="#">
+                        The latest from the Principality
+                    </a>
+                </h2>
+
+                <div class="news-date">
+                    5 August 2026
+                </div>
+
+                <p>
+                    The latest developments, announcements and information
+                    from across Vithuanum.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <strong>
+        Principality of Vithuanum
+    </strong>
+
+    <p>
+        Official Government Website
+    </p>
+
+    <p>
+        © Principality of Vithuanum
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
