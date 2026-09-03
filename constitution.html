@@ -1,329 +1,728 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Constitution - Principality of Vithuanum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Constitution | Principality of Vithuanum</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
 </head>
 
-
 <body>
 
-<header>
-    <h1>Constitution of Vithuanum</h1>
-    <p>The Supreme Law of the Principality</p>
+<header class="government-header">
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <div class="government-brand">
+
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum">
+
+        <div>
+            <strong>PRINCIPALITY OF VITHUANUM</strong>
+            <span>Official Government Website</span>
+        </div>
+
+    </div>
+
 </header>
 
 
-<nav>
+<nav id="side-menu" class="side-menu">
+
+    <div class="menu-header">
+
+        <strong>VITHUANUM</strong>
+
+        <button
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+            ×
+        </button>
+
+    </div>
+
     <a href="index.html">Home</a>
-    <a href="history.html">History</a>
     <a href="government.html">Government</a>
+    <a href="history.html">History</a>
     <a href="territory.html">Territory</a>
+    <a href="citizenship.html">Citizenship</a>
     <a href="diplomacy.html">Diplomacy</a>
     <a href="constitution.html">Constitution</a>
     <a href="get-involved.html">Get Involved</a>
-    <a href="citizenship.html">Citizenship</a>
     <a href="political-parties.html">Political Parties</a>
+    <a href="news.html">News</a>
+
 </nav>
 
 
-
-<section>
-
-
-<h2>📜 Table of Contents</h2>
-
-<div class="toc">
-
-<p><a href="#article1">Article I: The State</a></p>
-<p><a href="#article2">Article II: The Sovereign</a></p>
-<p><a href="#article3">Article III: The Government</a></p>
-<p><a href="#article4">Article IV: Citizenship</a></p>
-<p><a href="#article5">Article V: Rights of Citizens</a></p>
-<p><a href="#article6">Article VI: National Territories and Regions</a></p>
-<p><a href="#article7">Article VII: Diplomacy</a></p>
-<p><a href="#article8">Article VIII: Laws and Justice</a></p>
-<p><a href="#article9">Article IX: National Culture</a></p>
-<p><a href="#article10">Article X: Future Institutions</a></p>
-<p><a href="#article11">Article XI: Amendments</a></p>
-<p><a href="#article12">Article XII: Visitor Verification and Citizenship</a></p>
-
+<div
+    id="menu-overlay"
+    class="menu-overlay"
+    onclick="toggleMenu()">
 </div>
 
 
+<main>
 
-<h2>📜 Preamble</h2>
+    <!-- CONSTITUTION HEADER -->
 
-<p>
-We, the founders and citizens of the Principality of Vithuanum, establish this Constitution to create a peaceful, creative, and united micronation.
-</p>
+    <section class="hero">
 
-<p>
-This Constitution shall protect the rights of citizens, guide the government, preserve national identity, and provide a foundation for the future growth of Vithuanum.
-</p>
+        <div class="hero-inner">
 
+            <p class="eyebrow">
+                FOUNDATIONAL DOCUMENT
+            </p>
 
+            <h1>
+                Constitution of the Principality of Vithuanum
+            </h1>
 
+            <p class="intro">
+                The supreme law establishing the principles,
+                institutions, rights and responsibilities of
+                the Principality of Vithuanum.
+            </p>
 
-<h2 id="article1">Article I: The State</h2>
+        </div>
 
-<p>
-The official name of the nation shall be the <strong>Principality of Vithuanum</strong>.
-</p>
+    </section>
 
-<p>
-Vithuanum is a micronation dedicated to:
-</p>
 
-<ul>
-<li>Peaceful diplomacy</li>
-<li>Creativity and culture</li>
-<li>Community and friendship</li>
-<li>Respect and cooperation</li>
-</ul>
+    <!-- PREAMBLE -->
 
-<p>
-The national symbols of Vithuanum shall include:
-</p>
+    <section class="content-section">
 
-<ul>
-<li>The national flag</li>
-<li>The coat of arms</li>
-<li>The national anthem</li>
-<li>Other symbols established by the Sovereign</li>
-</ul>
+        <h2>Preamble</h2>
 
+        <p>
+            We, the founders and citizens of the Principality
+            of Vithuanum, establish this Constitution to create
+            a peaceful, creative, and united micronation.
+            This Constitution shall protect the rights of
+            citizens, guide the government, preserve national
+            identity, and provide a foundation for the future
+            growth of Vithuanum.
+        </p>
 
+    </section>
 
 
-<h2 id="article2">Article II: The Sovereign</h2>
+    <!-- ARTICLE I -->
 
-<p>
-The Sovereign shall be the Head of State and the highest authority of the Principality of Vithuanum.
-</p>
+    <section class="content-section">
 
-<p>
-The duties of the Sovereign include:
-</p>
+        <h2>Article I: The State</h2>
 
-<ul>
-<li>Protecting the Constitution</li>
-<li>Representing Vithuanum</li>
-<li>Appointing government officials</li>
-<li>Approving national decisions</li>
-<li>Protecting citizen rights</li>
-<li>Guiding future development</li>
-</ul>
+        <h3>Section 1</h3>
 
+        <p>
+            The official name of the nation shall be the
+            Principality of Vithuanum.
+        </p>
 
+        <h3>Section 2</h3>
 
+        <p>
+            Vithuanum is a micronation dedicated to:
+        </p>
 
-<h2 id="article3">Article III: The Government</h2>
+        <ul>
+            <li>Peaceful diplomacy</li>
+            <li>Creativity and culture</li>
+            <li>Community and friendship</li>
+            <li>Respect and cooperation</li>
+        </ul>
 
-<p>
-The Government shall assist the Sovereign in managing the affairs of Vithuanum.
-</p>
+        <h3>Section 3</h3>
 
-<p>
-Government positions may include:
-</p>
+        <p>
+            The national symbols of Vithuanum shall include:
+        </p>
 
-<ul>
-<li>Prime Minister</li>
-<li>Minister of Foreign Affairs</li>
-<li>Minister of Culture</li>
-<li>Minister of Finance</li>
-<li>Minister of Infrastructure</li>
-<li>Other positions created when needed</li>
-</ul>
+        <ul>
+            <li>The national flag</li>
+            <li>The coat of arms</li>
+            <li>The national anthem</li>
+            <li>Other symbols established by the Sovereign</li>
+        </ul>
 
+    </section>
 
 
+    <!-- ARTICLE II -->
 
-<h2 id="article4">Article IV: Citizenship</h2>
+    <section class="content-section">
 
-<p>
-Citizenship may be granted to individuals who apply and agree to respect the Constitution and laws of Vithuanum.
-</p>
+        <h2>Article II: The Sovereign</h2>
 
-<ul>
-<li>Respect other members</li>
-<li>Follow national laws and server rules</li>
-<li>Support peaceful development</li>
-<li>Represent the nation positively</li>
-</ul>
+        <h3>Section 1</h3>
 
+        <p>
+            The Sovereign shall be the Head of State and the
+            highest authority of the Principality of Vithuanum.
+        </p>
 
+        <h3>Section 2</h3>
 
+        <p>
+            The duties of the Sovereign include:
+        </p>
 
-<h2 id="article5">Article V: Rights of Citizens</h2>
+        <ul>
+            <li>Protecting the Constitution.</li>
+            <li>Representing Vithuanum.</li>
+            <li>Appointing government officials.</li>
+            <li>Approving national decisions.</li>
+            <li>Protecting the rights of citizens.</li>
+            <li>Guiding the future development of the nation.</li>
+        </ul>
 
-<p>
-Every citizen of Vithuanum shall have the right to:
-</p>
+        <h3>Section 3</h3>
 
-<ul>
-<li>Express opinions respectfully</li>
-<li>Participate in national activities</li>
-<li>Share ideas</li>
-<li>Access national information</li>
-<li>Be treated fairly</li>
-<li>Participate in cultural projects</li>
-</ul>
+        <p>
+            The Sovereign shall act responsibly and fairly,
+            respecting the values of Vithuanum.
+        </p>
 
+    </section>
 
 
+    <!-- ARTICLE III -->
 
-<h2 id="article6">Article VI: National Territories and Regions</h2>
+    <section class="content-section">
 
-<p>
-The territory of Vithuanum may be divided into states, provinces, regions, or districts.
-</p>
+        <h2>Article III: The Government</h2>
 
-<p>
-Territorial divisions may have their own:
-</p>
+        <h3>Section 1</h3>
 
-<ul>
-<li>Flags</li>
-<li>Symbols</li>
-<li>Histories</li>
-<li>Cultural identities</li>
-</ul>
+        <p>
+            The Government shall assist the Sovereign in
+            managing the affairs of Vithuanum.
+        </p>
 
+        <h3>Section 2</h3>
 
+        <p>
+            Government positions may include:
+        </p>
 
+        <ul>
+            <li>Prime Minister</li>
+            <li>Minister of Foreign Affairs</li>
+            <li>Minister of Culture</li>
+            <li>Minister of Finance</li>
+            <li>Minister of Infrastructure</li>
+            <li>Other positions created when needed</li>
+        </ul>
 
-<h2 id="article7">Article VII: Diplomacy</h2>
+        <h3>Section 3</h3>
 
-<p>
-Vithuanum shall seek peaceful relations with other micronations and communities.
-</p>
+        <p>
+            Government officials shall serve the interests
+            of Vithuanum and its citizens.
+        </p>
 
-<ul>
-<li>Alliances</li>
-<li>Friendships</li>
-<li>Diplomatic agreements</li>
-<li>Embassies</li>
-</ul>
+    </section>
 
 
+    <!-- ARTICLE IV -->
 
+    <section class="content-section">
 
-<h2 id="article8">Article VIII: Laws and Justice</h2>
+        <h2>Article IV: The National Assembly</h2>
 
-<p>
-The laws of Vithuanum shall protect citizens and maintain order.
-</p>
+        <h3>Section 1</h3>
 
-<p>
-All citizens and officials shall be subject to the laws of Vithuanum.
-</p>
+        <p>
+            The National Assembly of Vithuanum shall be the
+            official legislative body of the Principality
+            of Vithuanum.
+        </p>
 
+        <h3>Section 2</h3>
 
+        <p>
+            The National Assembly shall initially consist of
+            five (5) Members of Parliament, hereafter referred
+            to as MPs.
+        </p>
 
+        <h3>Section 3</h3>
 
-<h2 id="article9">Article IX: National Culture</h2>
+        <p>
+            MPs shall represent the citizens of Vithuanum as
+            a whole and shall not be assigned to represent
+            individual counties, regions, or territorial
+            divisions.
+        </p>
 
-<p>
-Vithuanum shall encourage:
-</p>
+        <h3>Section 4</h3>
 
-<ul>
-<li>Art</li>
-<li>History</li>
-<li>Photography</li>
-<li>Maps</li>
-<li>Architecture</li>
-<li>National traditions</li>
-</ul>
+        <p>
+            Members of Parliament shall have the right to:
+        </p>
 
+        <ul>
+            <li>Propose legislation.</li>
+            <li>Debate proposed laws and national matters.</li>
+            <li>Vote on legislation.</li>
+            <li>Represent the interests and views of citizens.</li>
+            <li>
+                Question the Government and its ministers on
+                matters concerning their duties.
+            </li>
+        </ul>
 
+        <h3>Section 5</h3>
 
+        <p>
+            MPs may stand for election as members of a
+            recognised political party or as independent
+            candidates.
+        </p>
 
-<h2 id="article10">Article X: Future Institutions</h2>
+        <h3>Section 6</h3>
 
-<p>
-Future institutions may be created to improve national governance.
-</p>
+        <p>
+            The National Assembly shall elect or appoint a
+            Speaker of the National Assembly, who shall be
+            responsible for organising Assembly business,
+            maintaining order during debates, and overseeing
+            official votes.
+        </p>
 
-<ul>
-<li>A Parliament</li>
-<li>Courts</li>
-<li>Local governments</li>
-<li>Additional government bodies</li>
-</ul>
+        <h3>Section 7</h3>
 
+        <p>
+            The method, timing, and procedures of parliamentary
+            elections may be established by law or by
+            regulations approved by the Sovereign, provided
+            they remain consistent with this Constitution.
+        </p>
 
+        <h3>Section 8</h3>
 
+        <p>
+            A proposed law shall require a majority vote of
+            participating MPs to pass through the National
+            Assembly, unless another constitutional requirement
+            applies.
+        </p>
 
-<h2 id="article11">Article XI: Amendments</h2>
+        <h3>Section 9</h3>
 
-<p>
-This Constitution may be changed when necessary to reflect the growth and needs of Vithuanum.
-</p>
+        <p>
+            Legislation passed by the National Assembly shall
+            be presented to the Sovereign for approval before
+            becoming law.
+        </p>
 
-<p>
-Amendments require approval from the Sovereign.
-</p>
+    </section>
 
 
+    <!-- ARTICLE V -->
 
+    <section class="content-section">
 
-<h2 id="article12">Article XII: Visitor Verification and Citizenship</h2>
+        <h2>Article V: Citizenship</h2>
 
-<p>
-Individuals joining the official community of the Principality of Vithuanum shall initially be recognised as Visitors.
-</p>
+        <h3>Section 1</h3>
 
-<ul>
-<li>Visitors should complete the citizenship process within three days.</li>
-<li>Visitors failing to obtain citizenship may be removed.</li>
-<li>Removed individuals may reapply later.</li>
-<li>Extensions may be granted in exceptional circumstances.</li>
-</ul>
+        <p>
+            Citizenship may be granted to individuals who
+            apply and agree to respect the Constitution and
+            laws of Vithuanum.
+        </p>
 
+        <h3>Section 2</h3>
 
+        <p>
+            Citizens shall:
+        </p>
 
+        <ul>
+            <li>Respect other members.</li>
+            <li>Follow national laws and server rules.</li>
+            <li>Support the peaceful development of Vithuanum.</li>
+            <li>Represent the nation positively.</li>
+        </ul>
 
-<h2>🏰 National Values</h2>
+        <h3>Section 3</h3>
 
-<ul>
-<li>Tradition</li>
-<li>Peace</li>
-<li>Unity</li>
-<li>Justice</li>
-<li>Creativity</li>
-<li>Diplomacy</li>
-<li>Honour</li>
-</ul>
+        <p>
+            Citizenship may be removed due to serious
+            violations of national laws or harmful actions
+            against the community.
+        </p>
 
+    </section>
 
 
+    <!-- ARTICLE VI -->
 
-<h2>📝 Oath of Citizenship</h2>
+    <section class="content-section">
 
-<p>
-"I pledge to respect the Principality of Vithuanum, uphold its Constitution, support its citizens, and contribute positively to the future of our nation."
-</p>
+        <h2>Article VI: Rights of Citizens</h2>
 
+        <p>
+            Every citizen of Vithuanum shall have the right to:
+        </p>
 
+        <ul>
+            <li>Express opinions respectfully.</li>
+            <li>Participate in national activities.</li>
+            <li>Share ideas for improving the nation.</li>
+            <li>Access national information.</li>
+            <li>Be treated fairly and with respect.</li>
+            <li>Participate in cultural and creative projects.</li>
+            <li>
+                Participate in parliamentary elections,
+                subject to electoral laws and requirements.
+            </li>
+            <li>
+                Stand for election to the National Assembly,
+                subject to electoral laws and requirements.
+            </li>
+        </ul>
 
+    </section>
 
-<h2>🏰 AVE VITHUANUM</h2>
 
+    <!-- ARTICLE VII -->
 
-</section>
+    <section class="content-section">
 
+        <h2>Article VII: National Territories and Regions</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            The territory of Vithuanum may be divided into
+            states, provinces, regions, or districts.
+        </p>
+
+        <h3>Section 2</h3>
+
+        <p>
+            Territorial divisions may have their own:
+        </p>
+
+        <ul>
+            <li>Flags</li>
+            <li>Symbols</li>
+            <li>Histories</li>
+            <li>Cultural identities</li>
+        </ul>
+
+        <h3>Section 3</h3>
+
+        <p>
+            All territories shall remain united under the
+            Principality of Vithuanum.
+        </p>
+
+    </section>
+
+
+    <!-- ARTICLE VIII -->
+
+    <section class="content-section">
+
+        <h2>Article VIII: Diplomacy</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            Vithuanum shall seek peaceful relations with
+            other micronations and communities.
+        </p>
+
+        <h3>Section 2</h3>
+
+        <p>
+            The Government may establish:
+        </p>
+
+        <ul>
+            <li>Alliances</li>
+            <li>Friendships</li>
+            <li>Diplomatic agreements</li>
+            <li>Embassies</li>
+        </ul>
+
+        <h3>Section 3</h3>
+
+        <p>
+            Representatives of Vithuanum shall act respectfully
+            when representing the nation.
+        </p>
+
+    </section>
+
+
+    <!-- ARTICLE IX -->
+
+    <section class="content-section">
+
+        <h2>Article IX: Laws and Justice</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            The laws of Vithuanum shall be created to protect
+            citizens and maintain order.
+        </p>
+
+        <h3>Section 2</h3>
+
+        <p>
+            All citizens and officials shall be subject to
+            the laws of Vithuanum.
+        </p>
+
+        <h3>Section 3</h3>
+
+        <p>
+            Punishments shall be fair, reasonable, and focused
+            on maintaining a safe community.
+        </p>
+
+        <h3>Section 4</h3>
+
+        <p>
+            New legislation may be proposed by Members of
+            Parliament, the Government, or the Sovereign,
+            unless otherwise established by law.
+        </p>
+
+    </section>
+
+
+    <!-- ARTICLE X -->
+
+    <section class="content-section">
+
+        <h2>Article X: National Culture</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            Vithuanum shall encourage:
+        </p>
+
+        <ul>
+            <li>Art</li>
+            <li>History</li>
+            <li>Photography</li>
+            <li>Maps</li>
+            <li>Architecture</li>
+            <li>National traditions</li>
+        </ul>
+
+        <h3>Section 2</h3>
+
+        <p>
+            Citizens are encouraged to contribute to the
+            culture and identity of the nation.
+        </p>
+
+    </section>
+
+
+    <!-- ARTICLE XI -->
+
+    <section class="content-section">
+
+        <h2>Article XI: Future Institutions</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            As Vithuanum grows, new institutions may be created
+            to improve national governance and administration.
+        </p>
+
+        <h3>Section 2</h3>
+
+        <p>
+            Future institutions may include:
+        </p>
+
+        <ul>
+            <li>Courts</li>
+            <li>Local governments</li>
+            <li>Additional government bodies</li>
+            <li>Electoral institutions</li>
+            <li>Other national organisations</li>
+        </ul>
+
+        <h3>Section 3</h3>
+
+        <p>
+            The creation of new institutions shall be decided
+            through lawful constitutional changes or legislation
+            consistent with this Constitution.
+        </p>
+
+    </section>
+
+
+    <!-- ARTICLE XII -->
+
+    <section class="content-section">
+
+        <h2>Article XII: Amendments</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            This Constitution may be changed when necessary to
+            reflect the growth and needs of Vithuanum.
+        </p>
+
+        <h3>Section 2</h3>
+
+        <p>
+            Amendments require approval from the Sovereign.
+        </p>
+
+    </section>
+
+
+    <!-- ARTICLE XIII -->
+
+    <section class="content-section">
+
+        <h2>Article XIII: Visitor Verification and Citizenship</h2>
+
+        <h3>Section 1</h3>
+
+        <p>
+            Individuals joining the official community of the
+            Principality of Vithuanum shall initially be
+            recognised as Visitors.
+        </p>
+
+        <h3>Section 2</h3>
+
+        <p>
+            Visitors are expected to complete the citizenship
+            application process within three (3) days of joining
+            the server.
+        </p>
+
+        <h3>Section 3</h3>
+
+        <p>
+            Visitors who fail to obtain citizenship within the
+            three-day period may be removed from the official
+            Discord server at the discretion of the Government
+            or authorised moderators.
+        </p>
+
+        <h3>Section 4</h3>
+
+        <p>
+            Individuals removed under this Article may rejoin
+            the server and submit a new application for
+            citizenship at a later date, subject to the laws
+            and regulations of the Principality of Vithuanum.
+        </p>
+
+        <h3>Section 5</h3>
+
+        <p>
+            The Government may grant extensions or exemptions
+            in exceptional circumstances where a visitor has
+            demonstrated a genuine intention to become a citizen.
+        </p>
+
+        <p>
+            This amendment shall take effect immediately upon
+            its adoption.
+        </p>
+
+    </section>
+
+
+    <!-- NATIONAL VALUES -->
+
+    <section class="content-section">
+
+        <h2>National Values</h2>
+
+        <p>
+            The Principality of Vithuanum shall be guided by:
+        </p>
+
+        <ul>
+            <li>Tradition</li>
+            <li>Peace</li>
+            <li>Unity</li>
+            <li>Justice</li>
+            <li>Creativity</li>
+            <li>Diplomacy</li>
+            <li>Honour</li>
+        </ul>
+
+    </section>
+
+
+    <!-- CITIZENSHIP OATH -->
+
+    <section class="content-section">
+
+        <h2>Oath of Citizenship</h2>
+
+        <blockquote>
+            “I pledge to respect the Principality of Vithuanum,
+            uphold its Constitution, support its citizens, and
+            contribute positively to the future of our nation.”
+        </blockquote>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="content-section">
+
+        <p>
+            <strong>
+                Established as the supreme law of the
+                Principality of Vithuanum.
+            </strong>
+        </p>
+
+    </section>
+
+</main>
 
 
 <footer>
-<p>© Principality of Vithuanum</p>
+
+    <strong>Principality of Vithuanum</strong>
+
+    <p>Official Government Website</p>
+
+    <p>© Principality of Vithuanum</p>
+
 </footer>
 
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
