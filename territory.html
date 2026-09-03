@@ -13,358 +13,291 @@
 
 <body>
 
-    <!-- Government Header -->
-    <header class="government-header">
+<header class="government-header">
 
-        <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
-            ☰
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <div class="government-brand">
+
+        <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
+
+        <div>
+            <strong>PRINCIPALITY OF VITHUANUM</strong>
+            <span>Official Government Website</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav id="side-menu" class="side-menu">
+
+    <div class="menu-header">
+        <strong>VITHUANUM</strong>
+
+        <button onclick="toggleMenu()" aria-label="Close navigation menu">
+            ×
         </button>
+    </div>
 
-        <div class="government-brand">
+    <a href="index.html">Home</a>
+    <a href="government.html">Government</a>
+    <a href="history.html">History</a>
+    <a href="territory.html">Territory</a>
+    <a href="citizenship.html">Citizenship</a>
+    <a href="diplomacy.html">Diplomacy</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="political-parties.html">Political Parties</a>
+    <a href="news.html">News</a>
 
-            <img src="coat-of-arms.png" alt="Coat of Arms of Vithuanum">
+</nav>
 
-            <div>
-                <strong>PRINCIPALITY OF VITHUANUM</strong>
-                <span>Official Government Website</span>
+
+<div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
+
+<main>
+
+    <section class="content-section">
+
+        <h1>Territory of Vithuanum</h1>
+
+        <p>
+            The Principality of Vithuanum consists of six
+            counties united under the sovereignty of the
+            Principality and its Constitution.
+        </p>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <h2>Territory</h2>
+
+        <p>
+            The territory of Vithuanum is represented below.
+            The highlighted area represents the territory
+            claimed by the Principality.
+        </p>
+
+
+        <div class="territory-map">
+
+            <svg
+                class="territory-svg"
+                viewBox="0 0 1163 481"
+                preserveAspectRatio="none"
+                aria-label="Map of the territory of Vithuanum"
+            >
+
+                <!-- Clean Map Background -->
+
+                <image
+                    href="map.png"
+                    x="0"
+                    y="0"
+                    width="1163"
+                    height="481"
+                />
+
+
+                <defs>
+
+                    <!-- Vithuanum Territory -->
+
+                    <clipPath id="vithuanum-territory">
+
+                        <polygon points="
+                            200,30
+                            650,60
+                            820,94
+                            935,138
+                            1015,203
+                            1068,292
+                            1140,363
+                            1145,412
+                            1015,479
+                            850,470
+                            650,462
+                            500,458
+                            410,451
+                            335,385
+                            150,378
+                            100,290
+                            48,100
+                            100,62
+                        "/>
+
+                    </clipPath>
+
+                </defs>
+
+
+                <!-- Vithuanum Flag -->
+
+                <image
+                    href="flag.png"
+                    x="0"
+                    y="0"
+                    width="1163"
+                    height="481"
+                    preserveAspectRatio="xMidYMid slice"
+                    clip-path="url(#vithuanum-territory)"
+                    opacity="0.5"
+                />
+
+
+                <!-- Vithuanum Border -->
+
+                <polygon
+                    points="
+                        200,30
+                        650,60
+                        820,94
+                        935,138
+                        1015,203
+                        1068,292
+                        1140,363
+                        1145,412
+                        1015,479
+                        850,470
+                        650,462
+                        500,458
+                        410,451
+                        335,385
+                        150,378
+                        100,290
+                        48,100
+                        100,62
+                    "
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-width="5"
+                    stroke-linejoin="round"
+                />
+
+            </svg>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <h2>Our Counties</h2>
+
+        <p>
+            Vithuanum is divided into six counties, each
+            forming an important part of the Principality.
+        </p>
+
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>Eagleshampton</h3>
+                <p>
+                    Eagleshampton is a recognised county
+                    of the Principality of Vithuanum.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ciocanshire</h3>
+                <p>
+                    Ciocanshire is a recognised county
+                    of the Principality of Vithuanum.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Hurent</h3>
+                <p>
+                    Hurent is a recognised county
+                    of the Principality of Vithuanum.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>South Coleena</h3>
+                <p>
+                    South Coleena is a recognised county
+                    of the Principality of Vithuanum.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>North Coleena</h3>
+                <p>
+                    North Coleena is a recognised county
+                    of the Principality of Vithuanum.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Kuross</h3>
+                <p>
+                    Kuross is a recognised county
+                    of the Principality of Vithuanum.
+                </p>
             </div>
 
         </div>
 
-    </header>
+    </section>
 
 
-    <!-- Side Navigation -->
-    <nav id="side-menu" class="side-menu">
+    <section class="content-section">
 
-        <div class="menu-header">
-
-            <strong>VITHUANUM</strong>
-
-            <button onclick="toggleMenu()" aria-label="Close navigation menu">
-                ×
-            </button>
-
-        </div>
-
-        <a href="index.html">Home</a>
-        <a href="government.html">Government</a>
-        <a href="history.html">History</a>
-        <a href="territory.html">Territory</a>
-        <a href="citizenship.html">Citizenship</a>
-        <a href="diplomacy.html">Diplomacy</a>
-        <a href="constitution.html">Constitution</a>
-        <a href="get-involved.html">Get Involved</a>
-        <a href="political-parties.html">Political Parties</a>
-        <a href="news.html">News</a>
-
-    </nav>
-
-
-    <!-- Dark Overlay -->
-    <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
-
-
-    <!-- Main Content -->
-    <main>
-
-
-        <!-- Introduction -->
-        <section class="content-section">
-
-            <h1>Territory of Vithuanum</h1>
-
-            <p>
-                The Principality of Vithuanum consists of six
-                counties united under the sovereignty of the
-                Principality and its Constitution.
-            </p>
-
-        </section>
-
-
-        <!-- Territory Map -->
-        <section class="content-section">
-
-            <h2>Territory</h2>
-
-            <p>
-                The territory of Vithuanum is represented below.
-                The highlighted area represents the territory
-                claimed by the Principality.
-            </p>
-
-
-            <div class="territory-map">
-
-                <svg
-                    class="territory-svg"
-                    viewBox="0 0 1163 481"
-                    preserveAspectRatio="none"
-                    aria-label="Map of the territory of Vithuanum"
-                >
-
-                    <!-- Clean Map Background -->
-                    <image
-                        href="map.png"
-                        x="0"
-                        y="0"
-                        width="1163"
-                        height="481"
-                    />
-
-
-                    <defs>
-
-                        <!-- Vithuanum Territory Shape -->
-                        <clipPath id="vithuanum-territory">
-
-                            <polygon points="
-                                47,104
-                                100,72
-                                180,42
-                                300,48
-                                430,53
-                                560,62
-                                690,72
-                                760,95
-                                850,130
-                                940,165
-                                1015,205
-                                1055,260
-                                1085,310
-                                1140,365
-                                1135,405
-                                1080,425
-                                980,415
-                                900,410
-                                800,400
-                                700,395
-                                600,390
-                                500,385
-                                450,365
-                                410,345
-                                370,320
-                                300,315
-                                240,315
-                                170,315
-                                115,310
-                                65,290
-                                45,250
-                                40,190
-                            "/>
-
-                        </clipPath>
-
-                    </defs>
-
-
-                    <!-- Vithuanum Flag -->
-                    <image
-                        href="flag.png"
-                        x="0"
-                        y="0"
-                        width="1163"
-                        height="481"
-                        preserveAspectRatio="xMidYMid slice"
-                        clip-path="url(#vithuanum-territory)"
-                        opacity="0.5"
-                    />
-
-
-                    <!-- Vithuanum Border -->
-                    <polygon
-                        points="
-                            47,104
-                            100,72
-                            180,42
-                            300,48
-                            430,53
-                            560,62
-                            690,72
-                            760,95
-                            850,130
-                            940,165
-                            1015,205
-                            1055,260
-                            1085,310
-                            1140,365
-                            1135,405
-                            1080,425
-                            980,415
-                            900,410
-                            800,400
-                            700,395
-                            600,390
-                            500,385
-                            450,365
-                            410,345
-                            370,320
-                            300,315
-                            240,315
-                            170,315
-                            115,310
-                            65,290
-                            45,250
-                            40,190
-                        "
-                        fill="none"
-                        stroke="#ffffff"
-                        stroke-width="5"
-                        stroke-linejoin="round"
-                    />
-
-                </svg>
-
-            </div>
-
-        </section>
-
-
-        <!-- Counties -->
-        <section class="content-section">
-
-            <h2>Our Counties</h2>
-
-            <p>
-                Vithuanum is divided into six counties, each
-                forming an important part of the Principality.
-            </p>
-
-
-            <div class="card-grid">
-
-
-                <div class="card">
-
-                    <h3>Eagleshampton</h3>
-
-                    <p>
-                        Eagleshampton is a recognised county
-                        of the Principality of Vithuanum.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>Ciocanshire</h3>
-
-                    <p>
-                        Ciocanshire is a recognised county
-                        of the Principality of Vithuanum.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>Hurent</h3>
-
-                    <p>
-                        Hurent is a recognised county
-                        of the Principality of Vithuanum.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>South Coleena</h3>
-
-                    <p>
-                        South Coleena is a recognised county
-                        of the Principality of Vithuanum.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>North Coleena</h3>
-
-                    <p>
-                        North Coleena is a recognised county
-                        of the Principality of Vithuanum.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>Kuross</h3>
-
-                    <p>
-                        Kuross is a recognised county
-                        of the Principality of Vithuanum.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- County Administration -->
-        <section class="content-section">
-
-            <h2>County Administration</h2>
-
-            <p>
-                Counties may have their own flags, symbols,
-                histories and cultural identities.
-            </p>
-
-            <p>
-                While counties may develop their own traditions
-                and identities, they remain an important part
-                of the united Principality of Vithuanum.
-            </p>
-
-        </section>
-
-
-        <!-- Future Expansion -->
-        <section class="content-section">
-
-            <h2>Future Expansion</h2>
-
-            <p>
-                As Vithuanum continues to develop, additional
-                counties and regions may be established according
-                to the Constitution and laws of the Principality.
-            </p>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <strong>Principality of Vithuanum</strong>
+        <h2>County Administration</h2>
 
         <p>
-            Official Government Website
+            Counties may have their own flags, symbols,
+            histories and cultural identities.
         </p>
 
         <p>
-            © Principality of Vithuanum
+            While counties may develop their own traditions
+            and identities, they remain an important part
+            of the united Principality of Vithuanum.
         </p>
 
-    </footer>
+    </section>
 
 
-    <script src="script.js"></script>
+    <section class="content-section">
+
+        <h2>Future Expansion</h2>
+
+        <p>
+            As Vithuanum continues to develop, additional
+            counties and regions may be established according
+            to the Constitution and laws of the Principality.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <strong>Principality of Vithuanum</strong>
+
+    <p>Official Government Website</p>
+
+    <p>© Principality of Vithuanum</p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 
