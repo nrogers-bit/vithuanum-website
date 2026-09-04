@@ -9,7 +9,6 @@
 <title>National Symbols | Principality of Vithuanum</title>
 
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
-
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -78,37 +77,6 @@
 
 
 /* ==========================================
-   SYMBOL CARDS
-   ========================================== */
-
-.symbol-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 35px;
-}
-
-.symbol-card {
-    background: #ffffff;
-    border: 1px solid #d8dee4;
-    border-top: 5px solid #005ea8;
-    padding: 30px;
-}
-
-.symbol-card h3 {
-    color: #0b1f33;
-    font-size: 25px;
-    margin: 0 0 15px;
-}
-
-.symbol-card p {
-    color: #1d1d1d;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-
-/* ==========================================
    FLAG
    ========================================== */
 
@@ -125,6 +93,85 @@
     max-width: 650px;
     height: auto;
     margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.flag-display img:hover {
+    transform: scale(1.02);
+}
+
+
+/* ==========================================
+   COAT OF ARMS
+   ========================================== */
+
+.coat-display {
+    margin: 30px 0;
+    padding: 35px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.coat-display img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.coat-display img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   IMAGE POPUP
+   ========================================== */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.image-modal.open {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: #ffffff;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.modal-close:hover {
+    color: #c9a227;
 }
 
 
@@ -160,26 +207,6 @@
 
 
 /* ==========================================
-   COAT OF ARMS
-   ========================================== */
-
-.coat-display {
-    margin: 30px 0;
-    padding: 35px;
-    background: #ffffff;
-    text-align: center;
-}
-
-.coat-display img {
-    display: block;
-    width: 300px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-
-/* ==========================================
    COAT OF ARMS MEANINGS
    ========================================== */
 
@@ -192,7 +219,7 @@
 
 
 /* ==========================================
-   VALUES
+   NATIONAL VALUES
    ========================================== */
 
 .values-grid {
@@ -272,7 +299,6 @@
         padding: 55px 20px;
     }
 
-    .symbol-grid,
     .flag-meanings,
     .coat-meanings {
         grid-template-columns: 1fr;
@@ -280,6 +306,11 @@
 
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 15px;
     }
 
 }
@@ -300,6 +331,10 @@
 <body>
 
 
+<!-- ==========================================
+     GOVERNMENT HEADER
+     ========================================== -->
+
 <header class="government-header">
 
     <button
@@ -307,7 +342,6 @@
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
     >☰</button>
-
 
     <div class="government-brand">
 
@@ -329,6 +363,10 @@
 </header>
 
 
+<!-- ==========================================
+     SIDE MENU
+     ========================================== -->
+
 <nav id="side-menu" class="side-menu">
 
     <div class="menu-header">
@@ -342,21 +380,13 @@
 
     </div>
 
-
     <a href="index.html">Home</a>
-
     <a href="government.html">Government</a>
-
     <a href="history.html">History</a>
-
     <a href="territory.html">Territory</a>
-
     <a href="citizenship.html">Citizenship</a>
-
     <a href="constitution.html">Constitution</a>
-
     <a href="national-symbols.html">National Symbols</a>
-
     <a href="news.html">News</a>
 
 </nav>
@@ -369,12 +399,42 @@
 ></div>
 
 
-<main>
+<!-- ==========================================
+     IMAGE POPUP
+     ========================================== -->
+
+<div
+    id="image-modal"
+    class="image-modal"
+    onclick="closeImage()"
+>
+
+    <button
+        class="modal-close"
+        onclick="closeImage()"
+        aria-label="Close image"
+    >
+        ×
+    </button>
+
+    <img
+        id="modal-image"
+        src=""
+        alt=""
+        onclick="event.stopPropagation()"
+    >
+
+</div>
 
 
 <!-- ==========================================
-     HERO
+     MAIN CONTENT
      ========================================== -->
+
+<main>
+
+
+<!-- HERO -->
 
 <section class="symbols-hero">
 
@@ -400,7 +460,7 @@
 
 
 <!-- ==========================================
-     FLAG
+     NATIONAL FLAG
      ========================================== -->
 
 <section class="symbol-section">
@@ -422,6 +482,7 @@
         <img
             src="flag.png"
             alt="National Flag of Vithuanum"
+            onclick="openImage(this.src, this.alt)"
         >
 
     </div>
@@ -474,8 +535,8 @@
             <p>
                 Blue represents stability, loyalty and
                 continuity, while also reflecting Vithuanum's
-                connection to the seas surrounding the United
-                Kingdom.
+                connection to the seas surrounding the
+                United Kingdom.
             </p>
 
         </div>
@@ -522,6 +583,7 @@
         <img
             src="coat-of-arms.png"
             alt="Coat of Arms of Vithuanum"
+            onclick="openImage(this.src, this.alt)"
         >
 
     </div>
@@ -675,6 +737,10 @@
 </main>
 
 
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+
 <footer>
 
     <strong>
@@ -693,6 +759,49 @@
 
 
 <script src="script.js"></script>
+
+<script>
+
+/* ==========================================
+   IMAGE POPUP
+   ========================================== */
+
+function openImage(src, alt) {
+
+    const modal = document.getElementById("image-modal");
+    const image = document.getElementById("modal-image");
+
+    image.src = src;
+    image.alt = alt;
+
+    modal.classList.add("open");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeImage() {
+
+    const modal = document.getElementById("image-modal");
+
+    modal.classList.remove("open");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* Close popup with Escape */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeImage();
+    }
+
+});
+
+</script>
 
 </body>
 
