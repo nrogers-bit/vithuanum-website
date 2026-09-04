@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>National Symbols | Principality of Vithuanum</title>
+
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ==========================================
+   NATIONAL SYMBOLS PAGE
+   ========================================== */
+
+.symbols-hero {
+    background: #0b1f33;
+    color: #ffffff;
+    padding: 110px 30px 100px;
+}
+
+.symbols-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.symbols-hero .eyebrow {
+    margin: 0 0 10px;
+    color: #c9a227;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.symbols-hero h1 {
+    max-width: 800px;
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: 46px;
+    line-height: 1.15;
+}
+
+.symbols-hero .intro {
+    max-width: 800px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   SYMBOL SECTIONS
+   ========================================== */
+
+.symbol-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+.symbol-section h2 {
+    color: #0b1f33;
+    font-size: 32px;
+    margin: 0 0 20px;
+}
+
+.symbol-section > p {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   SYMBOL CARDS
+   ========================================== */
+
+.symbol-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.symbol-card {
+    background: #ffffff;
+    border: 1px solid #d8dee4;
+    border-top: 5px solid #005ea8;
+    padding: 30px;
+}
+
+.symbol-card h3 {
+    color: #0b1f33;
+    font-size: 25px;
+    margin: 0 0 15px;
+}
+
+.symbol-card p {
+    color: #1d1d1d;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   FLAG
+   ========================================== */
+
+.flag-display {
+    margin: 30px 0;
+    padding: 25px;
+    background: #f3f6f8;
+    text-align: center;
+}
+
+.flag-display img {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   COAT OF ARMS
+   ========================================== */
+
+.coat-display {
+    margin: 30px 0;
+    padding: 35px;
+    background: #f3f6f8;
+    text-align: center;
+}
+
+.coat-display img {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   VALUES
+   ========================================== */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.value-box {
+    background: #e8f1f8;
+    padding: 22px;
+    border-left: 4px solid #005ea8;
+}
+
+.value-box strong {
+    color: #0b1f33;
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   ANTHEM
+   ========================================== */
+
+.anthem-box {
+    background: #f3f6f8;
+    border-left: 5px solid #c9a227;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.anthem-box strong {
+    display: block;
+    color: #0b1f33;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.anthem-box p {
+    margin: 0;
+}
+
+
+/* ==========================================
+   CONSTITUTION LINK
+   ========================================== */
+
+.symbol-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #005ea8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.symbol-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 800px) {
+
+    .symbols-hero {
+        padding: 70px 20px 60px;
+    }
+
+    .symbols-hero h1 {
+        font-size: 36px;
+    }
+
+    .symbol-section {
+        padding: 55px 20px;
+    }
+
+    .symbol-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     GOVERNMENT HEADER
+     ========================================== -->
+
+<header class="government-header">
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+    >☰</button>
+
+
+    <div class="government-brand">
+
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum"
+        >
+
+        <div>
+
+            <strong>PRINCIPALITY OF VITHUANUM</strong>
+
+            <span>Official Government Website</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     SIDE MENU
+     ========================================== -->
+
+<nav id="side-menu" class="side-menu">
+
+    <div class="menu-header">
+
+        <strong>VITHUANUM</strong>
+
+        <button
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu"
+        >×</button>
+
+    </div>
+
+
+    <a href="index.html">Home</a>
+
+    <a href="government.html">Government</a>
+
+    <a href="history.html">History</a>
+
+    <a href="territory.html">Territory</a>
+
+    <a href="citizenship.html">Citizenship</a>
+
+    <a href="constitution.html">Constitution</a>
+
+    <a href="national-symbols.html">National Symbols</a>
+
+    <a href="news.html">News</a>
+
+</nav>
+
+
+<div
+    id="menu-overlay"
+    class="menu-overlay"
+    onclick="toggleMenu()"
+></div>
+
+
+<!-- ==========================================
+     MAIN CONTENT
+     ========================================== -->
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="symbols-hero">
+
+    <div class="symbols-hero-inner">
+
+        <p class="eyebrow">
+            NATIONAL IDENTITY
+        </p>
+
+        <h1>
+            National Symbols
+        </h1>
+
+        <p class="intro">
+            The national symbols of the Principality of
+            Vithuanum represent its identity, history,
+            values and traditions.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FLAG -->
+
+<section class="symbol-section">
+
+    <h2>
+        National Flag
+    </h2>
+
+    <p>
+        The flag of the Principality of Vithuanum is one
+        of the principal symbols of the nation and represents
+        Vithuanum both within the Principality and abroad.
+    </p>
+
+
+    <div class="flag-display">
+
+        <img
+            src="flag.png"
+            alt="National Flag of Vithuanum"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- COAT OF ARMS -->
+
+<section class="symbol-section">
+
+    <h2>
+        Coat of Arms
+    </h2>
+
+    <p>
+        The Coat of Arms of the Principality of Vithuanum
+        serves as an official emblem of the nation and is
+        used to represent the Government and the Principality.
+    </p>
+
+
+    <div class="coat-display">
+
+        <img
+            src="coat-of-arms.png"
+            alt="Coat of Arms of Vithuanum"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ANTHEM -->
+
+<section class="symbol-section">
+
+    <h2>
+        National Anthem
+    </h2>
+
+    <div class="anthem-box">
+
+        <strong>
+            No national anthem has been adopted
+        </strong>
+
+        <p>
+            The Principality of Vithuanum has not yet
+            officially adopted a national anthem.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- NATIONAL VALUES -->
+
+<section class="symbol-section">
+
+    <h2>
+        National Values
+    </h2>
+
+    <p>
+        The national values of Vithuanum reflect the
+        principles that guide the nation and its community.
+    </p>
+
+
+    <div class="values-grid">
+
+        <div class="value-box">
+            <strong>Tradition</strong>
+        </div>
+
+        <div class="value-box">
+            <strong>Peace</strong>
+        </div>
+
+        <div class="value-box">
+            <strong>Unity</strong>
+        </div>
+
+        <div class="value-box">
+            <strong>Justice</strong>
+        </div>
+
+        <div class="value-box">
+            <strong>Creativity</strong>
+        </div>
+
+        <div class="value-box">
+            <strong>Diplomacy</strong>
+        </div>
+
+        <div class="value-box">
+            <strong>Honour</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONSTITUTION -->
+
+<section class="symbol-section">
+
+    <h2>
+        Constitutional Recognition
+    </h2>
+
+    <p>
+        The national identity and symbols of Vithuanum
+        form part of the constitutional framework of the
+        Principality.
+    </p>
+
+
+    <a
+        href="constitution.html"
+        class="symbol-link"
+    >
+        Read the Constitution →
+    </a>
+
+</section>
+
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+
+<footer>
+
+    <strong>
+        Principality of Vithuanum
+    </strong>
+
+    <p>
+        Official Government Website
+    </p>
+
+    <p>
+        © Principality of Vithuanum
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
