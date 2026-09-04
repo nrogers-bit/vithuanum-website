@@ -115,7 +115,7 @@
 .flag-display {
     margin: 30px 0;
     padding: 25px;
-    background: #f3f6f8;
+    background: #ffffff;
     text-align: center;
 }
 
@@ -129,13 +129,44 @@
 
 
 /* ==========================================
+   FLAG MEANINGS
+   ========================================== */
+
+.flag-meanings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.meaning-card {
+    background: #e8f1f8;
+    border-left: 5px solid #005ea8;
+    padding: 25px;
+}
+
+.meaning-card h3 {
+    color: #0b1f33;
+    font-size: 21px;
+    margin: 0 0 10px;
+}
+
+.meaning-card p {
+    margin: 0;
+    color: #1d1d1d;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
    COAT OF ARMS
    ========================================== */
 
 .coat-display {
     margin: 30px 0;
     padding: 35px;
-    background: #f3f6f8;
+    background: #ffffff;
     text-align: center;
 }
 
@@ -145,6 +176,18 @@
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+}
+
+
+/* ==========================================
+   COAT OF ARMS MEANINGS
+   ========================================== */
+
+.coat-meanings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 35px;
 }
 
 
@@ -229,7 +272,9 @@
         padding: 55px 20px;
     }
 
-    .symbol-grid {
+    .symbol-grid,
+    .flag-meanings,
+    .coat-meanings {
         grid-template-columns: 1fr;
     }
 
@@ -254,10 +299,6 @@
 
 <body>
 
-
-<!-- ==========================================
-     GOVERNMENT HEADER
-     ========================================== -->
 
 <header class="government-header">
 
@@ -287,10 +328,6 @@
 
 </header>
 
-
-<!-- ==========================================
-     SIDE MENU
-     ========================================== -->
 
 <nav id="side-menu" class="side-menu">
 
@@ -332,14 +369,12 @@
 ></div>
 
 
-<!-- ==========================================
-     MAIN CONTENT
-     ========================================== -->
-
 <main>
 
 
-<!-- HERO -->
+<!-- ==========================================
+     HERO
+     ========================================== -->
 
 <section class="symbols-hero">
 
@@ -364,7 +399,9 @@
 </section>
 
 
-<!-- FLAG -->
+<!-- ==========================================
+     FLAG
+     ========================================== -->
 
 <section class="symbol-section">
 
@@ -373,9 +410,10 @@
     </h2>
 
     <p>
-        The flag of the Principality of Vithuanum is one
-        of the principal symbols of the nation and represents
-        Vithuanum both within the Principality and abroad.
+        The national flag is one of the principal symbols
+        of the Principality of Vithuanum. Its colours and
+        heraldic imagery represent the identity and values
+        of the nation.
     </p>
 
 
@@ -388,10 +426,83 @@
 
     </div>
 
+
+    <h2>
+        Meaning of the Flag
+    </h2>
+
+
+    <div class="flag-meanings">
+
+        <div class="meaning-card">
+
+            <h3>
+                White
+            </h3>
+
+            <p>
+                White represents peace, unity and openness,
+                reflecting Vithuanum's commitment to peaceful
+                relations and a united national community.
+            </p>
+
+        </div>
+
+
+        <div class="meaning-card">
+
+            <h3>
+                Gold
+            </h3>
+
+            <p>
+                Gold represents Vithuanum's heritage,
+                sovereignty and national pride, reflecting
+                the historic and constitutional character
+                of the Principality.
+            </p>
+
+        </div>
+
+
+        <div class="meaning-card">
+
+            <h3>
+                Blue
+            </h3>
+
+            <p>
+                Blue represents stability, loyalty and
+                continuity, while also reflecting Vithuanum's
+                connection to the seas surrounding the United
+                Kingdom.
+            </p>
+
+        </div>
+
+
+        <div class="meaning-card">
+
+            <h3>
+                The Lions
+            </h3>
+
+            <p>
+                The lions represent strength, courage and
+                sovereignty, symbolising the determination
+                of Vithuanum and its people.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
 
-<!-- COAT OF ARMS -->
+<!-- ==========================================
+     COAT OF ARMS
+     ========================================== -->
 
 <section class="symbol-section">
 
@@ -415,16 +526,57 @@
 
     </div>
 
+
+    <h2>
+        Meaning of the Coat of Arms
+    </h2>
+
+
+    <div class="coat-meanings">
+
+        <div class="meaning-card">
+
+            <h3>
+                The Crown
+            </h3>
+
+            <p>
+                The crown represents the Principality's
+                constitutional monarchy and the authority
+                of the Sovereign.
+            </p>
+
+        </div>
+
+
+        <div class="meaning-card">
+
+            <h3>
+                The Lions
+            </h3>
+
+            <p>
+                The lions represent courage, strength and
+                the protection of the Principality.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
 
-<!-- ANTHEM -->
+<!-- ==========================================
+     NATIONAL ANTHEM
+     ========================================== -->
 
 <section class="symbol-section">
 
     <h2>
         National Anthem
     </h2>
+
 
     <div class="anthem-box">
 
@@ -442,7 +594,9 @@
 </section>
 
 
-<!-- NATIONAL VALUES -->
+<!-- ==========================================
+     NATIONAL VALUES
+     ========================================== -->
 
 <section class="symbol-section">
 
@@ -491,7 +645,9 @@
 </section>
 
 
-<!-- CONSTITUTION -->
+<!-- ==========================================
+     CONSTITUTION
+     ========================================== -->
 
 <section class="symbol-section">
 
@@ -518,10 +674,6 @@
 
 </main>
 
-
-<!-- ==========================================
-     FOOTER
-     ========================================== -->
 
 <footer>
 
